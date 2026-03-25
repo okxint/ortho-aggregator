@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="greenBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4a2a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2a7a4a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneT" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="steelT" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b8c0c8"/>
+      <stop offset="100%" style="stop-color:#8898a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#greenBg)"/>
+
+  <!-- Proximal tibia - anterior view -->
+  <g id="tibiaProx">
+    <!-- Tibial plateau - wide top -->
+    <path d="M70,40 Q72,38 90,36 Q110,34 140,34 Q170,34 190,36 Q208,38 210,40
+             L210,50 Q208,52 200,54 L195,60 Q190,68 188,80 L186,100 L184,130 L182,190
+             L98,190 L96,130 L94,100 L92,80 Q90,68 85,60 L80,54 Q72,52 70,50Z"
+          fill="url(#boneT)" stroke="#c4a870" stroke-width="1.2"/>
+    <!-- Tibial plateau surface detail -->
+    <line x1="75" y1="40" x2="205" y2="40" stroke="#c4a870" stroke-width="1.5"/>
+    <!-- Medial plateau -->
+    <ellipse cx="115" cy="40" rx="35" ry="4" fill="none" stroke="#a0c0d8" stroke-width="1.5" opacity="0.5"/>
+    <!-- Lateral plateau -->
+    <ellipse cx="170" cy="40" rx="30" ry="4" fill="none" stroke="#a0c0d8" stroke-width="1.5" opacity="0.5"/>
+    <!-- Tibial spines -->
+    <path d="M130,40 L135,32 L140,40 L145,32 L150,40" fill="url(#boneT)" stroke="#c4a870" stroke-width="0.8"/>
+    <!-- Tibial tuberosity -->
+    <path d="M130,55 Q135,62 140,65 Q145,62 150,55" fill="url(#boneT)" stroke="#c4a870" stroke-width="0.8"/>
+    <!-- Cortical outline emphasis -->
+    <path d="M92,80 L94,100 L96,130 L96,140" fill="none" stroke="#c4a870" stroke-width="0.8" opacity="0.5"/>
+    <path d="M188,80 L186,100 L184,130 L184,140" fill="none" stroke="#c4a870" stroke-width="0.8" opacity="0.5"/>
+  </g>
+
+  <!-- Cut line - perpendicular to mechanical axis -->
+  <line x1="65" y1="55" x2="215" y2="55" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <!-- Resected bone above cut (to be removed) -->
+  <path d="M75,40 Q110,34 140,34 Q170,34 205,40 L210,50 L215,55 L65,55 L70,50Z"
+        fill="#ff4444" opacity="0.1"/>
+
+  <!-- Extramedullary alignment rod -->
+  <g id="emRod">
+    <!-- Main rod running along tibia -->
+    <line x1="80" y1="55" x2="75" y2="190" stroke="#909aa8" stroke-width="4"/>
+    <line x1="80" y1="55" x2="75" y2="190" stroke="#b0b8c0" stroke-width="2"/>
+    <!-- Proximal clamp at ankle reference -->
+    <rect x="65" y="178" width="22" height="8" rx="2" fill="url(#steelT)" stroke="#707880" stroke-width="0.8"/>
+    <!-- Tibial cutting block -->
+    <rect x="62" y="48" width="155" height="14" rx="2" fill="url(#steelT)" stroke="#707880" stroke-width="1"/>
+    <!-- Cutting slot -->
+    <line x1="68" y1="55" x2="212" y2="55" stroke="#505860" stroke-width="2"/>
+    <!-- Fixation pins through guide into bone -->
+    <line x1="90" y1="48" x2="90" y2="42" stroke="#808890" stroke-width="2"/>
+    <circle cx="90" cy="42" r="1.5" fill="#a0a8b0"/>
+    <line x1="190" y1="48" x2="190" y2="42" stroke="#808890" stroke-width="2"/>
+    <circle cx="190" cy="42" r="1.5" fill="#a0a8b0"/>
+    <!-- Stylus at ankle -->
+    <path d="M72,186 L68,192 L78,192 L74,186" fill="#a0a8b0" stroke="#707880" stroke-width="0.5"/>
+  </g>
+
+  <!-- Oscillating saw in cutting slot -->
+  <g id="sawT" transform="translate(220,48)">
+    <rect x="0" y="2" width="40" height="8" rx="2" fill="#a0a8b0" stroke="#707880" stroke-width="0.8"/>
+    <rect x="38" y="0" width="20" height="12" rx="3" fill="#808890" stroke="#606870" stroke-width="0.8"/>
+    <!-- Blade -->
+    <rect x="-8" y="4.5" width="10" height="3" fill="#d0d4d8" stroke="#909498" stroke-width="0.5"/>
+  </g>
+
+  <!-- Mechanical axis line -->
+  <line x1="140" y1="8" x2="140" y2="195" stroke="#44ff44" stroke-width="0.8" stroke-dasharray="2,4" opacity="0.4"/>
+
+  <!-- 90-degree angle indicator -->
+  <path d="M140,55 L140,45 L150,45" fill="none" stroke="#44ff44" stroke-width="0.8" opacity="0.6"/>
+  <text x="152" y="44" fill="#88ff88" font-size="6" font-family="Arial">90°</text>
+
+  <!-- Labels -->
+  <text x="15" y="25" fill="#c0e8d0" font-size="7" font-family="Arial">Tibial plateau</text>
+  <line x1="60" y1="23" x2="80" y2="38" stroke="#c0e8d0" stroke-width="0.4" opacity="0.6"/>
+  <text x="15" y="60" fill="#ff8888" font-size="7" font-family="Arial">Cut level</text>
+  <line x1="48" y1="58" x2="65" y2="55" stroke="#ff8888" stroke-width="0.4" opacity="0.6"/>
+  <text x="15" y="100" fill="#c0e8d0" font-size="7" font-family="Arial">EM rod</text>
+  <line x1="38" y1="98" x2="77" y2="120" stroke="#c0e8d0" stroke-width="0.4" opacity="0.6"/>
+  <text x="15" y="48" fill="#c0e8d0" font-size="7" font-family="Arial">Cutting</text>
+  <text x="15" y="55" fill="#c0e8d0" font-size="7" font-family="Arial">block</text>
+  <line x1="40" y1="50" x2="62" y2="52" stroke="#c0e8d0" stroke-width="0.4" opacity="0.6"/>
+  <text x="225" y="45" fill="#c0e8d0" font-size="7" font-family="Arial">Saw</text>
+  <text x="175" y="28" fill="#88ff88" font-size="6.5" font-family="Arial">Mechanical</text>
+  <text x="175" y="35" fill="#88ff88" font-size="6.5" font-family="Arial">axis</text>
+  <line x1="173" y1="32" x2="142" y2="25" stroke="#88ff88" stroke-width="0.3" opacity="0.5"/>
+
+  <text x="140" y="197" fill="#c0e8d0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Proximal Tibial Resection</text>
+</svg>

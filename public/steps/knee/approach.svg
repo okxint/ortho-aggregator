@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="tealBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d4f4f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a8a8a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="bone" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="cartilage" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8dce8"/>
+      <stop offset="100%" style="stop-color:#a0c0d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#tealBg)"/>
+
+  <!-- Skin edges retracted -->
+  <path d="M95,15 Q100,20 98,50 L98,155 Q100,180 95,190" fill="none" stroke="#d4956a" stroke-width="3" opacity="0.8"/>
+  <path d="M185,15 Q180,20 182,50 L182,155 Q180,180 185,190" fill="none" stroke="#d4956a" stroke-width="3" opacity="0.8"/>
+  <!-- Skin flap shading -->
+  <path d="M60,15 Q75,18 95,15 Q100,20 98,50 L98,100 Q85,100 60,95Z" fill="#d4956a" opacity="0.15"/>
+  <path d="M220,15 Q205,18 185,15 Q180,20 182,50 L182,100 Q195,100 220,95Z" fill="#d4956a" opacity="0.15"/>
+
+  <!-- Midline incision line -->
+  <line x1="140" y1="8" x2="140" y2="192" stroke="#cc3333" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.7"/>
+
+  <!-- Distal femur - anterior view showing condyles -->
+  <g id="femur">
+    <!-- Femoral shaft -->
+    <path d="M120,10 L118,55 Q115,70 110,80 L108,90 Q105,100 108,105 Q112,112 118,115 L120,118
+             M160,10 L162,55 Q165,70 170,80 L172,90 Q175,100 172,105 Q168,112 162,115 L160,118"
+          fill="none" stroke="#d4b880" stroke-width="1.5"/>
+    <path d="M120,10 L118,55 Q115,70 110,80 L108,90 Q105,100 108,105 Q112,112 118,115 L120,118
+             L160,118 L162,115 Q168,112 172,105 Q175,100 172,90 L170,80 Q165,70 162,55 L160,10Z"
+          fill="url(#bone)" opacity="0.9"/>
+    <!-- Medial condyle -->
+    <ellipse cx="122" cy="118" rx="18" ry="14" fill="url(#bone)" stroke="#c4a870" stroke-width="1"/>
+    <!-- Lateral condyle -->
+    <ellipse cx="158" cy="118" rx="18" ry="14" fill="url(#bone)" stroke="#c4a870" stroke-width="1"/>
+    <!-- Intercondylar notch -->
+    <path d="M132,112 Q140,125 148,112" fill="#0d4f4f" stroke="#c4a870" stroke-width="0.8"/>
+    <!-- Articular cartilage on condyles -->
+    <path d="M106,120 Q122,135 138,120" fill="none" stroke="#a0c0d8" stroke-width="2" opacity="0.7"/>
+    <path d="M142,120 Q158,135 174,120" fill="none" stroke="#a0c0d8" stroke-width="2" opacity="0.7"/>
+  </g>
+
+  <!-- Joint space -->
+  <rect x="104" y="128" width="72" height="5" fill="#1a8a8a" opacity="0.3"/>
+
+  <!-- Proximal tibia plateau -->
+  <g id="tibia">
+    <path d="M100,133 L102,135 Q108,133 120,133 L140,133 L160,133 Q172,133 178,135 L180,133
+             L182,145 Q183,155 180,165 L178,190
+             M100,133 L98,145 Q97,155 100,165 L102,190"
+          fill="none" stroke="#d4b880" stroke-width="1.5"/>
+    <path d="M100,133 L102,135 Q120,132 140,133 Q160,132 178,135 L180,133
+             L182,145 Q183,155 180,165 L178,190 L102,190 L100,165 Q97,155 98,145Z"
+          fill="url(#bone)" opacity="0.9"/>
+    <!-- Tibial plateau surface -->
+    <line x1="102" y1="134" x2="178" y2="134" stroke="#c4a870" stroke-width="1.5"/>
+    <!-- Tibial spine -->
+    <path d="M132,133 L136,127 L140,133 L144,127 L148,133" fill="url(#bone)" stroke="#c4a870" stroke-width="0.8"/>
+    <!-- Articular cartilage on plateau -->
+    <line x1="104" y1="133" x2="132" y2="133" stroke="#a0c0d8" stroke-width="2" opacity="0.6"/>
+    <line x1="148" y1="133" x2="176" y2="133" stroke="#a0c0d8" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Patella reflected laterally -->
+  <g id="patella" transform="translate(185,95)">
+    <ellipse cx="0" cy="0" rx="14" ry="18" fill="url(#bone)" stroke="#c4a870" stroke-width="1.2" transform="rotate(-15)"/>
+    <!-- Articular surface facing medially -->
+    <path d="M-8,-12 Q-14,0 -8,12" fill="none" stroke="#a0c0d8" stroke-width="2" opacity="0.7"/>
+    <!-- Quad tendon -->
+    <path d="M-2,-18 Q5,-35 10,-50" fill="none" stroke="#cc9966" stroke-width="2.5" opacity="0.6"/>
+    <!-- Patellar tendon -->
+    <path d="M-2,18 Q5,35 0,55" fill="none" stroke="#cc9966" stroke-width="2.5" opacity="0.6"/>
+  </g>
+
+  <!-- Retractors -->
+  <path d="M95,80 L85,78 L83,82 L93,84" fill="#b0b8c0" stroke="#8090a0" stroke-width="0.8"/>
+  <path d="M95,140 L83,142 L82,138 L93,136" fill="#b0b8c0" stroke="#8090a0" stroke-width="0.8"/>
+
+  <!-- Labels -->
+  <text x="42" y="70" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">Medial</text>
+  <text x="42" y="78" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">retraction</text>
+  <text x="205" y="78" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">Patella</text>
+  <text x="205" y="86" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">(reflected)</text>
+  <text x="20" y="118" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">Medial</text>
+  <text x="20" y="126" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">condyle</text>
+  <line x1="48" y1="122" x2="108" y2="120" stroke="#e0f0f0" stroke-width="0.5" opacity="0.6"/>
+  <text x="220" y="118" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">Lateral</text>
+  <text x="220" y="126" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">condyle</text>
+  <line x1="220" y1="122" x2="172" y2="120" stroke="#e0f0f0" stroke-width="0.5" opacity="0.6"/>
+  <text x="18" y="148" fill="#e0f0f0" font-size="7" font-family="Arial, sans-serif">Tibial plateau</text>
+  <line x1="68" y1="145" x2="105" y2="134" stroke="#e0f0f0" stroke-width="0.5" opacity="0.6"/>
+  <text x="115" y="10" fill="#cc4444" font-size="7" font-family="Arial, sans-serif">Incision</text>
+
+  <!-- Title -->
+  <text x="140" y="197" fill="#e0f0f0" font-size="7.5" font-family="Arial, sans-serif" text-anchor="middle" font-weight="bold">Medial Parapatellar Approach</text>
+</svg>

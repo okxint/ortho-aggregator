@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="orangeBgE" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a3a1a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c06020;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneEC" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="steelEC" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d0d4d8"/>
+      <stop offset="50%" style="stop-color:#a8b0c0"/>
+      <stop offset="100%" style="stop-color:#d0d4d8"/>
+    </linearGradient>
+    <linearGradient id="carbonC" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#404850"/>
+      <stop offset="50%" style="stop-color:#303840"/>
+      <stop offset="100%" style="stop-color:#404850"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#orangeBgE)"/>
+
+  <!-- Final stable construct - main view -->
+  <!-- Leg outline -->
+  <path d="M95,8 Q90,15 88,30 L86,60 L85,90 L84,120 L85,150 L87,175 Q90,188 95,192
+           L135,192 Q140,188 142,175 L144,150 L145,120 L144,90 L142,60 L140,30 Q138,15 135,8Z"
+        fill="#c8a080" stroke="#a08060" stroke-width="0.6" opacity="0.2"/>
+
+  <!-- Bone - aligned/reduced -->
+  <path d="M105,12 L104,35 L103,60 L102,85 L102,90 L102,95 L103,115 L104,140 L105,165 L106,190
+           M125,12 L126,35 L127,60 L128,85 L128,90 L128,95 L127,115 L126,140 L125,165 L124,190"
+        fill="none" stroke="#d4b880" stroke-width="0.8" opacity="0.4"/>
+  <!-- Healed fracture line (reduced) -->
+  <path d="M102,90 Q108,88 115,92 Q122,95 128,90" fill="none" stroke="#c4a870" stroke-width="1" opacity="0.5"/>
+
+  <!-- External fixator - final tight construct -->
+  <!-- Proximal pins -->
+  <line x1="45" y1="38" x2="127" y2="38" stroke="url(#steelEC)" stroke-width="3"/>
+  <line x1="45" y1="38" x2="127" y2="38" stroke="#c8d0d8" stroke-width="1.5"/>
+  <line x1="45" y1="60" x2="127" y2="60" stroke="url(#steelEC)" stroke-width="3"/>
+  <line x1="45" y1="60" x2="127" y2="60" stroke="#c8d0d8" stroke-width="1.5"/>
+  <!-- Distal pins -->
+  <line x1="45" y1="120" x2="128" y2="120" stroke="url(#steelEC)" stroke-width="3"/>
+  <line x1="45" y1="120" x2="128" y2="120" stroke="#c8d0d8" stroke-width="1.5"/>
+  <line x1="45" y1="145" x2="128" y2="145" stroke="url(#steelEC)" stroke-width="3"/>
+  <line x1="45" y1="145" x2="128" y2="145" stroke="#c8d0d8" stroke-width="1.5"/>
+
+  <!-- Pin cluster rods -->
+  <rect x="42" y="31" width="7" height="36" rx="3" fill="url(#carbonC)" stroke="#505860" stroke-width="0.7"/>
+  <rect x="42" y="113" width="7" height="40" rx="3" fill="url(#carbonC)" stroke="#505860" stroke-width="0.7"/>
+  <!-- Main bar -->
+  <rect x="33" y="28" width="7" height="132" rx="3" fill="url(#carbonC)" stroke="#404850" stroke-width="0.8"/>
+
+  <!-- Tightened clamps (all locked) -->
+  <rect x="40" y="35" width="11" height="6" rx="1.5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+  <rect x="40" y="57" width="11" height="6" rx="1.5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+  <rect x="40" y="117" width="11" height="6" rx="1.5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+  <rect x="40" y="142" width="11" height="6" rx="1.5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+  <!-- Center clamp locked -->
+  <rect x="31" y="83" width="12" height="12" rx="2" fill="#808890" stroke="#606870" stroke-width="0.8"/>
+  <circle cx="37" cy="89" r="4" fill="#909aa0" stroke="#707880" stroke-width="0.5"/>
+
+  <!-- Check mark indicators on each clamp -->
+  <path d="M53,37 L55,39 L59,35" fill="none" stroke="#88ff88" stroke-width="1.2" opacity="0.7"/>
+  <path d="M53,59 L55,61 L59,57" fill="none" stroke="#88ff88" stroke-width="1.2" opacity="0.7"/>
+  <path d="M53,119 L55,121 L59,117" fill="none" stroke="#88ff88" stroke-width="1.2" opacity="0.7"/>
+  <path d="M53,144 L55,146 L59,142" fill="none" stroke="#88ff88" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- C-arm fluoroscopy inset -->
+  <g id="cArmInset" transform="translate(200,20)">
+    <!-- Monitor frame -->
+    <rect x="-5" y="-5" width="80" height="95" rx="4" fill="rgba(0,0,0,0.5)" stroke="#808890" stroke-width="1"/>
+    <rect x="0" y="0" width="70" height="75" rx="2" fill="#0a0a1a" stroke="#505860" stroke-width="0.5"/>
+    <!-- Fluoroscopy image (AP view) -->
+    <!-- Dark background -->
+    <rect x="2" y="2" width="66" height="71" rx="1" fill="#0a1520"/>
+    <!-- Bone outline on fluoro -->
+    <path d="M28,8 L27,20 L26,35 L26,38 L26,42 L27,55 L28,68
+             M42,8 L43,20 L44,35 L44,38 L44,42 L43,55 L42,68"
+          fill="none" stroke="#d0d8e0" stroke-width="1.5" opacity="0.7"/>
+    <!-- Pin shadows on fluoro -->
+    <line x1="10" y1="18" x2="44" y2="18" stroke="#e0e8f0" stroke-width="1" opacity="0.5"/>
+    <line x1="10" y1="28" x2="44" y2="28" stroke="#e0e8f0" stroke-width="1" opacity="0.5"/>
+    <line x1="10" y1="48" x2="44" y2="48" stroke="#e0e8f0" stroke-width="1" opacity="0.5"/>
+    <line x1="10" y1="58" x2="44" y2="58" stroke="#e0e8f0" stroke-width="1" opacity="0.5"/>
+    <!-- Fracture line reduced -->
+    <path d="M26,38 Q30,37 35,39 Q40,41 44,38" fill="none" stroke="#d0d8e0" stroke-width="0.5" opacity="0.5"/>
+    <!-- Rod shadow -->
+    <line x1="15" y1="10" x2="15" y2="65" stroke="#c0c8d0" stroke-width="1.5" opacity="0.3"/>
+    <!-- Alignment OK text -->
+    <text x="35" y="73" fill="#88ff88" font-size="5" font-family="Arial" text-anchor="middle">ALIGNMENT OK</text>
+    <!-- C-arm label -->
+    <text x="35" y="88" fill="#a08868" font-size="6" font-family="Arial" text-anchor="middle">C-arm AP view</text>
+  </g>
+
+  <!-- Labels -->
+  <text x="10" y="20" fill="#f0d8c0" font-size="7" font-family="Arial">All clamps</text>
+  <text x="10" y="28" fill="#f0d8c0" font-size="7" font-family="Arial">locked</text>
+  <text x="10" y="100" fill="#f0d8c0" font-size="7" font-family="Arial">Stable</text>
+  <text x="10" y="108" fill="#f0d8c0" font-size="7" font-family="Arial">construct</text>
+  <text x="10" y="170" fill="#88ff88" font-size="7" font-family="Arial">Pins tight</text>
+  <text x="80" y="98" fill="#f0d8c0" font-size="6.5" font-family="Arial">Reduced</text>
+  <text x="80" y="106" fill="#f0d8c0" font-size="6.5" font-family="Arial">fracture</text>
+  <line x1="97" y1="100" x2="106" y2="92" stroke="#f0d8c0" stroke-width="0.3" opacity="0.5"/>
+
+  <text x="115" y="195" fill="#f0d8c0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Final Construct - Fluoroscopy Confirmed</text>
+</svg>

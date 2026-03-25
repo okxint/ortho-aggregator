@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a0d3f"/>
+      <stop offset="100%" stop-color="#4a1a6d"/>
+    </linearGradient>
+    <linearGradient id="bone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8dcc8"/>
+      <stop offset="40%" stop-color="#f5ead6"/>
+      <stop offset="100%" stop-color="#d4c4a8"/>
+    </linearGradient>
+    <linearGradient id="nail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6080b0"/>
+      <stop offset="25%" stop-color="#90b0d8"/>
+      <stop offset="50%" stop-color="#a0c0e0"/>
+      <stop offset="75%" stop-color="#8098c0"/>
+      <stop offset="100%" stop-color="#5070a0"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a0a0a0"/>
+      <stop offset="50%" stop-color="#d8d8d8"/>
+      <stop offset="100%" stop-color="#909090"/>
+    </linearGradient>
+    <linearGradient id="jig" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#606060"/>
+      <stop offset="50%" stop-color="#a0a0a0"/>
+      <stop offset="100%" stop-color="#505050"/>
+    </linearGradient>
+    <linearGradient id="canal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7a1818"/>
+      <stop offset="100%" stop-color="#983030"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="140" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#c0a0e0" letter-spacing="1">INTERLOCKING SCREW FIXATION</text>
+
+  <!-- Dividing line -->
+  <line x1="140" y1="20" x2="140" y2="195" stroke="#c0a0e0" stroke-width="0.3" stroke-dasharray="3,3" opacity="0.4"/>
+
+  <!-- === LEFT SIDE: PROXIMAL LOCKING (with targeting jig) === -->
+  <text x="70" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#c0a0e0" font-weight="bold">PROXIMAL</text>
+
+  <!-- Proximal bone segment -->
+  <path d="M 35,35 C 33,50 31,70 30,90 C 29,110 28,130 28,150 L 28,190 L 110,190 L 110,150 C 110,130 109,110 108,90 C 107,70 105,50 103,35 Z" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+
+  <!-- Inner cortex -->
+  <path d="M 48,35 C 47,50 46,70 45,90 C 44,110 44,130 44,150 L 44,190" stroke="#b5a585" stroke-width="0.5" fill="none"/>
+  <path d="M 90,35 C 91,50 92,70 93,90 C 94,110 94,130 94,150 L 94,190" stroke="#b5a585" stroke-width="0.5" fill="none"/>
+
+  <!-- Medullary canal -->
+  <path d="M 48,35 C 47,50 46,70 45,90 C 44,110 44,130 44,190 L 94,190 C 94,130 94,110 93,90 C 92,70 91,50 90,35 Z" fill="url(#canal)" opacity="0.3"/>
+
+  <!-- Nail inside proximal bone -->
+  <rect x="52" y="35" width="34" height="155" rx="1" fill="url(#nail)" stroke="#4060a0" stroke-width="0.4" opacity="0.85"/>
+
+  <!-- Proximal locking holes in nail -->
+  <rect x="52" y="68" width="34" height="4" rx="1" fill="#3a5580"/>
+  <rect x="52" y="88" width="34" height="4" rx="1" fill="#3a5580"/>
+
+  <!-- Proximal locking bolt 1 (through bone + nail) -->
+  <rect x="22" y="67" width="94" height="6" rx="2" fill="url(#bolt)" stroke="#707070" stroke-width="0.4"/>
+  <!-- Bolt head (left) -->
+  <rect x="18" y="66" width="6" height="8" rx="1" fill="#888" stroke="#666" stroke-width="0.4"/>
+  <!-- Bolt threads visible -->
+  <line x1="25" y1="68" x2="25" y2="72" stroke="#999" stroke-width="0.3"/>
+  <line x1="28" y1="68" x2="28" y2="72" stroke="#999" stroke-width="0.3"/>
+  <line x1="109" y1="68" x2="109" y2="72" stroke="#999" stroke-width="0.3"/>
+  <line x1="112" y1="68" x2="112" y2="72" stroke="#999" stroke-width="0.3"/>
+
+  <!-- Proximal locking bolt 2 -->
+  <rect x="22" y="87" width="94" height="6" rx="2" fill="url(#bolt)" stroke="#707070" stroke-width="0.4"/>
+  <rect x="18" y="86" width="6" height="8" rx="1" fill="#888" stroke="#666" stroke-width="0.4"/>
+  <line x1="25" y1="88" x2="25" y2="92" stroke="#999" stroke-width="0.3"/>
+  <line x1="28" y1="88" x2="28" y2="92" stroke="#999" stroke-width="0.3"/>
+
+  <!-- Targeting jig (attached at top) -->
+  <rect x="56" y="30" width="26" height="8" rx="1" fill="url(#jig)" stroke="#555" stroke-width="0.4"/>
+  <!-- Jig arms extending to bolt holes -->
+  <path d="M 56,34 L 15,34 L 15,70 L 22,70" stroke="#888" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  <path d="M 56,34 L 12,34 L 12,90 L 22,90" stroke="#888" stroke-width="1" fill="none" stroke-dasharray="2,1" opacity="0.6"/>
+  <!-- Drill sleeve at jig end -->
+  <circle cx="20" cy="70" r="4" fill="none" stroke="#aaa" stroke-width="0.8"/>
+  <circle cx="20" cy="90" r="3.5" fill="none" stroke="#aaa" stroke-width="0.6" opacity="0.6"/>
+
+  <!-- Cortex penetration markers -->
+  <circle cx="30" cy="70" r="1.5" fill="none" stroke="#ff8080" stroke-width="0.4"/>
+  <circle cx="108" cy="70" r="1.5" fill="none" stroke="#ff8080" stroke-width="0.4"/>
+  <circle cx="30" cy="90" r="1.5" fill="none" stroke="#ff8080" stroke-width="0.4"/>
+  <circle cx="108" cy="90" r="1.5" fill="none" stroke="#ff8080" stroke-width="0.4"/>
+
+  <!-- === RIGHT SIDE: DISTAL LOCKING (freehand / perfect circle) === -->
+  <text x="210" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#c0a0e0" font-weight="bold">DISTAL</text>
+
+  <!-- Distal bone segment -->
+  <path d="M 175,35 C 173,50 171,70 170,90 C 169,110 168,130 168,150 L 168,190 L 250,190 L 250,150 C 250,130 249,110 248,90 C 247,70 245,50 243,35 Z" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+
+  <!-- Inner cortex -->
+  <path d="M 188,35 C 187,50 186,70 185,90 C 184,110 184,130 184,190" stroke="#b5a585" stroke-width="0.5" fill="none"/>
+  <path d="M 230,35 C 231,50 232,70 233,90 C 234,110 234,130 234,190" stroke="#b5a585" stroke-width="0.5" fill="none"/>
+
+  <!-- Medullary canal -->
+  <path d="M 188,35 C 187,50 186,70 185,90 C 184,110 184,130 184,190 L 234,190 C 234,130 234,110 233,90 C 232,70 231,50 230,35 Z" fill="url(#canal)" opacity="0.3"/>
+
+  <!-- Nail inside distal bone -->
+  <rect x="192" y="35" width="34" height="155" rx="1" fill="url(#nail)" stroke="#4060a0" stroke-width="0.4" opacity="0.85"/>
+
+  <!-- Distal locking holes in nail -->
+  <rect x="192" y="108" width="34" height="4" rx="1" fill="#3a5580"/>
+  <rect x="192" y="128" width="34" height="4" rx="1" fill="#3a5580"/>
+
+  <!-- Distal locking bolt 1 -->
+  <rect x="162" y="107" width="94" height="6" rx="2" fill="url(#bolt)" stroke="#707070" stroke-width="0.4"/>
+  <rect x="158" y="106" width="6" height="8" rx="1" fill="#888" stroke="#666" stroke-width="0.4"/>
+
+  <!-- Distal locking bolt 2 -->
+  <rect x="162" y="127" width="94" height="6" rx="2" fill="url(#bolt)" stroke="#707070" stroke-width="0.4"/>
+  <rect x="158" y="126" width="6" height="8" rx="1" fill="#888" stroke="#666" stroke-width="0.4"/>
+
+  <!-- Freehand technique: "Perfect circle" on C-arm -->
+  <!-- Simulated C-arm view circle at distal bolt -->
+  <circle cx="209" cy="155" r="12" fill="none" stroke="#c0a0e0" stroke-width="0.5" stroke-dasharray="2,1" opacity="0.6"/>
+  <!-- Perfect circle (drill aligned) -->
+  <circle cx="209" cy="155" r="5" fill="none" stroke="#80ff80" stroke-width="0.8"/>
+  <circle cx="209" cy="155" r="0.8" fill="#80ff80"/>
+  <!-- Drill bit coming toward viewer -->
+  <circle cx="209" cy="155" r="2.5" fill="none" stroke="#d0d0d0" stroke-width="0.4"/>
+
+  <!-- Cortex penetration markers -->
+  <circle cx="170" cy="110" r="1.5" fill="none" stroke="#ff8080" stroke-width="0.4"/>
+  <circle cx="248" cy="110" r="1.5" fill="none" stroke="#ff8080" stroke-width="0.4"/>
+  <circle cx="170" cy="130" r="1.5" fill="none" stroke="#ff8080" stroke-width="0.4"/>
+  <circle cx="248" cy="130" r="1.5" fill="none" stroke="#ff8080" stroke-width="0.4"/>
+
+  <!-- Labels -->
+  <!-- Proximal side labels -->
+  <text x="8" y="62" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Targeting</text>
+  <text x="8" y="69" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Jig</text>
+
+  <text x="38" y="60" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Locking</text>
+  <text x="38" y="67" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Bolt</text>
+  <line x1="50" y1="67" x2="50" y2="70" stroke="#c0a0e0" stroke-width="0.3"/>
+
+  <text x="45" y="110" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Near</text>
+  <text x="45" y="117" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Cortex</text>
+  <line x1="32" y1="100" x2="32" y2="95" stroke="#c0a0e0" stroke-width="0.3"/>
+
+  <text x="95" y="110" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Far</text>
+  <text x="95" y="117" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Cortex</text>
+
+  <!-- Distal side labels -->
+  <text x="192" y="150" font-family="Arial, sans-serif" font-size="6" fill="#80ff80" text-anchor="middle">"Perfect</text>
+  <text x="192" y="157" font-family="Arial, sans-serif" font-size="6" fill="#80ff80" text-anchor="middle">Circle"</text>
+
+  <text x="209" y="174" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0" text-anchor="middle">Freehand</text>
+  <text x="209" y="181" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0" text-anchor="middle">Technique</text>
+
+  <text x="177" y="100" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Locking</text>
+  <text x="177" y="107" font-family="Arial, sans-serif" font-size="6" fill="#c0a0e0">Bolts</text>
+
+  <!-- Nail label -->
+  <text x="69" y="145" font-family="Arial, sans-serif" font-size="6" fill="#90b0d8" text-anchor="middle" transform="rotate(-90,69,145)">IM Nail</text>
+  <text x="209" y="75" font-family="Arial, sans-serif" font-size="6" fill="#90b0d8" text-anchor="middle" transform="rotate(-90,209,75)">IM Nail</text>
+
+  <!-- Bicortical fixation arrows (proximal) -->
+  <path d="M 30,78 L 30,82" stroke="#ff8080" stroke-width="0.5"/>
+  <path d="M 108,78 L 108,82" stroke="#ff8080" stroke-width="0.5"/>
+  <text x="55" y="82" font-family="Arial, sans-serif" font-size="5" fill="#ff8080" text-anchor="middle">Bicortical</text>
+</svg>

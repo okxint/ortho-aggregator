@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff3e0"/>
+      <stop offset="100%" stop-color="#ffe0b2"/>
+    </linearGradient>
+    <linearGradient id="boneGradL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="40%" stop-color="#e8dcc8"/>
+      <stop offset="100%" stop-color="#d4c4a0"/>
+    </linearGradient>
+    <linearGradient id="cortexGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4c4a0"/>
+      <stop offset="100%" stop-color="#bfae8a"/>
+    </linearGradient>
+    <linearGradient id="marrowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffccbc"/>
+      <stop offset="100%" stop-color="#ef9a9a"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="20%" stop-color="#f5f5f5"/>
+      <stop offset="50%" stop-color="#bdbdbd"/>
+      <stop offset="80%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#9e9e9e"/>
+    </linearGradient>
+    <linearGradient id="screwGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#90a4ae"/>
+      <stop offset="25%" stop-color="#eceff1"/>
+      <stop offset="50%" stop-color="#b0bec5"/>
+      <stop offset="75%" stop-color="#eceff1"/>
+      <stop offset="100%" stop-color="#90a4ae"/>
+    </linearGradient>
+    <!-- DCP hole slope gradient -->
+    <linearGradient id="slopeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#616161"/>
+      <stop offset="100%" stop-color="#424242"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bgGrad)" rx="4"/>
+
+  <!-- Title -->
+  <text x="140" y="14" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="600" fill="#e65100">Step 6: DCP Compression</text>
+
+  <!-- ========== TOP VIEW - DCP MECHANISM DETAIL ========== -->
+  <!-- Section label -->
+  <text x="140" y="28" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="6.5" fill="#bf360c" font-style="italic">Top: DCP oval hole mechanism (axial view)</text>
+
+  <!-- Plate top view - showing oval hole mechanism -->
+  <g transform="translate(40, 32)">
+    <!-- Plate body (top view) -->
+    <rect x="0" y="8" width="200" height="32" rx="4" fill="url(#plateGrad)" stroke="#757575" stroke-width="0.8"/>
+
+    <!-- DCP Oval hole - zoomed/detailed view -->
+    <!-- Hole 1 (left, with screw in neutral) -->
+    <ellipse cx="35" cy="24" rx="10" ry="6" fill="#333" stroke="#555" stroke-width="0.5"/>
+    <!-- Inclined plane inside hole (the DCP slope) -->
+    <path d="M 25,24 Q 28,20 35,20 Q 42,20 45,24" fill="url(#slopeGrad)" stroke="#555" stroke-width="0.3" opacity="0.6"/>
+    <!-- Screw in neutral position -->
+    <circle cx="35" cy="24" r="4" fill="#b0bec5" stroke="#78909c" stroke-width="0.5"/>
+    <path d="M 33.5,24 L 34.5,23 L 35.5,23 L 36.5,24 L 35.5,25 L 34.5,25 Z" fill="#546e7a" stroke="#37474f" stroke-width="0.2"/>
+    <text x="35" y="38" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="5" fill="#757575">Neutral</text>
+
+    <!-- Fracture line (center) -->
+    <line x1="100" y1="6" x2="100" y2="42" stroke="#604020" stroke-width="1" stroke-dasharray="2,1"/>
+    <text x="100" y="5" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="5" fill="#604020">Fracture</text>
+
+    <!-- Hole 2 (right of fracture, ECCENTRIC screw placement) -->
+    <ellipse cx="135" cy="24" rx="10" ry="6" fill="#333" stroke="#555" stroke-width="0.5"/>
+    <!-- DCP inclined plane (slope) - highlighted -->
+    <path d="M 125,24 Q 128,19 135,19 Q 142,19 145,24" fill="url(#slopeGrad)" stroke="#e65100" stroke-width="0.5" opacity="0.8"/>
+    <!-- The slope ramp visualization -->
+    <path d="M 128,24 L 132,21 L 135,20" fill="none" stroke="#ff6d00" stroke-width="0.8"/>
+
+    <!-- Screw in ECCENTRIC position (away from fracture = to the right in the oval) -->
+    <circle cx="140" cy="24" r="4" fill="#b0bec5" stroke="#e65100" stroke-width="0.8"/>
+    <path d="M 138.5,24 L 139.5,23 L 140.5,23 L 141.5,24 L 140.5,25 L 139.5,25 Z" fill="#546e7a" stroke="#37474f" stroke-width="0.2"/>
+    <text x="140" y="38" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="5" fill="#e65100" font-weight="600">Eccentric</text>
+
+    <!-- Arrow showing screw sliding on inclined plane toward fracture -->
+    <path d="M 142,18 L 137,18" stroke="#e65100" stroke-width="1" fill="none"/>
+    <polygon points="137,16.5 134,18 137,19.5" fill="#e65100"/>
+    <text x="140" y="15" font-family="'Helvetica Neue', Arial, sans-serif" font-size="5" fill="#e65100">Screw slides</text>
+
+    <!-- Hole 3 -->
+    <ellipse cx="170" cy="24" rx="10" ry="6" fill="#333" stroke="#555" stroke-width="0.5"/>
+    <path d="M 160,24 Q 163,20 170,20 Q 177,20 180,24" fill="url(#slopeGrad)" stroke="#555" stroke-width="0.3" opacity="0.6"/>
+    <circle cx="170" cy="24" r="4" fill="#b0bec5" stroke="#78909c" stroke-width="0.5"/>
+    <path d="M 168.5,24 L 169.5,23 L 170.5,23 L 171.5,24 L 170.5,25 L 169.5,25 Z" fill="#546e7a" stroke="#37474f" stroke-width="0.2"/>
+
+    <!-- Compression arrows (bone fragments moving toward fracture) -->
+    <!-- Left fragment compression arrow -->
+    <path d="M 55,24 L 85,24" stroke="#e65100" stroke-width="1.8"/>
+    <polygon points="85,21 92,24 85,27" fill="#e65100"/>
+    <!-- Right fragment compression arrow -->
+    <path d="M 155,47 L 115,47" stroke="#e65100" stroke-width="1.8"/>
+    <polygon points="115,44 108,47 115,50" fill="#e65100"/>
+
+    <!-- Label for compression -->
+    <text x="75" y="20" font-family="'Helvetica Neue', Arial, sans-serif" font-size="5.5" fill="#e65100" font-weight="600">Compression</text>
+    <text x="120" y="55" font-family="'Helvetica Neue', Arial, sans-serif" font-size="5.5" fill="#e65100" font-weight="600">Compression</text>
+  </g>
+
+  <!-- ========== BOTTOM VIEW - SIDE CROSS SECTION ========== -->
+  <text x="140" y="103" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="6.5" fill="#bf360c" font-style="italic">Bottom: Cross-section showing DCP slope and screw interaction</text>
+
+  <!-- Bone fragments - side view -->
+  <g>
+    <!-- Left bone fragment -->
+    <rect x="20" y="120" width="110" height="10" rx="1" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <rect x="20" y="130" width="110" height="24" fill="url(#marrowGrad)" opacity="0.4"/>
+    <rect x="20" y="154" width="110" height="10" rx="1" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <rect x="20" y="120" width="110" height="44" rx="2" fill="none" stroke="#a08060" stroke-width="0.8"/>
+
+    <!-- Right bone fragment -->
+    <rect x="134" y="120" width="126" height="10" rx="1" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <rect x="134" y="130" width="126" height="24" fill="url(#marrowGrad)" opacity="0.4"/>
+    <rect x="134" y="154" width="126" height="10" rx="1" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <rect x="134" y="120" width="126" height="44" rx="2" fill="none" stroke="#a08060" stroke-width="0.8"/>
+
+    <!-- Fracture line -->
+    <path d="M 130,118 L 132,126 L 128,134 L 133,142 L 129,150 L 132,158 L 130,166" stroke="#604020" stroke-width="0.8" fill="none"/>
+    <path d="M 134,118 L 132,126 L 136,134 L 131,142 L 135,150 L 132,158 L 134,166" stroke="#604020" stroke-width="0.8" fill="none"/>
+  </g>
+
+  <!-- Plate (side view cross-section) -->
+  <g>
+    <rect x="35" y="108" width="210" height="12" rx="2" fill="url(#plateGrad)" stroke="#757575" stroke-width="0.8"/>
+
+    <!-- DCP hole cross-section showing inclined plane (the key mechanism) -->
+    <!-- This hole shows the slope that the spherical screw head slides on -->
+    <g>
+      <!-- Oval hole in cross section -->
+      <rect x="165" y="108" width="16" height="12" rx="1" fill="#333" stroke="#555" stroke-width="0.4"/>
+      <!-- Inclined plane / ramp inside hole (left side slope going down to the right) -->
+      <path d="M 165,112 L 172,108.5" stroke="#ff6d00" stroke-width="1.2" fill="none"/>
+      <path d="M 165,114 L 172,110.5" stroke="#ff6d00" stroke-width="0.6" fill="none" opacity="0.5"/>
+      <!-- The spherical screw head sitting on the slope -->
+      <circle cx="173" cy="114" r="4.5" fill="#b0bec5" stroke="#78909c" stroke-width="0.6"/>
+      <!-- The screw head sliding direction -->
+      <path d="M 178,110 L 172,112" stroke="#e65100" stroke-width="0.8"/>
+      <polygon points="172,110.8 170,112 172,113.2" fill="#e65100"/>
+    </g>
+
+    <!-- Neutral screw in left fragment hole -->
+    <g>
+      <rect x="60" y="108" width="14" height="12" rx="1" fill="#333" stroke="#555" stroke-width="0.4"/>
+      <circle cx="67" cy="114" r="4.5" fill="#b0bec5" stroke="#78909c" stroke-width="0.6"/>
+      <!-- Screw shaft going into bone -->
+      <rect x="65.5" y="118" width="3" height="46" fill="url(#screwGrad)" stroke="#78909c" stroke-width="0.2"/>
+      <!-- Thread marks -->
+      <line x1="64.5" y1="122" x2="68.5" y2="122" stroke="#90a4ae" stroke-width="0.4"/>
+      <line x1="64.5" y1="125" x2="68.5" y2="125" stroke="#90a4ae" stroke-width="0.4"/>
+      <line x1="64.5" y1="128" x2="68.5" y2="128" stroke="#90a4ae" stroke-width="0.4"/>
+      <line x1="64.5" y1="156" x2="68.5" y2="156" stroke="#90a4ae" stroke-width="0.4"/>
+      <line x1="64.5" y1="159" x2="68.5" y2="159" stroke="#90a4ae" stroke-width="0.4"/>
+      <line x1="64.5" y1="162" x2="68.5" y2="162" stroke="#90a4ae" stroke-width="0.4"/>
+    </g>
+
+    <!-- Eccentric screw in right fragment - shaft into bone -->
+    <rect x="171.5" y="118" width="3" height="46" fill="url(#screwGrad)" stroke="#78909c" stroke-width="0.2"/>
+    <line x1="170.5" y1="122" x2="174.5" y2="122" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="170.5" y1="125" x2="174.5" y2="125" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="170.5" y1="128" x2="174.5" y2="128" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="170.5" y1="156" x2="174.5" y2="156" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="170.5" y1="159" x2="174.5" y2="159" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="170.5" y1="162" x2="174.5" y2="162" stroke="#90a4ae" stroke-width="0.4"/>
+  </g>
+
+  <!-- Compression motion arrows (bottom section) -->
+  <g>
+    <!-- Right fragment moving left toward fracture -->
+    <path d="M 200,172 L 150,172" stroke="#e65100" stroke-width="1.5"/>
+    <polygon points="150,169.5 144,172 150,174.5" fill="#e65100"/>
+    <text x="175" y="180" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="5.5" fill="#e65100">Fragment moves toward fracture</text>
+  </g>
+
+  <!-- Labels -->
+  <style>
+    .label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 7px; fill: #37474f; }
+    .label-line { stroke: #546e7a; stroke-width: 0.5; stroke-dasharray: 1,1; }
+  </style>
+
+  <text x="185" y="108" class="label" font-size="6" fill="#ff6d00">DCP slope</text>
+
+  <text x="8" y="116" class="label" font-size="6">Plate</text>
+  <line x1="22" y1="115" x2="35" y2="115" class="label-line"/>
+
+  <text x="8" y="126" class="label" font-size="6">Near cortex</text>
+  <text x="8" y="160" class="label" font-size="6">Far cortex</text>
+
+  <!-- Principle explanation -->
+  <text x="140" y="194" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="6" fill="#bf360c">Spherical screw head slides on inclined plane, converting axial force to lateral compression</text>
+</svg>

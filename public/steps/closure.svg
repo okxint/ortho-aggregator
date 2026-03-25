@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" fill="none">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="280" y2="200"><stop offset="0%" stop-color="#ECFDF5"/><stop offset="100%" stop-color="#D1FAE5"/></linearGradient>
+  </defs>
+  <rect width="280" height="200" rx="12" fill="url(#bg6)"/>
+  <!-- Skin surface with sutures -->
+  <rect x="40" y="60" width="200" height="70" rx="12" fill="#FDDCB5" stroke="#E8C9A0" stroke-width="1"/>
+  <!-- Suture line -->
+  <line x1="80" y1="60" x2="200" y2="60" stroke="#DC2626" stroke-width="1.5" opacity="0.6"/>
+  <!-- Sutures (interrupted) -->
+  <g stroke="#1E40AF" stroke-width="1.5" fill="none">
+    <path d="M95 52 C95 55 95 65 95 68 M90 60 L100 60"/>
+    <path d="M115 52 C115 55 115 65 115 68 M110 60 L120 60"/>
+    <path d="M135 52 C135 55 135 65 135 68 M130 60 L140 60"/>
+    <path d="M155 52 C155 55 155 65 155 68 M150 60 L160 60"/>
+    <path d="M175 52 C175 55 175 65 175 68 M170 60 L180 60"/>
+  </g>
+  <!-- Knots -->
+  <g fill="#1E40AF">
+    <circle cx="95" cy="52" r="2"/><circle cx="115" cy="52" r="2"/>
+    <circle cx="135" cy="52" r="2"/><circle cx="155" cy="52" r="2"/>
+    <circle cx="175" cy="52" r="2"/>
+  </g>
+  <!-- Drain -->
+  <path d="M190 80 L230 80 L240 85 L240 95 L230 100 L220 100" stroke="#EF4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="220" cy="100" r="3" fill="#FCA5A5"/>
+  <text x="232" y="108" font-family="system-ui,sans-serif" font-size="7" fill="#6B7280">Drain</text>
+  <!-- Sterile dressing -->
+  <rect x="65" y="38" width="150" height="18" rx="4" fill="white" stroke="#D1D5DB" stroke-width="1" opacity="0.8"/>
+  <text x="140" y="50" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#9CA3AF">Sterile Dressing</text>
+  <!-- Irrigation bottle -->
+  <g transform="translate(30, 85)">
+    <rect x="0" y="0" width="16" height="30" rx="4" fill="#BFDBFE" stroke="#60A5FA" stroke-width="1"/>
+    <rect x="4" y="-6" width="8" height="8" rx="2" fill="#93C5FD"/>
+    <text x="8" y="18" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" fill="#1E40AF">NS</text>
+    <!-- Water drops -->
+    <path d="M20 15 Q22 12 24 15 Q22 18 20 15Z" fill="#60A5FA" opacity="0.6"/>
+    <path d="M25 20 Q27 17 29 20 Q27 23 25 20Z" fill="#60A5FA" opacity="0.4"/>
+  </g>
+  <rect x="70" y="160" width="140" height="26" rx="8" fill="white" fill-opacity="0.9"/>
+  <text x="140" y="177" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#047857">Closure &amp; Dressing</text>
+</svg>

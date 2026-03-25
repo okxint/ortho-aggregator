@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f5e9"/>
+      <stop offset="100%" stop-color="#c8e6c9"/>
+    </linearGradient>
+    <linearGradient id="boneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="40%" stop-color="#e8dcc8"/>
+      <stop offset="100%" stop-color="#d4c4a0"/>
+    </linearGradient>
+    <linearGradient id="cortexGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4c4a0"/>
+      <stop offset="100%" stop-color="#bfae8a"/>
+    </linearGradient>
+    <linearGradient id="marrowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffccbc"/>
+      <stop offset="100%" stop-color="#ef9a9a"/>
+    </linearGradient>
+    <linearGradient id="steelGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b0bec5"/>
+      <stop offset="30%" stop-color="#eceff1"/>
+      <stop offset="60%" stop-color="#cfd8dc"/>
+      <stop offset="100%" stop-color="#90a4ae"/>
+    </linearGradient>
+    <linearGradient id="steelGrad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#90a4ae"/>
+      <stop offset="40%" stop-color="#eceff1"/>
+      <stop offset="70%" stop-color="#cfd8dc"/>
+      <stop offset="100%" stop-color="#b0bec5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bgGrad)" rx="4"/>
+
+  <!-- Title -->
+  <text x="140" y="14" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="600" fill="#2e7d32">Step 2: Fracture Reduction</text>
+
+  <!-- Proximal bone fragment (left) - side view -->
+  <g>
+    <!-- Near cortex -->
+    <path d="M 30,70 L 30,140 Q 30,145 35,145 L 35,70 Q 35,65 30,70 Z" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <!-- Medullary canal -->
+    <rect x="35" y="68" width="30" height="77" fill="url(#marrowGrad)" opacity="0.5"/>
+    <!-- Far cortex -->
+    <path d="M 65,70 L 65,140 Q 65,145 70,145 L 70,70 Q 70,65 65,70 Z" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <!-- Outer bone surface -->
+    <rect x="30" y="68" width="40" height="78" rx="2" fill="none" stroke="#a08060" stroke-width="1"/>
+    <!-- Periosteum hint -->
+    <rect x="28" y="70" width="1.5" height="72" rx="0.5" fill="#f0e68c" opacity="0.6"/>
+    <rect x="70.5" y="70" width="1.5" height="72" rx="0.5" fill="#f0e68c" opacity="0.6"/>
+    <!-- Fracture surface (right end - irregular) -->
+    <path d="M 70,68 L 73,75 L 69,82 L 74,90 L 70,98 L 73,105 L 69,112 L 74,120 L 70,128 L 73,135 L 70,145" stroke="#604020" stroke-width="1" fill="none"/>
+    <!-- Haversian canals (cortex detail) -->
+    <circle cx="32" cy="85" r="0.6" fill="#bfae8a"/>
+    <circle cx="33" cy="105" r="0.5" fill="#bfae8a"/>
+    <circle cx="32" cy="125" r="0.6" fill="#bfae8a"/>
+    <circle cx="67" cy="90" r="0.5" fill="#bfae8a"/>
+    <circle cx="68" cy="115" r="0.6" fill="#bfae8a"/>
+  </g>
+
+  <!-- Distal bone fragment (right) - slightly offset showing reduction in progress -->
+  <g>
+    <!-- Near cortex -->
+    <path d="M 82,72 L 82,142 Q 82,147 87,147 L 87,72 Q 87,67 82,72 Z" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <!-- Medullary canal -->
+    <rect x="87" y="70" width="30" height="77" fill="url(#marrowGrad)" opacity="0.5"/>
+    <!-- Far cortex -->
+    <path d="M 117,72 L 117,142 Q 117,147 122,147 L 122,72 Q 122,67 117,72 Z" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <!-- Outer bone surface -->
+    <rect x="82" y="70" width="40" height="77" rx="2" fill="none" stroke="#a08060" stroke-width="1"/>
+    <!-- Periosteum hint -->
+    <rect x="80" y="72" width="1.5" height="72" rx="0.5" fill="#f0e68c" opacity="0.6"/>
+    <rect x="122.5" y="72" width="1.5" height="72" rx="0.5" fill="#f0e68c" opacity="0.6"/>
+    <!-- Fracture surface (left end - matching irregular) -->
+    <path d="M 82,70 L 79,77 L 83,84 L 78,92 L 82,100 L 79,107 L 83,114 L 78,122 L 82,130 L 79,137 L 82,147" stroke="#604020" stroke-width="1" fill="none"/>
+    <!-- Haversian canals -->
+    <circle cx="84" cy="88" r="0.6" fill="#bfae8a"/>
+    <circle cx="85" cy="110" r="0.5" fill="#bfae8a"/>
+    <circle cx="119" cy="95" r="0.5" fill="#bfae8a"/>
+    <circle cx="120" cy="120" r="0.6" fill="#bfae8a"/>
+  </g>
+
+  <!-- Fracture gap (narrowing - showing reduction) -->
+  <path d="M 73,75 L 79,77" stroke="#604020" stroke-width="0.4" stroke-dasharray="1,1" opacity="0.5"/>
+  <path d="M 74,90 L 78,92" stroke="#604020" stroke-width="0.4" stroke-dasharray="1,1" opacity="0.5"/>
+  <path d="M 73,105 L 79,107" stroke="#604020" stroke-width="0.4" stroke-dasharray="1,1" opacity="0.5"/>
+  <path d="M 74,120 L 78,122" stroke="#604020" stroke-width="0.4" stroke-dasharray="1,1" opacity="0.5"/>
+
+  <!-- Pointed Reduction Forceps (Weber clamp) - Top jaw -->
+  <g>
+    <!-- Upper arm -->
+    <path d="M 130,20 L 155,22 Q 160,22 162,26 L 162,35 Q 160,38 155,38 L 148,37" fill="url(#steelGrad)" stroke="#607d8b" stroke-width="0.8"/>
+    <!-- Upper jaw curving down to bone -->
+    <path d="M 148,37 Q 140,42 120,50 L 105,58 Q 95,64 90,68" fill="none" stroke="#90a4ae" stroke-width="3"/>
+    <path d="M 148,37 Q 140,42 120,50 L 105,58 Q 95,64 90,68" fill="none" stroke="url(#steelGrad)" stroke-width="2.5"/>
+    <!-- Pointed tip gripping near cortex -->
+    <path d="M 90,68 L 88,72 L 86,70 L 90,68 Z" fill="#78909c" stroke="#546e7a" stroke-width="0.5"/>
+    <!-- Serrated grip marks -->
+    <line x1="92" y1="67" x2="94" y2="65" stroke="#78909c" stroke-width="0.4"/>
+    <line x1="97" y1="64" x2="99" y2="62" stroke="#78909c" stroke-width="0.4"/>
+    <line x1="103" y1="61" x2="105" y2="59" stroke="#78909c" stroke-width="0.4"/>
+  </g>
+
+  <!-- Pointed Reduction Forceps - Bottom jaw -->
+  <g>
+    <!-- Lower arm -->
+    <path d="M 130,24 L 155,26 Q 160,27 162,30 L 162,35" fill="url(#steelGrad2)" stroke="#607d8b" stroke-width="0.8"/>
+    <!-- Lower jaw curving down to bone -->
+    <path d="M 148,41 Q 145,50 135,65 L 125,80 Q 118,95 112,108 L 108,118 Q 104,130 100,138" fill="none" stroke="#90a4ae" stroke-width="3"/>
+    <path d="M 148,41 Q 145,50 135,65 L 125,80 Q 118,95 112,108 L 108,118 Q 104,130 100,138" fill="none" stroke="url(#steelGrad2)" stroke-width="2.5"/>
+    <!-- Pointed tip gripping far cortex -->
+    <path d="M 100,138 L 98,142 L 96,140 L 100,138 Z" fill="#78909c" stroke="#546e7a" stroke-width="0.5"/>
+  </g>
+
+  <!-- Pivot/hinge of forceps -->
+  <circle cx="155" cy="32" r="3" fill="#b0bec5" stroke="#607d8b" stroke-width="0.8"/>
+  <circle cx="155" cy="32" r="1.2" fill="#78909c"/>
+
+  <!-- Handle rings -->
+  <ellipse cx="130" cy="20" rx="8" ry="5" fill="none" stroke="#90a4ae" stroke-width="2"/>
+  <ellipse cx="130" cy="24" rx="8" ry="5" fill="none" stroke="#90a4ae" stroke-width="2"/>
+
+  <!-- Compression arrows showing fragments moving together -->
+  <!-- Arrow pointing right (proximal moving toward distal) -->
+  <g>
+    <line x1="42" y1="55" x2="62" y2="55" stroke="#2e7d32" stroke-width="1.5"/>
+    <polygon points="62,52 68,55 62,58" fill="#2e7d32"/>
+  </g>
+  <!-- Arrow pointing left (distal moving toward proximal) -->
+  <g>
+    <line x1="110" y1="55" x2="90" y2="55" stroke="#2e7d32" stroke-width="1.5"/>
+    <polygon points="90,52 84,55 90,58" fill="#2e7d32"/>
+  </g>
+
+  <!-- Motion lines showing reduction -->
+  <path d="M 85,155 Q 82,158 78,156" stroke="#66bb6a" stroke-width="0.5" fill="none" opacity="0.6"/>
+  <path d="M 86,160 Q 83,163 79,161" stroke="#66bb6a" stroke-width="0.5" fill="none" opacity="0.6"/>
+
+  <!-- Labels -->
+  <style>
+    .label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 7px; fill: #37474f; }
+    .label-line { stroke: #546e7a; stroke-width: 0.5; stroke-dasharray: 1,1; }
+  </style>
+
+  <text x="30" y="163" class="label">Proximal fragment</text>
+  <text x="82" y="163" class="label">Distal fragment</text>
+
+  <text x="155" y="16" class="label" font-size="6.5">Reduction forceps</text>
+  <line x1="170" y1="18" x2="158" y2="28" class="label-line"/>
+
+  <text x="68" y="52" class="label" font-size="6" fill="#2e7d32">Reduction</text>
+
+  <!-- Fracture line label -->
+  <text x="62" y="178" class="label" font-size="6.5">Fracture line</text>
+  <line x1="76" y1="172" x2="76" y2="150" class="label-line"/>
+
+  <!-- Near/Far cortex labels -->
+  <text x="22" y="190" class="label" font-size="6">Near cortex</text>
+  <text x="55" y="190" class="label" font-size="6">Far cortex</text>
+</svg>

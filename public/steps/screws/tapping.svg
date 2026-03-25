@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="purpleBgSc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a1a5a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6a3a9a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="cortT" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8d4a8"/>
+      <stop offset="100%" style="stop-color:#d4c090"/>
+    </linearGradient>
+    <linearGradient id="steelT2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d0d4d8"/>
+      <stop offset="50%" style="stop-color:#b0b8c8"/>
+      <stop offset="100%" style="stop-color:#d0d4d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#purpleBgSc)"/>
+
+  <!-- Bone cross-section -->
+  <!-- Near cortex -->
+  <rect x="30" y="45" width="220" height="18" rx="1" fill="url(#cortT)" stroke="#c4a870" stroke-width="1.2"/>
+  <!-- Cancellous -->
+  <rect x="30" y="63" width="220" height="74" fill="#f0e4c8" stroke="none"/>
+  <g opacity="0.3">
+    <circle cx="70" cy="85" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="110" cy="95" r="4" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="170" cy="80" r="3.5" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="210" cy="100" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="80" cy="115" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="150" cy="110" r="4" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="220" cy="115" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+  </g>
+  <!-- Far cortex -->
+  <rect x="30" y="137" width="220" height="18" rx="1" fill="url(#cortT)" stroke="#c4a870" stroke-width="1.2"/>
+
+  <!-- Drill hole (pre-existing) -->
+  <rect x="137.5" y="45" width="5" height="110" fill="#3a1a5a" opacity="0.2" stroke="none"/>
+
+  <!-- Tap instrument -->
+  <g id="tap">
+    <!-- Tap shaft -->
+    <line x1="140" y1="8" x2="140" y2="140" stroke="url(#steelT2)" stroke-width="5"/>
+    <line x1="140" y1="8" x2="140" y2="140" stroke="#d0d8e0" stroke-width="2.5"/>
+
+    <!-- Thread-cutting flutes on tap (visible in bone area) -->
+    <!-- Near cortex threads being cut -->
+    <g stroke="#909aa8" stroke-width="0.8" fill="none">
+      <path d="M137,48 L143,52"/>
+      <path d="M137,52 L143,56"/>
+      <path d="M137,56 L143,60"/>
+    </g>
+
+    <!-- Threads cut into cancellous bone -->
+    <g stroke="#909aa8" stroke-width="0.7" fill="none">
+      <path d="M137,65 L143,69"/>
+      <path d="M137,69 L143,73"/>
+      <path d="M137,73 L143,77"/>
+      <path d="M137,77 L143,81"/>
+      <path d="M137,81 L143,85"/>
+      <path d="M137,85 L143,89"/>
+      <path d="M137,89 L143,93"/>
+      <path d="M137,93 L143,97"/>
+      <path d="M137,97 L143,101"/>
+      <path d="M137,101 L143,105"/>
+      <path d="M137,105 L143,109"/>
+      <path d="M137,109 L143,113"/>
+      <path d="M137,113 L143,117"/>
+      <path d="M137,117 L143,121"/>
+      <path d="M137,121 L143,125"/>
+      <path d="M137,125 L143,129"/>
+      <path d="M137,129 L143,133"/>
+    </g>
+
+    <!-- Tap tip (tapered with cutting edges) -->
+    <path d="M137.5,140 L140,148 L142.5,140" fill="#d0d8e0" stroke="#a0a8b0" stroke-width="0.5"/>
+    <!-- Flute grooves at tip -->
+    <line x1="139" y1="140" x2="139" y2="146" stroke="#a0a8b0" stroke-width="0.3"/>
+    <line x1="141" y1="140" x2="141" y2="146" stroke="#a0a8b0" stroke-width="0.3"/>
+
+    <!-- T-handle at top -->
+    <rect x="132" y="5" width="16" height="8" rx="2" fill="#808890" stroke="#606870" stroke-width="0.8"/>
+    <line x1="140" y1="5" x2="140" y2="0" stroke="#707880" stroke-width="2.5"/>
+    <line x1="130" y1="0" x2="150" y2="0" stroke="#707880" stroke-width="2.5"/>
+  </g>
+
+  <!-- Thread impressions left in bone (near cortex) -->
+  <g opacity="0.5">
+    <path d="M134,49 L133,51 L134,53" fill="none" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M134,53 L133,55 L134,57" fill="none" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M134,57 L133,59 L134,61" fill="none" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M146,49 L147,51 L146,53" fill="none" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M146,53 L147,55 L146,57" fill="none" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M146,57 L147,59 L146,61" fill="none" stroke="#c4a870" stroke-width="0.8"/>
+  </g>
+
+  <!-- Thread impressions in cancellous -->
+  <g opacity="0.4">
+    <path d="M134,66 L132,69 L134,72" fill="none" stroke="#c4a870" stroke-width="0.6"/>
+    <path d="M134,72 L132,75 L134,78" fill="none" stroke="#c4a870" stroke-width="0.6"/>
+    <path d="M134,78 L132,81 L134,84" fill="none" stroke="#c4a870" stroke-width="0.6"/>
+    <path d="M134,84 L132,87 L134,90" fill="none" stroke="#c4a870" stroke-width="0.6"/>
+    <path d="M146,66 L148,69 L146,72" fill="none" stroke="#c4a870" stroke-width="0.6"/>
+    <path d="M146,72 L148,75 L146,78" fill="none" stroke="#c4a870" stroke-width="0.6"/>
+    <path d="M146,78 L148,81 L146,84" fill="none" stroke="#c4a870" stroke-width="0.6"/>
+    <path d="M146,84 L148,87 L146,90" fill="none" stroke="#c4a870" stroke-width="0.6"/>
+  </g>
+
+  <!-- Rotation arrow -->
+  <path d="M155,25 Q162,18 162,30" fill="none" stroke="#bb88ee" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="162,30 159,26 165,27" fill="#bb88ee" opacity="0.6"/>
+
+  <!-- Labels -->
+  <text x="255" y="55" fill="#d0c0e0" font-size="7" font-family="Arial">Near</text>
+  <text x="255" y="63" fill="#d0c0e0" font-size="7" font-family="Arial">cortex</text>
+  <text x="255" y="100" fill="#d0c0e0" font-size="7" font-family="Arial">Cancellous</text>
+  <text x="255" y="145" fill="#d0c0e0" font-size="7" font-family="Arial">Far</text>
+  <text x="255" y="153" fill="#d0c0e0" font-size="7" font-family="Arial">cortex</text>
+  <text x="15" y="15" fill="#d0c0e0" font-size="7" font-family="Arial">T-handle</text>
+  <text x="15" y="55" fill="#d0c0e0" font-size="7" font-family="Arial">Threads cut</text>
+  <text x="15" y="63" fill="#d0c0e0" font-size="7" font-family="Arial">into cortex</text>
+  <line x1="52" y1="58" x2="133" y2="55" stroke="#d0c0e0" stroke-width="0.3" opacity="0.5"/>
+  <text x="15" y="100" fill="#d0c0e0" font-size="7" font-family="Arial">Tap with</text>
+  <text x="15" y="108" fill="#d0c0e0" font-size="7" font-family="Arial">cutting flutes</text>
+  <line x1="58" y1="104" x2="136" y2="100" stroke="#d0c0e0" stroke-width="0.3" opacity="0.5"/>
+  <text x="15" y="148" fill="#d0c0e0" font-size="7" font-family="Arial">Tapered tip</text>
+  <line x1="50" y1="146" x2="137" y2="144" stroke="#d0c0e0" stroke-width="0.3" opacity="0.5"/>
+
+  <!-- Detail callout showing thread profile -->
+  <g transform="translate(200,165)">
+    <rect x="-5" y="-5" width="55" height="30" rx="2" fill="rgba(0,0,0,0.3)" stroke="#9078b0" stroke-width="0.5"/>
+    <text x="22" y="5" fill="#d0c0e0" font-size="5.5" font-family="Arial" text-anchor="middle">Thread profile</text>
+    <path d="M5,12 L10,8 L15,12 L20,8 L25,12 L30,8 L35,12 L40,8 L45,12" fill="none" stroke="#d0d4d8" stroke-width="1"/>
+    <path d="M5,18 L10,22 L15,18 L20,22 L25,18 L30,22 L35,18 L40,22 L45,18" fill="none" stroke="#c4a870" stroke-width="1"/>
+  </g>
+
+  <text x="140" y="195" fill="#d0c0e0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Tapping - Cutting Threads in Bone</text>
+</svg>

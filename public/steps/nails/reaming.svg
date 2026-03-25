@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d3f1a"/>
+      <stop offset="100%" stop-color="#1a6d2d"/>
+    </linearGradient>
+    <linearGradient id="bone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8dcc8"/>
+      <stop offset="40%" stop-color="#f5ead6"/>
+      <stop offset="100%" stop-color="#d4c4a8"/>
+    </linearGradient>
+    <linearGradient id="canal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7a1818"/>
+      <stop offset="100%" stop-color="#983030"/>
+    </linearGradient>
+    <linearGradient id="reamer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#909090"/>
+      <stop offset="30%" stop-color="#d0d0d0"/>
+      <stop offset="70%" stop-color="#c0c0c0"/>
+      <stop offset="100%" stop-color="#808080"/>
+    </linearGradient>
+    <linearGradient id="reamerHead" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a0a0a0"/>
+      <stop offset="50%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#888888"/>
+    </linearGradient>
+    <radialGradient id="shaving" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f5ead6"/>
+      <stop offset="100%" stop-color="#c4b496" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="140" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#a0e0a0" letter-spacing="1">CANAL REAMING</text>
+
+  <!-- Femoral shaft cross-section (longitudinal view) -->
+  <!-- Outer cortex - left side -->
+  <path d="M 100,22 C 96,40 92,70 90,100 C 88,130 87,160 86,192 L 86,200" fill="none" stroke="#a09070" stroke-width="1.2"/>
+  <!-- Outer cortex - right side -->
+  <path d="M 168,22 C 172,40 176,70 178,100 C 180,130 181,160 182,192 L 182,200" fill="none" stroke="#a09070" stroke-width="1.2"/>
+
+  <!-- Bone fill - left cortex wall -->
+  <path d="M 100,22 C 96,40 92,70 90,100 C 88,130 87,160 86,200 L 110,200 C 110,160 112,130 114,100 C 116,70 118,40 120,22 Z" fill="url(#bone)" stroke="none"/>
+  <!-- Bone fill - right cortex wall -->
+  <path d="M 148,22 C 150,40 152,70 154,100 C 156,130 157,160 158,200 L 182,200 C 181,160 180,130 178,100 C 176,70 172,40 168,22 Z" fill="url(#bone)" stroke="none"/>
+
+  <!-- Inner cortex lines -->
+  <path d="M 120,22 C 118,40 116,70 114,100 C 112,130 111,160 110,200" stroke="#b5a585" stroke-width="0.6" fill="none"/>
+  <path d="M 148,22 C 150,40 152,70 154,100 C 156,130 157,160 158,200" stroke="#b5a585" stroke-width="0.6" fill="none"/>
+
+  <!-- Medullary canal (dark interior) -->
+  <path d="M 120,22 C 118,40 116,70 114,100 C 112,130 111,160 110,200 L 158,200 C 157,160 156,130 154,100 C 152,70 150,40 148,22 Z" fill="url(#canal)" opacity="0.5"/>
+
+  <!-- Cortical bone texture (Haversian system hints) -->
+  <circle cx="96" cy="60" r="2" fill="none" stroke="#c4b496" stroke-width="0.3"/>
+  <circle cx="94" cy="90" r="1.5" fill="none" stroke="#c4b496" stroke-width="0.3"/>
+  <circle cx="93" cy="120" r="2" fill="none" stroke="#c4b496" stroke-width="0.3"/>
+  <circle cx="170" cy="55" r="1.5" fill="none" stroke="#c4b496" stroke-width="0.3"/>
+  <circle cx="173" cy="85" r="2" fill="none" stroke="#c4b496" stroke-width="0.3"/>
+  <circle cx="175" cy="115" r="1.5" fill="none" stroke="#c4b496" stroke-width="0.3"/>
+  <circle cx="172" cy="145" r="2" fill="none" stroke="#c4b496" stroke-width="0.3"/>
+
+  <!-- Guide wire (through center, thin) -->
+  <line x1="134" y1="0" x2="134" y2="200" stroke="#e0c030" stroke-width="0.7"/>
+
+  <!-- Flexible reamer shaft (over guide wire) -->
+  <path d="M 131,0 L 131,90 L 137,90 L 137,0" fill="url(#reamer)" stroke="#707070" stroke-width="0.3"/>
+  <!-- Shaft flexibility curves -->
+  <path d="M 131,30 C 130.5,40 131.5,50 131,60" stroke="#b0b0b0" stroke-width="0.3" fill="none"/>
+  <path d="M 137,30 C 137.5,40 136.5,50 137,60" stroke="#b0b0b0" stroke-width="0.3" fill="none"/>
+
+  <!-- Reamer head (cutting flutes) -->
+  <ellipse cx="134" cy="95" rx="18" ry="5" fill="url(#reamerHead)" stroke="#707070" stroke-width="0.5"/>
+  <!-- Cutting flutes -->
+  <path d="M 116,95 C 118,88 122,85 126,88 C 128,90 130,92 134,90 C 138,88 140,86 144,88 C 148,90 150,93 152,95" fill="none" stroke="#606060" stroke-width="0.6"/>
+  <path d="M 118,98 C 120,102 124,104 128,102 C 131,100 133,98 134,100 C 136,102 139,104 143,102 C 147,100 149,98 150,97" fill="none" stroke="#606060" stroke-width="0.6"/>
+  <!-- Reamer body cylinder -->
+  <rect x="116" y="90" width="36" height="10" rx="2" fill="url(#reamerHead)" stroke="#707070" stroke-width="0.4" opacity="0.8"/>
+  <!-- Cutting teeth detail -->
+  <path d="M 117,92 L 119,88 L 121,92" stroke="#555" stroke-width="0.4" fill="none"/>
+  <path d="M 123,92 L 125,87 L 127,92" stroke="#555" stroke-width="0.4" fill="none"/>
+  <path d="M 129,92 L 131,88 L 133,92" stroke="#555" stroke-width="0.4" fill="none"/>
+  <path d="M 135,92 L 137,88 L 139,92" stroke="#555" stroke-width="0.4" fill="none"/>
+  <path d="M 141,92 L 143,87 L 145,92" stroke="#555" stroke-width="0.4" fill="none"/>
+  <path d="M 147,92 L 149,88 L 151,92" stroke="#555" stroke-width="0.4" fill="none"/>
+
+  <!-- Bone shavings / debris -->
+  <ellipse cx="120" cy="108" rx="3" ry="1.5" fill="url(#shaving)" opacity="0.8" transform="rotate(-20,120,108)"/>
+  <ellipse cx="145" cy="105" rx="2.5" ry="1" fill="url(#shaving)" opacity="0.7" transform="rotate(15,145,105)"/>
+  <ellipse cx="125" cy="112" rx="2" ry="1" fill="url(#shaving)" opacity="0.6" transform="rotate(-35,125,112)"/>
+  <ellipse cx="140" cy="114" rx="3" ry="1.2" fill="url(#shaving)" opacity="0.7" transform="rotate(25,140,114)"/>
+  <ellipse cx="130" cy="118" rx="2" ry="0.8" fill="url(#shaving)" opacity="0.5" transform="rotate(-10,130,118)"/>
+  <ellipse cx="148" cy="110" rx="1.5" ry="0.7" fill="url(#shaving)" opacity="0.6" transform="rotate(40,148,110)"/>
+  <ellipse cx="118" cy="116" rx="2.5" ry="1" fill="url(#shaving)" opacity="0.5" transform="rotate(-45,118,116)"/>
+  <!-- Smaller particles -->
+  <circle cx="135" cy="106" r="0.8" fill="#e8dcc8" opacity="0.5"/>
+  <circle cx="128" cy="110" r="0.6" fill="#e8dcc8" opacity="0.4"/>
+  <circle cx="142" cy="108" r="0.7" fill="#e8dcc8" opacity="0.5"/>
+  <circle cx="122" cy="104" r="0.5" fill="#e8dcc8" opacity="0.4"/>
+
+  <!-- Reamed canal area (wider above reamer) -->
+  <path d="M 114,100 C 113,110 113,125 114,140 C 114,155 114,170 114,200" stroke="#8a3030" stroke-width="0.4" fill="none" stroke-dasharray="2,2" opacity="0.5"/>
+  <path d="M 154,100 C 155,110 155,125 154,140 C 154,155 154,170 154,200" stroke="#8a3030" stroke-width="0.4" fill="none" stroke-dasharray="2,2" opacity="0.5"/>
+
+  <!-- Direction arrow (reamer advancing) -->
+  <path d="M 134,130 L 134,145" stroke="#a0e0a0" stroke-width="0.8" fill="none"/>
+  <path d="M 130,141 L 134,148 L 138,141" stroke="#a0e0a0" stroke-width="0.8" fill="none"/>
+
+  <!-- Labels -->
+  <!-- Reamer label -->
+  <line x1="152" y1="92" x2="200" y2="70" stroke="#a0e0a0" stroke-width="0.4"/>
+  <text x="202" y="66" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Flexible</text>
+  <text x="202" y="74" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Reamer</text>
+
+  <!-- Guide wire label -->
+  <line x1="134" y1="170" x2="200" y2="170" stroke="#e0c030" stroke-width="0.4"/>
+  <text x="202" y="168" font-family="Arial, sans-serif" font-size="7" fill="#e0c030">Guide</text>
+  <text x="202" y="176" font-family="Arial, sans-serif" font-size="7" fill="#e0c030">Wire</text>
+
+  <!-- Bone shavings label -->
+  <line x1="145" y1="115" x2="200" y2="125" stroke="#a0e0a0" stroke-width="0.4"/>
+  <text x="202" y="122" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Bone</text>
+  <text x="202" y="130" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Shavings</text>
+
+  <!-- Cortex labels -->
+  <text x="18" y="100" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Lateral</text>
+  <text x="18" y="108" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Cortex</text>
+  <line x1="46" y1="104" x2="88" y2="104" stroke="#a0e0a0" stroke-width="0.4"/>
+
+  <text x="202" y="100" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Medial</text>
+  <text x="202" y="108" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Cortex</text>
+  <line x1="200" y1="104" x2="180" y2="104" stroke="#a0e0a0" stroke-width="0.4"/>
+
+  <!-- Canal label -->
+  <text x="18" y="150" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Medullary</text>
+  <text x="18" y="158" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Canal</text>
+  <line x1="52" y1="154" x2="112" y2="145" stroke="#a0e0a0" stroke-width="0.4"/>
+
+  <!-- Cutting flutes label -->
+  <line x1="116" y1="88" x2="50" y2="70" stroke="#a0e0a0" stroke-width="0.4"/>
+  <text x="18" y="68" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Cutting</text>
+  <text x="18" y="76" font-family="Arial, sans-serif" font-size="7" fill="#a0e0a0">Flutes</text>
+
+  <!-- Reaming direction label -->
+  <text x="140" y="143" font-family="Arial, sans-serif" font-size="6" fill="#a0e0a0" opacity="0.7">Advance</text>
+</svg>

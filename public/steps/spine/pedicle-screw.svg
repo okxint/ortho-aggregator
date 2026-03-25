@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="blueBgS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a6a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2a5aa0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneSP" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="steelSP" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c0c8d0"/>
+      <stop offset="100%" style="stop-color:#8898a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#blueBgS)"/>
+
+  <!-- Vertebra from oblique/axial view - showing pedicle anatomy -->
+  <g id="vertAxial" transform="translate(130,110)">
+    <!-- Vertebral body (anterior) -->
+    <ellipse cx="0" cy="35" rx="55" ry="30" fill="url(#boneSP)" stroke="#c4a870" stroke-width="1.2"/>
+    <!-- Cancellous interior of body -->
+    <ellipse cx="0" cy="35" rx="42" ry="22" fill="none" stroke="#d4c4a0" stroke-width="0.5" opacity="0.5"/>
+
+    <!-- Left pedicle -->
+    <path d="M-42,18 L-52,5 Q-58,-2 -60,-8 L-62,-15 Q-63,-20 -58,-25 L-45,-30
+             Q-38,-32 -30,-28 L-20,-22 Q-15,-18 -15,-12 L-18,0 Q-22,8 -30,14 L-42,18Z"
+          fill="url(#boneSP)" stroke="#c4a870" stroke-width="1"/>
+    <!-- Right pedicle -->
+    <path d="M42,18 L52,5 Q58,-2 60,-8 L62,-15 Q63,-20 58,-25 L45,-30
+             Q38,-32 30,-28 L20,-22 Q15,-18 15,-12 L18,0 Q22,8 30,14 L42,18Z"
+          fill="url(#boneSP)" stroke="#c4a870" stroke-width="1"/>
+
+    <!-- Laminae (posterior) -->
+    <path d="M-20,-22 L-15,-30 Q-10,-38 0,-40 Q10,-38 15,-30 L20,-22"
+          fill="url(#boneSP)" stroke="#c4a870" stroke-width="1"/>
+    <!-- Spinous process -->
+    <path d="M-3,-40 L-2,-55 Q0,-60 2,-55 L3,-40" fill="url(#boneSP)" stroke="#c4a870" stroke-width="0.8"/>
+
+    <!-- Spinal canal -->
+    <ellipse cx="0" cy="-15" rx="14" ry="12" fill="#1a3a6a" stroke="#c4a870" stroke-width="0.8" opacity="0.7"/>
+    <!-- Spinal cord/cauda equina -->
+    <ellipse cx="0" cy="-15" rx="6" ry="8" fill="#a0b0c8" stroke="#8090a8" stroke-width="0.5" opacity="0.5"/>
+
+    <!-- Transverse processes -->
+    <path d="M-58,-8 L-78,-12 Q-85,-10 -78,-6 L-58,-2" fill="url(#boneSP)" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M58,-8 L78,-12 Q85,-10 78,-6 L58,-2" fill="url(#boneSP)" stroke="#c4a870" stroke-width="0.8"/>
+
+    <!-- Pedicle screw trajectory (right side) - being inserted -->
+    <!-- Screw path through pedicle -->
+    <line x1="42" y1="-28" x2="8" y2="30" stroke="#ff6644" stroke-width="1" stroke-dasharray="2,2" opacity="0.6"/>
+
+    <!-- Pedicle screw -->
+    <g transform="rotate(-25,42,-28)">
+      <!-- Screw shaft with threads -->
+      <line x1="42" y1="-28" x2="20" y2="-28" stroke="#a0a8b8" stroke-width="4"/>
+      <line x1="42" y1="-28" x2="20" y2="-28" stroke="#c0c8d0" stroke-width="2"/>
+      <!-- Thread lines -->
+      <line x1="38" y1="-31" x2="38" y2="-25" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="35" y1="-31.5" x2="35" y2="-24.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="32" y1="-32" x2="32" y2="-24" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="29" y1="-32" x2="29" y2="-24" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="26" y1="-31.5" x2="26" y2="-24.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="23" y1="-31" x2="23" y2="-25" stroke="#909aa8" stroke-width="0.5"/>
+      <!-- Self-tapping tip -->
+      <path d="M20,-28 L16,-27" fill="none" stroke="#c0c8d0" stroke-width="2"/>
+      <!-- Screw tulip/head -->
+      <path d="M42,-33 L42,-23 L48,-21 L48,-35Z" fill="url(#steelSP)" stroke="#707880" stroke-width="0.8"/>
+    </g>
+
+    <!-- Screwdriver -->
+    <g transform="rotate(-25,42,-28)">
+      <rect x="48" y="-30" width="55" height="4" rx="1" fill="url(#steelSP)" stroke="#707880" stroke-width="0.6"/>
+      <rect x="100" y="-34" width="18" height="12" rx="3" fill="#808890" stroke="#606870" stroke-width="0.6"/>
+      <!-- T-handle -->
+      <line x1="109" y1="-34" x2="109" y2="-42" stroke="#707880" stroke-width="2.5"/>
+      <line x1="102" y1="-42" x2="116" y2="-42" stroke="#707880" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- Pedicle entry point marker on left -->
+  <circle cx="88" cy="82" r="3" fill="none" stroke="#ff8844" stroke-width="1.5"/>
+  <circle cx="88" cy="82" r="0.8" fill="#ff8844"/>
+
+  <!-- Labels -->
+  <text x="10" y="18" fill="#c0d8f0" font-size="7" font-family="Arial">Vertebral body</text>
+  <line x1="55" y1="16" x2="110" y2="135" stroke="#c0d8f0" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="55" fill="#c0d8f0" font-size="7" font-family="Arial">Spinal canal</text>
+  <line x1="50" y1="53" x2="125" y2="92" stroke="#c0d8f0" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="75" fill="#ff8844" font-size="7" font-family="Arial">Pedicle entry</text>
+  <text x="10" y="83" fill="#ff8844" font-size="7" font-family="Arial">point</text>
+  <line x1="52" y1="80" x2="85" y2="82" stroke="#ff8844" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="105" fill="#c0d8f0" font-size="7" font-family="Arial">Pedicle</text>
+  <line x1="38" y1="103" x2="78" y2="100" stroke="#c0d8f0" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="140" fill="#c0d8f0" font-size="7" font-family="Arial">Transverse</text>
+  <text x="10" y="148" fill="#c0d8f0" font-size="7" font-family="Arial">process</text>
+  <line x1="45" y1="144" x2="52" y2="108" stroke="#c0d8f0" stroke-width="0.4" opacity="0.5"/>
+  <text x="200" y="25" fill="#c0d8f0" font-size="7" font-family="Arial">Screwdriver</text>
+  <text x="10" y="30" fill="#c0d8f0" font-size="6.5" font-family="Arial">(axial view)</text>
+  <text x="200" y="35" fill="#ff6644" font-size="6.5" font-family="Arial">Screw trajectory</text>
+
+  <text x="140" y="195" fill="#c0d8f0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Pedicle Screw Insertion - Axial View</text>
+</svg>

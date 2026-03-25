@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="greenBgE" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4a2a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2a7a4a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneEF" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="steelEF" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d0d4d8"/>
+      <stop offset="50%" style="stop-color:#a8b0c0"/>
+      <stop offset="100%" style="stop-color:#d0d4d8"/>
+    </linearGradient>
+    <linearGradient id="carbonRod" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#404850"/>
+      <stop offset="50%" style="stop-color:#303840"/>
+      <stop offset="100%" style="stop-color:#404850"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#greenBgE)"/>
+
+  <!-- Limb outline (tibia/leg) -->
+  <path d="M120,10 Q115,15 112,30 L110,60 L108,90 L107,120 L108,150 L110,175 Q112,185 120,190
+           L160,190 Q168,185 170,175 L172,150 L173,120 L172,90 L170,60 L168,30 Q165,15 160,10Z"
+        fill="#c8a080" stroke="#a08060" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Tibia bone (visible through skin outline) -->
+  <path d="M128,15 L126,45 L125,75 L124,105 L125,135 L126,165 L128,190
+           M152,15 L154,45 L155,75 L156,105 L155,135 L154,165 L152,190"
+        fill="none" stroke="#d4b880" stroke-width="1" opacity="0.4"/>
+
+  <!-- Fracture line in bone -->
+  <path d="M124,100 Q130,95 135,102 Q140,108 145,98 Q150,93 156,100"
+        fill="none" stroke="#ff6644" stroke-width="1.5" stroke-dasharray="2,1" opacity="0.6"/>
+
+  <!-- Schanz pins - proximal group -->
+  <!-- Pin 1 -->
+  <line x1="50" y1="45" x2="155" y2="45" stroke="url(#steelEF)" stroke-width="3"/>
+  <line x1="50" y1="45" x2="155" y2="45" stroke="#c8d0d8" stroke-width="1.5"/>
+  <!-- Pin 2 -->
+  <line x1="50" y1="70" x2="155" y2="70" stroke="url(#steelEF)" stroke-width="3"/>
+  <line x1="50" y1="70" x2="155" y2="70" stroke="#c8d0d8" stroke-width="1.5"/>
+
+  <!-- Schanz pins - distal group -->
+  <!-- Pin 3 -->
+  <line x1="50" y1="130" x2="155" y2="130" stroke="url(#steelEF)" stroke-width="3"/>
+  <line x1="50" y1="130" x2="155" y2="130" stroke="#c8d0d8" stroke-width="1.5"/>
+  <!-- Pin 4 -->
+  <line x1="50" y1="155" x2="155" y2="155" stroke="url(#steelEF)" stroke-width="3"/>
+  <line x1="50" y1="155" x2="155" y2="155" stroke="#c8d0d8" stroke-width="1.5"/>
+
+  <!-- Connecting rod 1 (proximal) -->
+  <rect x="47" y="38" width="8" height="40" rx="3" fill="url(#carbonRod)" stroke="#505860" stroke-width="0.8"/>
+
+  <!-- Connecting rod 2 (distal) -->
+  <rect x="47" y="123" width="8" height="40" rx="3" fill="url(#carbonRod)" stroke="#505860" stroke-width="0.8"/>
+
+  <!-- Main connecting bar between rod groups -->
+  <rect x="38" y="35" width="8" height="132" rx="3" fill="url(#carbonRod)" stroke="#404850" stroke-width="1"/>
+
+  <!-- Pin-to-rod clamps -->
+  <!-- Clamp 1 -->
+  <g transform="translate(46,42)">
+    <rect x="-4" y="-4" width="16" height="8" rx="2" fill="#808890" stroke="#606870" stroke-width="0.6"/>
+    <circle cx="4" cy="0" r="2" fill="#a0a8b0" stroke="#707880" stroke-width="0.4"/>
+    <line x1="4" y1="-2" x2="4" y2="2" stroke="#606870" stroke-width="0.5"/>
+  </g>
+  <!-- Clamp 2 -->
+  <g transform="translate(46,67)">
+    <rect x="-4" y="-4" width="16" height="8" rx="2" fill="#808890" stroke="#606870" stroke-width="0.6"/>
+    <circle cx="4" cy="0" r="2" fill="#a0a8b0" stroke="#707880" stroke-width="0.4"/>
+    <line x1="4" y1="-2" x2="4" y2="2" stroke="#606870" stroke-width="0.5"/>
+  </g>
+  <!-- Clamp 3 -->
+  <g transform="translate(46,127)">
+    <rect x="-4" y="-4" width="16" height="8" rx="2" fill="#808890" stroke="#606870" stroke-width="0.6"/>
+    <circle cx="4" cy="0" r="2" fill="#a0a8b0" stroke="#707880" stroke-width="0.4"/>
+    <line x1="4" y1="-2" x2="4" y2="2" stroke="#606870" stroke-width="0.5"/>
+  </g>
+  <!-- Clamp 4 -->
+  <g transform="translate(46,152)">
+    <rect x="-4" y="-4" width="16" height="8" rx="2" fill="#808890" stroke="#606870" stroke-width="0.6"/>
+    <circle cx="4" cy="0" r="2" fill="#a0a8b0" stroke="#707880" stroke-width="0.4"/>
+    <line x1="4" y1="-2" x2="4" y2="2" stroke="#606870" stroke-width="0.5"/>
+  </g>
+
+  <!-- Rod-to-rod clamps (connecting main bar to pin clusters) -->
+  <g transform="translate(42,55)">
+    <rect x="-6" y="-3" width="12" height="6" rx="1.5" fill="#909aa0" stroke="#707880" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#b0b8c0" stroke="#808890" stroke-width="0.3"/>
+  </g>
+  <g transform="translate(42,140)">
+    <rect x="-6" y="-3" width="12" height="6" rx="1.5" fill="#909aa0" stroke="#707880" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="1.5" fill="#b0b8c0" stroke="#808890" stroke-width="0.3"/>
+  </g>
+
+  <!-- Assembly arrow showing rod being connected -->
+  <path d="M28,90 L28,105 L24,105 L32,115 L40,105 L36,105 L36,90Z" fill="#88ff88" opacity="0.3"/>
+
+  <!-- Labels -->
+  <text x="165" y="42" fill="#c0e8d0" font-size="7" font-family="Arial">Proximal pins</text>
+  <text x="165" y="68" fill="#c0e8d0" font-size="7" font-family="Arial">(in bone)</text>
+  <text x="165" y="130" fill="#c0e8d0" font-size="7" font-family="Arial">Distal pins</text>
+  <text x="165" y="155" fill="#c0e8d0" font-size="7" font-family="Arial">(in bone)</text>
+  <text x="165" y="100" fill="#ff8866" font-size="7" font-family="Arial">Fracture site</text>
+  <line x1="195" y1="102" x2="150" y2="100" stroke="#ff8866" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="18" fill="#c0e8d0" font-size="7" font-family="Arial">Connecting</text>
+  <text x="10" y="26" fill="#c0e8d0" font-size="7" font-family="Arial">bar</text>
+  <line x1="35" y1="22" x2="40" y2="50" stroke="#c0e8d0" stroke-width="0.4" opacity="0.5"/>
+  <text x="165" y="50" fill="#b0b8c0" font-size="6.5" font-family="Arial">Pin-rod clamp</text>
+  <line x1="195" y1="52" x2="58" y2="44" stroke="#b0b8c0" stroke-width="0.3" opacity="0.5"/>
+
+  <text x="140" y="195" fill="#c0e8d0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Unilateral Frame Assembly</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="8" fill="#F5F3FF"/>
+  <!-- Femur outline -->
+  <path d="M160 30 Q140 50 145 80 L145 220 Q140 250 155 270 L245 270 Q260 250 255 220 L255 80 Q260 50 240 30 Z" fill="#FDE8D0" stroke="#D4A574" stroke-width="1" stroke-dasharray="4 2" opacity="0.5"/>
+  <!-- Medullary canal -->
+  <rect x="175" y="50" width="50" height="210" rx="10" fill="#FEF3C7" opacity="0.3"/>
+  <!-- IM Nail -->
+  <rect x="188" y="40" width="24" height="225" rx="4" fill="url(#nailGrad)" stroke="#64748B" stroke-width="1.5"/>
+  <!-- Proximal bend -->
+  <path d="M188 40 Q185 30 178 25 L178 20 Q180 15 185 15 L200 12 L215 15 Q220 15 222 20 L222 25 Q215 30 212 40" fill="url(#nailGrad)" stroke="#64748B" stroke-width="1.5"/>
+  <!-- Locking holes -->
+  <ellipse cx="200" cy="70" rx="12" ry="4" fill="#E2E8F0" stroke="#64748B" stroke-width="1"/>
+  <ellipse cx="200" cy="230" rx="12" ry="4" fill="#E2E8F0" stroke="#64748B" stroke-width="1"/>
+  <ellipse cx="200" cy="248" rx="12" ry="4" fill="#E2E8F0" stroke="#64748B" stroke-width="1"/>
+  <!-- Locking screws (proximal) -->
+  <line x1="155" y1="70" x2="245" y2="70" stroke="#475569" stroke-width="2.5"/>
+  <circle cx="155" cy="70" r="3" fill="#94A3B8" stroke="#64748B" stroke-width="1"/>
+  <circle cx="245" cy="70" r="3" fill="#94A3B8" stroke="#64748B" stroke-width="1"/>
+  <!-- Locking screws (distal) -->
+  <line x1="155" y1="230" x2="245" y2="230" stroke="#475569" stroke-width="2.5"/>
+  <circle cx="155" cy="230" r="3" fill="#94A3B8" stroke="#64748B" stroke-width="1"/>
+  <circle cx="245" cy="230" r="3" fill="#94A3B8" stroke="#64748B" stroke-width="1"/>
+  <line x1="155" y1="248" x2="245" y2="248" stroke="#475569" stroke-width="2.5"/>
+  <circle cx="155" cy="248" r="3" fill="#94A3B8" stroke="#64748B" stroke-width="1"/>
+  <circle cx="245" cy="248" r="3" fill="#94A3B8" stroke="#64748B" stroke-width="1"/>
+  <!-- Labels -->
+  <text x="290" y="73" font-family="system-ui,sans-serif" font-size="9" fill="#6B21A8">Proximal lock</text>
+  <text x="290" y="233" font-family="system-ui,sans-serif" font-size="9" fill="#6B21A8">Distal locks</text>
+  <text x="200" y="290" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#475569">Interlocking Intramedullary Nail</text>
+  <defs>
+    <linearGradient id="nailGrad" x1="188" y1="0" x2="212" y2="0"><stop offset="0%" stop-color="#B0BEC5"/><stop offset="50%" stop-color="#E0E0E0"/><stop offset="100%" stop-color="#90A4AE"/></linearGradient>
+  </defs>
+</svg>

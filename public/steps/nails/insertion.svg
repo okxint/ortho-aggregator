@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1f3f"/>
+      <stop offset="100%" stop-color="#1a3a6d"/>
+    </linearGradient>
+    <linearGradient id="bone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8dcc8"/>
+      <stop offset="40%" stop-color="#f5ead6"/>
+      <stop offset="100%" stop-color="#d4c4a8"/>
+    </linearGradient>
+    <linearGradient id="canal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7a1818"/>
+      <stop offset="100%" stop-color="#983030"/>
+    </linearGradient>
+    <linearGradient id="nail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6080b0"/>
+      <stop offset="25%" stop-color="#90b0d8"/>
+      <stop offset="50%" stop-color="#a0c0e0"/>
+      <stop offset="75%" stop-color="#8098c0"/>
+      <stop offset="100%" stop-color="#5070a0"/>
+    </linearGradient>
+    <linearGradient id="jig" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#707070"/>
+      <stop offset="40%" stop-color="#b0b0b0"/>
+      <stop offset="100%" stop-color="#606060"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#404040"/>
+      <stop offset="50%" stop-color="#666666"/>
+      <stop offset="100%" stop-color="#383838"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="140" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#a0c0e0" letter-spacing="1">NAIL INSERTION</text>
+
+  <!-- Proximal femur anatomy -->
+  <!-- Greater trochanter -->
+  <path d="M 95,38 C 82,40 72,50 68,62 C 65,72 67,80 72,86 C 76,90 82,92 88,91" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+  <!-- Femoral head -->
+  <ellipse cx="118" cy="50" rx="18" ry="17" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+  <!-- Neck -->
+  <path d="M 100,58 C 98,64 96,72 94,80 L 88,91 C 92,94 98,95 104,93 C 101,80 102,68 104,60 Z" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+
+  <!-- Femoral shaft -->
+  <path d="M 80,86 C 78,100 76,120 75,145 C 74,165 73,180 73,200 L 115,200 C 115,180 114,165 113,145 C 112,120 110,100 108,86 Z" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+
+  <!-- Inner cortex lines -->
+  <path d="M 86,90 C 85,105 84,120 83,145 C 82,165 82,180 82,200" stroke="#b5a585" stroke-width="0.5" fill="none"/>
+  <path d="M 102,90 C 103,105 104,120 105,145 C 106,165 106,180 106,200" stroke="#b5a585" stroke-width="0.5" fill="none"/>
+
+  <!-- Medullary canal -->
+  <path d="M 86,90 C 85,105 84,120 83,145 C 82,165 82,180 82,200 L 106,200 C 106,180 106,165 105,145 C 104,120 103,105 102,90 Z" fill="url(#canal)" opacity="0.4"/>
+
+  <!-- IM Nail (titanium, inside canal) -->
+  <!-- Nail body -->
+  <path d="M 89,50 C 88,65 88,85 87,105 C 86,125 86,145 86,165 L 86,200 L 102,200 L 102,165 C 102,145 102,125 101,105 C 100,85 100,65 99,50 Z" fill="url(#nail)" stroke="#4060a0" stroke-width="0.5" opacity="0.9"/>
+
+  <!-- Proximal locking holes -->
+  <ellipse cx="94" cy="72" rx="5" ry="2" fill="#3a5580" stroke="#2a4570" stroke-width="0.4"/>
+  <ellipse cx="94" cy="82" rx="5" ry="2" fill="#3a5580" stroke="#2a4570" stroke-width="0.4"/>
+
+  <!-- Distal locking holes -->
+  <ellipse cx="94" cy="168" rx="5" ry="2" fill="#3a5580" stroke="#2a4570" stroke-width="0.4"/>
+  <ellipse cx="94" cy="178" rx="5" ry="2" fill="#3a5580" stroke="#2a4570" stroke-width="0.4"/>
+
+  <!-- Nail tip (distal, slightly rounded) -->
+  <path d="M 86,195 C 87,198 90,200 94,200 C 98,200 101,198 102,195" fill="url(#nail)" stroke="#4060a0" stroke-width="0.3"/>
+
+  <!-- Insertion jig/handle assembly -->
+  <!-- Jig body attached to nail proximal end -->
+  <rect x="86" y="38" width="16" height="14" rx="1" fill="url(#jig)" stroke="#555" stroke-width="0.5"/>
+  <!-- Connecting bolt through jig to nail -->
+  <circle cx="94" cy="42" r="2" fill="#888" stroke="#555" stroke-width="0.3"/>
+  <circle cx="94" cy="48" r="2" fill="#888" stroke="#555" stroke-width="0.3"/>
+
+  <!-- Targeting arm (extends laterally from jig) -->
+  <rect x="102" y="40" width="50" height="6" rx="2" fill="url(#jig)" stroke="#555" stroke-width="0.4"/>
+  <!-- Targeting holes in arm -->
+  <circle cx="120" cy="43" r="2.5" fill="#505050" stroke="#404040" stroke-width="0.3"/>
+  <circle cx="135" cy="43" r="2.5" fill="#505050" stroke="#404040" stroke-width="0.3"/>
+  <circle cx="148" cy="43" r="2.5" fill="#505050" stroke="#404040" stroke-width="0.3"/>
+
+  <!-- Handle (T-shape on top) -->
+  <rect x="88" y="24" width="12" height="16" rx="2" fill="url(#handle)" stroke="#333" stroke-width="0.5"/>
+  <!-- T-bar -->
+  <rect x="78" y="22" width="32" height="6" rx="3" fill="url(#handle)" stroke="#333" stroke-width="0.5"/>
+  <!-- Grip texture -->
+  <line x1="80" y1="24" x2="80" y2="27" stroke="#555" stroke-width="0.3"/>
+  <line x1="83" y1="24" x2="83" y2="27" stroke="#555" stroke-width="0.3"/>
+  <line x1="86" y1="24" x2="86" y2="27" stroke="#555" stroke-width="0.3"/>
+  <line x1="102" y1="24" x2="102" y2="27" stroke="#555" stroke-width="0.3"/>
+  <line x1="105" y1="24" x2="105" y2="27" stroke="#555" stroke-width="0.3"/>
+  <line x1="108" y1="24" x2="108" y2="27" stroke="#555" stroke-width="0.3"/>
+
+  <!-- Insertion direction arrow -->
+  <path d="M 60,55 L 60,75" stroke="#a0c0e0" stroke-width="0.8"/>
+  <path d="M 57,71 L 60,78 L 63,71" stroke="#a0c0e0" stroke-width="0.8" fill="none"/>
+
+  <!-- Labels -->
+  <!-- Insertion Handle -->
+  <line x1="78" y1="25" x2="40" y2="25" stroke="#a0c0e0" stroke-width="0.4"/>
+  <text x="6" y="23" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Insertion</text>
+  <text x="6" y="31" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Handle</text>
+
+  <!-- Targeting Jig -->
+  <line x1="148" y1="46" x2="190" y2="55" stroke="#a0c0e0" stroke-width="0.4"/>
+  <text x="192" y="52" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Targeting</text>
+  <text x="192" y="60" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Jig Arm</text>
+
+  <!-- Proximal Locking Holes -->
+  <line x1="100" y1="77" x2="200" y2="80" stroke="#a0c0e0" stroke-width="0.4"/>
+  <text x="202" y="77" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Proximal</text>
+  <text x="202" y="85" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Locking Holes</text>
+
+  <!-- IM Nail -->
+  <line x1="102" y1="130" x2="200" y2="130" stroke="#90b0d8" stroke-width="0.4"/>
+  <text x="202" y="128" font-family="Arial, sans-serif" font-size="7" fill="#90b0d8">IM Nail</text>
+  <text x="202" y="136" font-family="Arial, sans-serif" font-size="7" fill="#90b0d8">(Titanium)</text>
+
+  <!-- Distal Locking Holes -->
+  <line x1="100" y1="173" x2="200" y2="173" stroke="#a0c0e0" stroke-width="0.4"/>
+  <text x="202" y="170" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Distal</text>
+  <text x="202" y="178" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Locking Holes</text>
+
+  <!-- Entry Point -->
+  <line x1="94" y1="52" x2="40" y2="58" stroke="#ff8080" stroke-width="0.4"/>
+  <text x="6" y="56" font-family="Arial, sans-serif" font-size="7" fill="#ff8080">Entry</text>
+  <text x="6" y="64" font-family="Arial, sans-serif" font-size="7" fill="#ff8080">Point</text>
+
+  <!-- Greater Trochanter -->
+  <line x1="70" y1="55" x2="40" y2="78" stroke="#a0c0e0" stroke-width="0.4"/>
+  <text x="6" y="76" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Greater</text>
+  <text x="6" y="84" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0">Trochanter</text>
+
+  <!-- Direction label -->
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="6" fill="#a0c0e0" opacity="0.7">Insert</text>
+
+  <!-- Femoral shaft label -->
+  <text x="6" y="150" font-family="Arial, sans-serif" font-size="7" fill="#a0c0e0" transform="rotate(-90,12,150)">Femoral Shaft</text>
+</svg>

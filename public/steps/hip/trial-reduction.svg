@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bgOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f2a0a"/>
+      <stop offset="100%" stop-color="#7a4a1a"/>
+    </linearGradient>
+    <linearGradient id="boneT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e6c8"/>
+      <stop offset="100%" stop-color="#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="metalT" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#707888"/>
+      <stop offset="20%" stop-color="#b0b8c8"/>
+      <stop offset="50%" stop-color="#d0d8e8"/>
+      <stop offset="80%" stop-color="#b0b8c8"/>
+      <stop offset="100%" stop-color="#707888"/>
+    </linearGradient>
+    <linearGradient id="trialHead" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d8d0c8"/>
+      <stop offset="50%" stop-color="#f0e8e0"/>
+      <stop offset="100%" stop-color="#c0b8b0"/>
+    </linearGradient>
+    <linearGradient id="cupT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8d0d8"/>
+      <stop offset="50%" stop-color="#e0e8f0"/>
+      <stop offset="100%" stop-color="#a0a8b8"/>
+    </linearGradient>
+    <linearGradient id="linerPoly" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8e8e8"/>
+      <stop offset="100%" stop-color="#d0d0d0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bgOrange)" rx="4"/>
+
+  <!-- Title -->
+  <text x="140" y="16" text-anchor="middle" fill="#ffc080" font-family="Arial, sans-serif" font-size="9" font-weight="bold">TRIAL REDUCTION</text>
+
+  <!-- Pelvis -->
+  <path d="M 10,28 Q 30,20 65,22 Q 90,25 108,35 Q 120,45 124,58 Q 128,72 124,88 Q 118,100 110,108 Q 96,116 78,116 Q 60,114 48,104 Q 35,90 26,72 Q 18,55 12,40 Z" fill="url(#boneT)" stroke="#b89a6a" stroke-width="0.8"/>
+
+  <!-- Iliac crest -->
+  <path d="M 12,29 Q 32,21 65,23 Q 88,26 106,34" fill="none" stroke="#d4b88a" stroke-width="1.2"/>
+
+  <!-- Acetabular cup (implanted) -->
+  <g transform="rotate(-43, 100, 82)">
+    <path d="M 76,68 A 25,25 0 0,1 124,68 Q 122,80 116,90 Q 108,98 100,100 Q 92,98 84,90 Q 78,80 76,68 Z" fill="url(#cupT)" stroke="#808890" stroke-width="0.6"/>
+    <!-- Polyethylene liner -->
+    <path d="M 80,70 A 21,21 0 0,1 120,70 Q 118,80 113,88 Q 107,94 100,96 Q 93,94 87,88 Q 82,80 80,70 Z" fill="url(#linerPoly)" stroke="#b0b0b0" stroke-width="0.4"/>
+  </g>
+
+  <!-- Ischium -->
+  <path d="M 78,116 Q 85,126 86,140 Q 85,152 78,158 Q 68,160 60,152 Q 55,142 55,130 Q 58,118 62,114" fill="url(#boneT)" stroke="#b89a6a" stroke-width="0.6"/>
+
+  <!-- Trial femoral head (being reduced into cup) -->
+  <circle cx="97" cy="78" r="13" fill="url(#trialHead)" stroke="#a0a0a0" stroke-width="0.6"/>
+  <!-- Head highlight -->
+  <circle cx="93" cy="74" r="3" fill="#f8f0e8" opacity="0.4"/>
+  <!-- "TRIAL" label on head -->
+  <text x="97" y="80" text-anchor="middle" fill="#808080" font-family="Arial, sans-serif" font-size="4" font-weight="bold">TRIAL</text>
+
+  <!-- Reduction arrow (head going into cup) -->
+  <path d="M 110,65 Q 105,70 100,73" fill="none" stroke="#ffdd80" stroke-width="1" marker-end="url(#arrowRed)"/>
+  <defs>
+    <marker id="arrowRed" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+      <path d="M 0,0 L 4,2 L 0,4 Z" fill="#ffdd80"/>
+    </marker>
+  </defs>
+
+  <!-- Trial femoral stem in femur -->
+  <!-- Proximal femur -->
+  <path d="M 80,95 Q 74,100 68,110 Q 62,125 58,145 Q 55,165 53,190 Q 53,195 53,200" fill="url(#boneT)" stroke="#b89a6a" stroke-width="0.7"/>
+  <path d="M 120,95 Q 128,100 134,110 Q 140,125 143,145 Q 145,165 147,190 Q 147,195 147,200" fill="url(#boneT)" stroke="#b89a6a" stroke-width="0.7"/>
+
+  <!-- Greater trochanter -->
+  <path d="M 120,95 Q 132,85 137,78 Q 140,74 138,80 Q 136,88 134,95" fill="url(#boneT)" stroke="#b89a6a" stroke-width="0.7"/>
+
+  <!-- Stem inside femur -->
+  <path d="M 88,92 L 84,98 Q 80,115 78,135 Q 76,150 76,170 L 78,174 Q 82,176 88,177 Q 94,176 98,174 L 100,170 Q 100,150 98,135 Q 96,115 92,98 Z" fill="url(#metalT)" stroke="#606870" stroke-width="0.5" opacity="0.6"/>
+  <path d="M 112,92 L 116,98 Q 118,115 120,135 Q 121,150 121,170 L 119,174 Q 115,176 109,177 Q 103,176 100,174" fill="url(#metalT)" stroke="#606870" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Stem neck -->
+  <path d="M 90,92 Q 88,86 84,82 Q 80,78 78,76 L 82,74 Q 86,78 90,84 Q 92,88 93,92" fill="url(#metalT)" stroke="#606870" stroke-width="0.4"/>
+
+  <!-- Morse taper connection -->
+  <circle cx="80" cy="76" r="2" fill="#b0b8c8" stroke="#808898" stroke-width="0.4"/>
+
+  <!-- Neck to head connection -->
+  <line x1="80" y1="76" x2="90" y2="78" stroke="#a0a8b8" stroke-width="3"/>
+
+  <!-- LEG LENGTH measurement -->
+  <!-- Reference line at pelvis -->
+  <line x1="155" y1="35" x2="175" y2="35" stroke="#ff9060" stroke-width="0.5" stroke-dasharray="2,1"/>
+  <!-- Reference line at lesser trochanter equivalent -->
+  <line x1="155" y1="115" x2="175" y2="115" stroke="#ff9060" stroke-width="0.5" stroke-dasharray="2,1"/>
+  <!-- Vertical measurement line -->
+  <line x1="165" y1="38" x2="165" y2="112" stroke="#ff9060" stroke-width="0.8"/>
+  <!-- Arrows -->
+  <path d="M 163,40 L 165,35 L 167,40" fill="none" stroke="#ff9060" stroke-width="0.6"/>
+  <path d="M 163,110 L 165,115 L 167,110" fill="none" stroke="#ff9060" stroke-width="0.6"/>
+  <!-- Label -->
+  <text x="173" y="72" fill="#ff9060" font-family="Arial, sans-serif" font-size="7" font-weight="bold">leg</text>
+  <text x="173" y="80" fill="#ff9060" font-family="Arial, sans-serif" font-size="7" font-weight="bold">length</text>
+
+  <!-- OFFSET measurement -->
+  <!-- Center of femoral head -->
+  <circle cx="97" cy="78" r="1" fill="#60c0ff"/>
+  <!-- Center of femoral canal axis -->
+  <line x1="100" y1="92" x2="100" y2="180" stroke="#60c0ff" stroke-width="0.3" stroke-dasharray="2,2" opacity="0.4"/>
+  <!-- Horizontal offset line -->
+  <line x1="97" y1="78" x2="100" y2="78" stroke="#60c0ff" stroke-width="0.3" opacity="0.4"/>
+
+  <!-- Offset measurement (horizontal from canal axis to head center) -->
+  <line x1="30" y1="78" x2="10" y2="78" stroke="#60c0ff" stroke-width="0.5" stroke-dasharray="2,1"/>
+  <line x1="30" y1="130" x2="10" y2="130" stroke="#60c0ff" stroke-width="0.5" stroke-dasharray="2,1"/>
+  <!-- Vertical canal axis reference -->
+  <line x1="20" y1="81" x2="20" y2="127" stroke="#60c0ff" stroke-width="0.8"/>
+  <path d="M 18,83 L 20,78 L 22,83" fill="none" stroke="#60c0ff" stroke-width="0.6"/>
+  <path d="M 18,125 L 20,130 L 22,125" fill="none" stroke="#60c0ff" stroke-width="0.6"/>
+  <text x="8" y="103" fill="#60c0ff" font-family="Arial, sans-serif" font-size="7" font-weight="bold" transform="rotate(-90, 8, 103)">offset</text>
+
+  <!-- Range of motion testing arrows -->
+  <g transform="translate(200, 100)">
+    <rect x="-5" y="-5" width="75" height="95" rx="3" fill="#4f2a0a" stroke="#8a5a2a" stroke-width="0.5" opacity="0.8"/>
+    <text x="32" y="8" text-anchor="middle" fill="#ffc080" font-family="Arial, sans-serif" font-size="6" font-weight="bold">ROM Testing</text>
+
+    <!-- Flexion -->
+    <path d="M 15,25 A 12,12 0 0,1 15,45" fill="none" stroke="#ffdd80" stroke-width="0.7" marker-end="url(#arrowROM)"/>
+    <text x="28" y="37" fill="#e0b060" font-family="Arial, sans-serif" font-size="5">flexion 90°+</text>
+
+    <!-- Internal rotation -->
+    <path d="M 20,52 A 8,8 0 0,1 32,52" fill="none" stroke="#80d0ff" stroke-width="0.7" marker-end="url(#arrowROM2)"/>
+    <text x="38" y="55" fill="#80b0d0" font-family="Arial, sans-serif" font-size="5">IR 30°+</text>
+
+    <!-- Extension -->
+    <path d="M 15,65 A 12,12 0 0,0 15,78" fill="none" stroke="#90e090" stroke-width="0.7" marker-end="url(#arrowROM3)"/>
+    <text x="28" y="74" fill="#80c080" font-family="Arial, sans-serif" font-size="5">ext 15°+</text>
+
+    <text x="32" y="88" text-anchor="middle" fill="#c09060" font-family="Arial, sans-serif" font-size="5">check stability</text>
+  </g>
+
+  <defs>
+    <marker id="arrowROM" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+      <path d="M 0,0 L 3,1.5 L 0,3 Z" fill="#ffdd80"/>
+    </marker>
+    <marker id="arrowROM2" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+      <path d="M 0,0 L 3,1.5 L 0,3 Z" fill="#80d0ff"/>
+    </marker>
+    <marker id="arrowROM3" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+      <path d="M 0,0 L 3,1.5 L 0,3 Z" fill="#90e090"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <text x="97" y="62" text-anchor="middle" fill="#ffc080" font-family="Arial, sans-serif" font-size="5.5">trial head</text>
+  <text x="140" y="78" fill="#ffc080" font-family="Arial, sans-serif" font-size="5.5">acetabular cup</text>
+  <line x1="115" y1="76" x2="138" y2="76" stroke="#ffc080" stroke-width="0.3"/>
+
+  <text x="55" y="25" fill="#ffc080" font-family="Arial, sans-serif" font-size="5.5">ilium</text>
+
+  <!-- Orientation -->
+  <text x="10" y="195" fill="#a08040" font-family="Arial, sans-serif" font-size="6">AP View</text>
+</svg>

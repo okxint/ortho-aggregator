@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="blueBgE" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a6a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2a5aa0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneE" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0b898"/>
+      <stop offset="100%" style="stop-color:#c8a080"/>
+    </linearGradient>
+    <linearGradient id="steelE" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d0d4d8"/>
+      <stop offset="50%" style="stop-color:#b0b8c8"/>
+      <stop offset="100%" style="stop-color:#d0d4d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#blueBgE)"/>
+
+  <!-- Cross-section of limb -->
+  <!-- Skin outline -->
+  <ellipse cx="140" cy="100" rx="95" ry="75" fill="url(#skin)" stroke="#a08868" stroke-width="1.2" opacity="0.3"/>
+
+  <!-- Soft tissue layers -->
+  <ellipse cx="140" cy="100" rx="80" ry="60" fill="#c09070" stroke="#a07858" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Bone cross-section (tibia) -->
+  <!-- Near cortex -->
+  <path d="M100,55 L100,145 Q100,150 105,152 L175,152 Q180,150 180,145 L180,55 Q180,50 175,48 L105,48 Q100,50 100,55Z"
+        fill="url(#boneE)" stroke="#c4a870" stroke-width="1.2"/>
+  <!-- Medullary canal -->
+  <path d="M115,58 L115,142 Q115,145 120,146 L160,146 Q165,145 165,142 L165,58 Q165,55 160,53 L120,53 Q115,55 115,58Z"
+        fill="#e8dcc0" stroke="#d4c4a0" stroke-width="0.5" opacity="0.6"/>
+  <!-- Cortical bone emphasis -->
+  <rect x="100" y="48" width="15" height="104" fill="url(#boneE)" stroke="none" opacity="0.3"/>
+  <rect x="165" y="48" width="15" height="104" fill="url(#boneE)" stroke="none" opacity="0.3"/>
+
+  <!-- Stab incision through skin -->
+  <path d="M35,95 Q38,92 40,95 L40,105 Q38,108 35,105Z" fill="#cc3333" stroke="#aa2222" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Schanz pin being drilled through -->
+  <g id="schanzPin">
+    <!-- Pin shaft -->
+    <line x1="20" y1="100" x2="195" y2="100" stroke="url(#steelE)" stroke-width="5"/>
+    <line x1="20" y1="100" x2="195" y2="100" stroke="#c0c8d0" stroke-width="3"/>
+    <!-- Thread section (in bone) -->
+    <g opacity="0.8">
+      <line x1="100" y1="97" x2="100" y2="103" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="105" y1="96.5" x2="105" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="110" y1="96.5" x2="110" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="115" y1="97" x2="115" y2="103" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="120" y1="96.5" x2="120" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="125" y1="96.5" x2="125" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="130" y1="97" x2="130" y2="103" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="135" y1="96.5" x2="135" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="140" y1="96.5" x2="140" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="145" y1="97" x2="145" y2="103" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="150" y1="96.5" x2="150" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="155" y1="96.5" x2="155" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="160" y1="97" x2="160" y2="103" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="165" y1="96.5" x2="165" y2="103.5" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="170" y1="97" x2="170" y2="103" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="175" y1="97" x2="175" y2="103" stroke="#909aa8" stroke-width="0.5"/>
+      <line x1="180" y1="97.5" x2="180" y2="102.5" stroke="#909aa8" stroke-width="0.5"/>
+    </g>
+    <!-- Self-drilling tip -->
+    <path d="M195,100 L205,99 L200,97" fill="none" stroke="#d0d4d8" stroke-width="1.5"/>
+    <path d="M195,100 L205,101 L200,103" fill="none" stroke="#b0b8c0" stroke-width="1"/>
+    <!-- Point -->
+    <path d="M195,98.5 L203,100 L195,101.5" fill="#d0d4d8" stroke="#a0a8b0" stroke-width="0.3"/>
+  </g>
+
+  <!-- Drill/driver on pin (left side, outside skin) -->
+  <g id="driver" transform="translate(15,100)">
+    <!-- Chuck -->
+    <path d="M-5,-5 L-10,-8 L-10,8 L-5,5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+    <!-- T-handle driver -->
+    <rect x="-30" y="-4" width="22" height="8" rx="2" fill="#707880" stroke="#505860" stroke-width="0.6"/>
+    <line x1="-30" y1="0" x2="-38" y2="0" stroke="#606870" stroke-width="3"/>
+    <line x1="-38" y1="-8" x2="-38" y2="8" stroke="#606870" stroke-width="2.5"/>
+  </g>
+
+  <!-- Rotation arrow -->
+  <path d="M8,82 Q18,75 25,82" fill="none" stroke="#88aaff" stroke-width="1" opacity="0.6"/>
+  <path d="M25,82 L23,78 M25,82 L22,85" fill="none" stroke="#88aaff" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Cortex labels -->
+  <text x="80" y="42" fill="#c0d8f0" font-size="7" font-family="Arial">Near cortex</text>
+  <line x1="100" y1="48" x2="100" y2="44" stroke="#c0d8f0" stroke-width="0.4" opacity="0.6"/>
+  <text x="170" y="42" fill="#c0d8f0" font-size="7" font-family="Arial">Far cortex</text>
+  <line x1="180" y1="48" x2="183" y2="44" stroke="#c0d8f0" stroke-width="0.4" opacity="0.6"/>
+  <text x="115" y="165" fill="#c0d8f0" font-size="7" font-family="Arial">Tibia (cross-section)</text>
+  <text x="25" y="130" fill="#cc6666" font-size="6.5" font-family="Arial">Stab incision</text>
+  <line x1="50" y1="128" x2="38" y2="108" stroke="#cc6666" stroke-width="0.3" opacity="0.5"/>
+  <text x="120" y="80" fill="#c0d8f0" font-size="6.5" font-family="Arial">Threaded shaft</text>
+  <text x="195" y="88" fill="#c0d8f0" font-size="6.5" font-family="Arial">Self-drilling</text>
+  <text x="195" y="96" fill="#c0d8f0" font-size="6.5" font-family="Arial">tip</text>
+  <text x="10" y="20" fill="#c0d8f0" font-size="7" font-family="Arial">T-handle</text>
+
+  <text x="140" y="195" fill="#c0d8f0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Schanz Pin Insertion</text>
+</svg>

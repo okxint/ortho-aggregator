@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="purpleBgE" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a1a5a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6a3a9a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneER" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="steelER" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d0d4d8"/>
+      <stop offset="50%" style="stop-color:#a8b0c0"/>
+      <stop offset="100%" style="stop-color:#d0d4d8"/>
+    </linearGradient>
+    <linearGradient id="carbonR" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#404850"/>
+      <stop offset="50%" style="stop-color:#303840"/>
+      <stop offset="100%" style="stop-color:#404850"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#purpleBgE)"/>
+
+  <!-- Bone with fracture being reduced -->
+  <!-- Proximal fragment -->
+  <path d="M148,10 L146,30 L145,50 L144,70 L142,85 Q138,92 145,95 Q150,90 155,92 L158,85 L156,70 L155,50 L154,30 L152,10Z"
+        fill="url(#boneER)" stroke="#c4a870" stroke-width="1"/>
+  <!-- Distal fragment (slightly displaced, being reduced) -->
+  <path d="M143,98 Q138,100 140,105 Q148,108 152,102 Q156,100 155,95
+           L156,105 L157,120 L158,145 L158,165 L156,185 L154,195
+           L148,195 L146,185 L144,165 L144,145 L145,120 L146,105Z"
+        fill="url(#boneER)" stroke="#c4a870" stroke-width="1"/>
+
+  <!-- Fracture line -->
+  <path d="M142,88 Q145,95 148,90 Q150,96 155,92"
+        fill="none" stroke="#ff4444" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Reduction arrows showing fragments coming together -->
+  <path d="M132,82 L138,88" fill="none" stroke="#88ff88" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <path d="M168,105 L160,99" fill="none" stroke="#88ff88" stroke-width="1.5"/>
+  <!-- Arrow heads -->
+  <polygon points="139,87 136,85 137,90" fill="#88ff88" opacity="0.7"/>
+  <polygon points="161,100 164,102 162,97" fill="#88ff88" opacity="0.7"/>
+
+  <!-- External fixator frame -->
+  <!-- Proximal pins -->
+  <line x1="60" y1="40" x2="155" y2="40" stroke="url(#steelER)" stroke-width="3"/>
+  <line x1="60" y1="40" x2="155" y2="40" stroke="#c8d0d8" stroke-width="1.5"/>
+  <line x1="60" y1="65" x2="155" y2="65" stroke="url(#steelER)" stroke-width="3"/>
+  <line x1="60" y1="65" x2="155" y2="65" stroke="#c8d0d8" stroke-width="1.5"/>
+
+  <!-- Distal pins -->
+  <line x1="60" y1="130" x2="158" y2="130" stroke="url(#steelER)" stroke-width="3"/>
+  <line x1="60" y1="130" x2="158" y2="130" stroke="#c8d0d8" stroke-width="1.5"/>
+  <line x1="60" y1="155" x2="158" y2="155" stroke="url(#steelER)" stroke-width="3"/>
+  <line x1="60" y1="155" x2="158" y2="155" stroke="#c8d0d8" stroke-width="1.5"/>
+
+  <!-- Proximal pin cluster rod -->
+  <rect x="56" y="33" width="8" height="40" rx="3" fill="url(#carbonR)" stroke="#505860" stroke-width="0.8"/>
+  <!-- Distal pin cluster rod -->
+  <rect x="56" y="123" width="8" height="40" rx="3" fill="url(#carbonR)" stroke="#505860" stroke-width="0.8"/>
+
+  <!-- Main connecting bar with adjustment mechanism -->
+  <rect x="46" y="30" width="8" height="138" rx="3" fill="url(#carbonR)" stroke="#404850" stroke-width="1"/>
+
+  <!-- Adjustment knob/clamp at junction (this is the key reduction mechanism) -->
+  <g id="adjustKnob" transform="translate(50,90)">
+    <rect x="-10" y="-10" width="20" height="20" rx="3" fill="#808890" stroke="#606870" stroke-width="1"/>
+    <!-- Hex bolt -->
+    <circle cx="0" cy="0" r="6" fill="#909aa0" stroke="#707880" stroke-width="0.8"/>
+    <path d="M-3,-5 L3,-5 L6,0 L3,5 L-3,5 L-6,0Z" fill="#a0a8b0" stroke="#808890" stroke-width="0.5"/>
+    <!-- Adjustment lines -->
+    <line x1="-3" y1="0" x2="3" y2="0" stroke="#606870" stroke-width="0.5"/>
+    <line x1="0" y1="-3" x2="0" y2="3" stroke="#606870" stroke-width="0.5"/>
+  </g>
+
+  <!-- Wrench on adjustment knob -->
+  <g transform="translate(25,90)">
+    <rect x="-15" y="-3" width="20" height="6" rx="1.5" fill="#606870" stroke="#404850" stroke-width="0.5"/>
+    <path d="M5,-4 L10,-6 L10,6 L5,4" fill="#707880" stroke="#505860" stroke-width="0.3"/>
+    <!-- Turn arrow -->
+    <path d="M-18,-6 Q-25,0 -18,6" fill="none" stroke="#aa88ee" stroke-width="1" opacity="0.7"/>
+    <polygon points="-18,6 -21,3 -15,4" fill="#aa88ee" opacity="0.7"/>
+  </g>
+
+  <!-- Pin-rod clamps -->
+  <rect x="54" y="37" width="12" height="6" rx="1.5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+  <rect x="54" y="62" width="12" height="6" rx="1.5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+  <rect x="54" y="127" width="12" height="6" rx="1.5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+  <rect x="54" y="152" width="12" height="6" rx="1.5" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+
+  <!-- Labels -->
+  <text x="170" y="40" fill="#d0c0e0" font-size="7" font-family="Arial">Proximal pins</text>
+  <text x="170" y="130" fill="#d0c0e0" font-size="7" font-family="Arial">Distal pins</text>
+  <text x="170" y="95" fill="#ff8866" font-size="7" font-family="Arial">Fracture being</text>
+  <text x="170" y="103" fill="#ff8866" font-size="7" font-family="Arial">reduced</text>
+  <line x1="170" y1="99" x2="156" y2="95" stroke="#ff8866" stroke-width="0.4" opacity="0.5"/>
+  <text x="5" y="78" fill="#d0c0e0" font-size="7" font-family="Arial">Adjustment</text>
+  <text x="5" y="86" fill="#d0c0e0" font-size="7" font-family="Arial">knob</text>
+  <text x="5" y="115" fill="#aa88ee" font-size="6.5" font-family="Arial">Wrench for</text>
+  <text x="5" y="123" fill="#aa88ee" font-size="6.5" font-family="Arial">reduction</text>
+  <text x="120" y="80" fill="#88ff88" font-size="6.5" font-family="Arial">Reduction</text>
+  <text x="120" y="88" fill="#88ff88" font-size="6.5" font-family="Arial">force</text>
+
+  <text x="140" y="195" fill="#d0c0e0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Fracture Reduction via External Fixator</text>
+</svg>

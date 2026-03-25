@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="blueBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a6a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2a5aa0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneF" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c0c8d0"/>
+      <stop offset="100%" style="stop-color:#8898a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#blueBg)"/>
+
+  <!-- Distal femur - lateral view -->
+  <g id="femurLateral">
+    <!-- Femoral shaft -->
+    <path d="M90,8 L88,40 L86,60 L84,75 Q80,88 78,95 Q72,108 70,115
+             Q65,125 68,135 Q72,148 85,155 Q100,162 115,160 Q128,158 135,150
+             Q140,142 140,130 L138,115 Q136,105 138,95 L140,75 L142,60 L144,40 L146,8"
+          fill="url(#boneF)" stroke="#c4a870" stroke-width="1.2"/>
+    <!-- Medullary canal -->
+    <path d="M108,8 L106,40 L105,60 L104,75 Q102,85 103,95 L128,95 Q130,85 128,75 L130,60 L130,40 L128,8"
+          fill="#d4c4a0" stroke="#c4a870" stroke-width="0.5" opacity="0.5"/>
+    <!-- Articular surface of condyle -->
+    <path d="M70,115 Q65,125 68,135 Q72,148 85,155 Q100,162 115,160 Q128,158 135,150 Q140,142 140,130"
+          fill="none" stroke="#a0c0d8" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Cutting guide/jig clamped to femur -->
+  <g id="cuttingGuide">
+    <!-- Intramedullary rod -->
+    <line x1="117" y1="8" x2="117" y2="80" stroke="#909aa8" stroke-width="3"/>
+    <line x1="117" y1="80" x2="115" y2="95" stroke="#909aa8" stroke-width="3"/>
+    <!-- Jig body -->
+    <rect x="60" y="88" width="90" height="12" rx="2" fill="url(#steel)" stroke="#707880" stroke-width="1"/>
+    <!-- Cutting slots in jig -->
+    <line x1="70" y1="88" x2="70" y2="100" stroke="#505860" stroke-width="1.5"/>
+    <line x1="85" y1="88" x2="85" y2="100" stroke="#505860" stroke-width="1.5"/>
+    <line x1="100" y1="88" x2="100" y2="100" stroke="#505860" stroke-width="1.5"/>
+    <line x1="115" y1="88" x2="115" y2="100" stroke="#505860" stroke-width="1.5"/>
+    <line x1="130" y1="88" x2="130" y2="100" stroke="#505860" stroke-width="1.5"/>
+    <!-- Clamp pins -->
+    <line x1="75" y1="100" x2="75" y2="110" stroke="#808890" stroke-width="2"/>
+    <line x1="135" y1="100" x2="135" y2="110" stroke="#808890" stroke-width="2"/>
+  </g>
+
+  <!-- 5 Cut lines with labels -->
+  <!-- Distal cut (horizontal) -->
+  <line x1="62" y1="130" x2="145" y2="130" stroke="#ff4444" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <!-- Anterior cut (angled) -->
+  <line x1="130" y1="95" x2="145" y2="115" stroke="#ff6644" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <!-- Posterior cut (angled) -->
+  <line x1="62" y1="148" x2="82" y2="140" stroke="#ff8844" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <!-- Anterior chamfer -->
+  <line x1="138" y1="112" x2="145" y2="128" stroke="#ffaa44" stroke-width="1" stroke-dasharray="2,2"/>
+  <!-- Posterior chamfer -->
+  <line x1="70" y1="140" x2="65" y2="132" stroke="#ffaa44" stroke-width="1" stroke-dasharray="2,2"/>
+
+  <!-- Oscillating saw -->
+  <g id="saw" transform="translate(148,125)">
+    <rect x="0" y="-4" width="45" height="8" rx="2" fill="#a0a8b0" stroke="#707880" stroke-width="0.8"/>
+    <rect x="42" y="-6" width="25" height="12" rx="3" fill="#808890" stroke="#606870" stroke-width="0.8"/>
+    <!-- Saw blade -->
+    <rect x="-12" y="-1.5" width="14" height="3" fill="#d0d4d8" stroke="#909498" stroke-width="0.5"/>
+    <line x1="-12" y1="-1.5" x2="-12" y2="1.5" stroke="#b0b4b8" stroke-width="0.8"/>
+    <!-- Teeth -->
+    <path d="M-12,-1.5 L-11,-2.5 L-10,-1.5 L-9,-2.5 L-8,-1.5 L-7,-2.5 L-6,-1.5 L-5,-2.5 L-4,-1.5 L-3,-2.5 L-2,-1.5"
+          fill="none" stroke="#c0c4c8" stroke-width="0.5"/>
+  </g>
+
+  <!-- Cut diagram - small inset showing 5 cuts -->
+  <g transform="translate(210,20)">
+    <rect x="-5" y="-5" width="65" height="75" rx="3" fill="rgba(0,0,0,0.3)" stroke="#5080b0" stroke-width="0.5"/>
+    <text x="27" y="5" fill="#c0d0e0" font-size="6" font-family="Arial" text-anchor="middle">5-Cut Pattern</text>
+    <!-- Simplified condyle profile -->
+    <path d="M10,15 L10,30 L8,40 Q8,55 20,60 Q32,65 42,58 Q50,50 50,40 L48,30 L48,15"
+          fill="none" stroke="#d4b880" stroke-width="1.2"/>
+    <!-- Numbered cuts -->
+    <line x1="8" y1="45" x2="50" y2="45" stroke="#ff4444" stroke-width="0.8"/>
+    <text x="53" y="47" fill="#ff6666" font-size="5" font-family="Arial">1</text>
+    <line x1="45" y1="18" x2="50" y2="32" stroke="#ff6644" stroke-width="0.8"/>
+    <text x="52" y="24" fill="#ff8866" font-size="5" font-family="Arial">2</text>
+    <line x1="10" y1="55" x2="25" y2="58" stroke="#ff8844" stroke-width="0.8"/>
+    <text x="5" y="58" fill="#ffaa66" font-size="5" font-family="Arial">3</text>
+    <line x1="47" y1="30" x2="50" y2="42" stroke="#ffaa44" stroke-width="0.8"/>
+    <text x="52" y="38" fill="#ffcc66" font-size="5" font-family="Arial">4</text>
+    <line x1="12" y1="48" x2="8" y2="42" stroke="#ffaa44" stroke-width="0.8"/>
+    <text x="3" y="48" fill="#ffcc66" font-size="5" font-family="Arial">5</text>
+    <text x="12" y="70" fill="#90a8c0" font-size="5" font-family="Arial">1-Distal 2-Ant</text>
+  </g>
+
+  <!-- Labels -->
+  <text x="15" y="25" fill="#c0d8f0" font-size="7" font-family="Arial">Femoral shaft</text>
+  <line x1="55" y1="23" x2="88" y2="30" stroke="#c0d8f0" stroke-width="0.4" opacity="0.6"/>
+  <text x="15" y="80" fill="#c0d8f0" font-size="7" font-family="Arial">IM rod</text>
+  <line x1="38" y1="78" x2="115" y2="50" stroke="#c0d8f0" stroke-width="0.4" opacity="0.6"/>
+  <text x="15" y="100" fill="#c0d8f0" font-size="7" font-family="Arial">Cutting jig</text>
+  <line x1="55" y1="98" x2="62" y2="94" stroke="#c0d8f0" stroke-width="0.4" opacity="0.6"/>
+  <text x="155" y="115" fill="#c0d8f0" font-size="7" font-family="Arial">Oscillating</text>
+  <text x="155" y="123" fill="#c0d8f0" font-size="7" font-family="Arial">saw</text>
+  <text x="15" y="140" fill="#ff6666" font-size="6.5" font-family="Arial">Distal cut</text>
+  <line x1="52" y1="138" x2="62" y2="130" stroke="#ff6666" stroke-width="0.4" opacity="0.6"/>
+
+  <text x="140" y="197" fill="#c0d8f0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Distal Femoral Resection - 5 Cuts</text>
+</svg>

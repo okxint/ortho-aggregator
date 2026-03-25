@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="purpleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a1a5a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6a3a9a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="implant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d8dce0"/>
+      <stop offset="100%" style="stop-color:#a0a8b8"/>
+    </linearGradient>
+    <linearGradient id="poly" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e8f0"/>
+      <stop offset="100%" style="stop-color:#c0c0d0"/>
+    </linearGradient>
+    <linearGradient id="boneP" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#purpleBg)"/>
+
+  <!-- Femoral shaft -->
+  <path d="M100,8 L98,30 L96,50 L95,65 L155,65 L154,50 L152,30 L150,8"
+        fill="url(#boneP)" stroke="#c4a870" stroke-width="1"/>
+
+  <!-- Trial femoral component - lateral view showing condylar shape -->
+  <g id="trialFemoral">
+    <path d="M88,65 L88,72 Q86,78 84,85 Q80,95 78,105 Q75,115 78,125
+             Q82,135 92,140 Q105,147 120,145 Q132,143 140,138 Q148,143 160,145
+             Q175,147 188,140 Q198,135 202,125 Q205,115 202,105 Q200,95 196,85
+             Q194,78 192,72 L192,65Z"
+          fill="url(#implant)" stroke="#808890" stroke-width="1.2"/>
+    <!-- Anterior flange -->
+    <path d="M88,65 L88,72 Q90,68 95,66" fill="none" stroke="#909aa0" stroke-width="0.8"/>
+    <path d="M192,65 L192,72 Q190,68 185,66" fill="none" stroke="#909aa0" stroke-width="0.8"/>
+    <!-- Condylar articulating surfaces -->
+    <path d="M78,105 Q75,115 78,125 Q82,135 92,140 Q105,147 120,145"
+          fill="none" stroke="#b0b8c8" stroke-width="1.5"/>
+    <path d="M202,105 Q205,115 202,125 Q198,135 188,140 Q175,147 160,145"
+          fill="none" stroke="#b0b8c8" stroke-width="1.5"/>
+    <!-- Intercondylar box/cam -->
+    <rect x="125" y="120" width="30" height="15" rx="2" fill="#b0b8c0" stroke="#808890" stroke-width="0.8"/>
+  </g>
+
+  <!-- Trial tibial baseplate -->
+  <g id="trialTibial">
+    <!-- Poly insert -->
+    <path d="M82,148 L82,155 Q82,158 85,160 L195,160 Q198,158 198,155 L198,148
+             Q190,145 160,145 L140,146 L120,145 Q90,145 82,148Z"
+          fill="url(#poly)" stroke="#a0a0b0" stroke-width="1"/>
+    <!-- Articulating dish in poly -->
+    <ellipse cx="110" cy="150" rx="22" ry="3" fill="none" stroke="#b8b8c8" stroke-width="0.8"/>
+    <ellipse cx="170" cy="150" rx="22" ry="3" fill="none" stroke="#b8b8c8" stroke-width="0.8"/>
+    <!-- Metal baseplate -->
+    <rect x="78" y="160" width="124" height="6" rx="1" fill="url(#implant)" stroke="#808890" stroke-width="1"/>
+    <!-- Central stem/keel -->
+    <rect x="133" y="166" width="14" height="20" rx="1" fill="url(#implant)" stroke="#808890" stroke-width="0.8"/>
+  </g>
+
+  <!-- Tibial bone below -->
+  <path d="M85,166 L83,185 L83,195 L197,195 L197,185 L195,166"
+        fill="url(#boneP)" stroke="#c4a870" stroke-width="1" opacity="0.7"/>
+
+  <!-- Trial patella button -->
+  <g id="trialPatella" transform="translate(210,95)">
+    <ellipse cx="0" cy="0" rx="12" ry="15" fill="url(#boneP)" stroke="#c4a870" stroke-width="0.8"/>
+    <!-- Poly button on posterior surface -->
+    <ellipse cx="-6" cy="0" rx="6" ry="10" fill="url(#poly)" stroke="#a0a0b0" stroke-width="0.8"/>
+    <!-- Pegs -->
+    <line x1="-6" y1="-4" x2="-2" y2="-4" stroke="#c0c0d0" stroke-width="1.5"/>
+    <line x1="-6" y1="4" x2="-2" y2="4" stroke="#c0c0d0" stroke-width="1.5"/>
+    <!-- Quad tendon -->
+    <path d="M2,-15 Q8,-30 12,-45" fill="none" stroke="#cc9966" stroke-width="2" opacity="0.5"/>
+    <!-- Patellar tendon -->
+    <path d="M2,15 Q8,30 5,50" fill="none" stroke="#cc9966" stroke-width="2" opacity="0.5"/>
+  </g>
+
+  <!-- Extension indicator -->
+  <path d="M60,100 L60,170" fill="none" stroke="#d0c0e0" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.5"/>
+  <text x="50" y="135" fill="#d0c0e0" font-size="5.5" font-family="Arial" transform="rotate(-90,50,135)">Extension</text>
+
+  <!-- Labels -->
+  <text x="15" y="20" fill="#d0c0e0" font-size="7" font-family="Arial">Femoral shaft</text>
+  <line x1="62" y1="18" x2="98" y2="25" stroke="#d0c0e0" stroke-width="0.4" opacity="0.6"/>
+  <text x="15" y="80" fill="#d0c0e0" font-size="7" font-family="Arial">Trial femoral</text>
+  <text x="15" y="88" fill="#d0c0e0" font-size="7" font-family="Arial">component</text>
+  <line x1="60" y1="84" x2="88" y2="90" stroke="#d0c0e0" stroke-width="0.4" opacity="0.6"/>
+  <text x="15" y="155" fill="#d0c0e0" font-size="7" font-family="Arial">Poly insert</text>
+  <line x1="52" y1="153" x2="82" y2="152" stroke="#d0c0e0" stroke-width="0.4" opacity="0.6"/>
+  <text x="15" y="168" fill="#d0c0e0" font-size="7" font-family="Arial">Tibial tray</text>
+  <line x1="52" y1="166" x2="78" y2="163" stroke="#d0c0e0" stroke-width="0.4" opacity="0.6"/>
+  <text x="230" y="80" fill="#d0c0e0" font-size="7" font-family="Arial">Trial</text>
+  <text x="230" y="88" fill="#d0c0e0" font-size="7" font-family="Arial">patella</text>
+  <line x1="228" y1="84" x2="220" y2="90" stroke="#d0c0e0" stroke-width="0.4" opacity="0.6"/>
+  <text x="150" y="135" fill="#d0c0e0" font-size="6" font-family="Arial">Cam-post</text>
+
+  <text x="140" y="197" fill="#d0c0e0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Trial Components in Extension</text>
+</svg>

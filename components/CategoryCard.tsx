@@ -21,18 +21,18 @@ export default function CategoryCard({ category }: { category: Category }) {
   return (
     <Link href={`/category/${category.id}`} className="category-card block group">
       <div className="flex items-start gap-4">
-        <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition">
-          <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/40 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/60 transition">
+          <svg className="w-7 h-7 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d={icon} />
           </svg>
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-bold text-blue-600 bg-blue-50 rounded-full px-2 py-0.5">{category.number}</span>
-            <h3 className="font-semibold text-gray-900 text-[15px] truncate">{category.name}</h3>
+            <span className="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/40 rounded-full px-2 py-0.5">{category.number}</span>
+            <h3 className="font-semibold text-gray-900 dark:text-white text-[15px] truncate">{category.name}</h3>
           </div>
-          <p className="text-xs text-gray-500 line-clamp-2 mb-2">{category.description}</p>
-          <span className="text-xs font-medium text-blue-600">{count} products &rarr;</span>
+          <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-2">{category.description}</p>
+          <span className="text-xs font-medium text-blue-600 dark:text-blue-400">{count} products &rarr;</span>
         </div>
       </div>
     </Link>

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bgTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d4f4f"/>
+      <stop offset="100%" stop-color="#1a7a7a"/>
+    </linearGradient>
+    <linearGradient id="bone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e6c8"/>
+      <stop offset="100%" stop-color="#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="muscle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c44040"/>
+      <stop offset="100%" stop-color="#8b2020"/>
+    </linearGradient>
+    <linearGradient id="capsule" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8c8a0"/>
+      <stop offset="100%" stop-color="#d4a870"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bgTeal)" rx="4"/>
+
+  <!-- Title -->
+  <text x="140" y="16" text-anchor="middle" fill="#a0e0e0" font-family="Arial, sans-serif" font-size="9" font-weight="bold">POSTERIOR APPROACH TO HIP</text>
+
+  <!-- Pelvis - lateral view (ilium) -->
+  <path d="M 40,30 Q 60,22 100,25 Q 130,28 145,45 Q 155,60 150,80 Q 148,90 140,100 Q 130,108 120,108 Q 100,106 90,95 Q 75,78 55,60 Q 42,45 40,30 Z" fill="url(#bone)" stroke="#b89a6a" stroke-width="0.8"/>
+  <!-- Iliac crest highlight -->
+  <path d="M 42,31 Q 60,24 100,26 Q 125,28 142,42" fill="none" stroke="#d4b88a" stroke-width="1.2"/>
+
+  <!-- Acetabulum -->
+  <circle cx="130" cy="98" r="18" fill="#3a3028" stroke="#b89a6a" stroke-width="0.8"/>
+  <circle cx="130" cy="98" r="16" fill="none" stroke="#8a7a5a" stroke-width="0.5" stroke-dasharray="2,1"/>
+
+  <!-- Femoral head in acetabulum -->
+  <circle cx="130" cy="98" r="14" fill="url(#bone)" stroke="#b89a6a" stroke-width="0.7"/>
+  <circle cx="127" cy="95" r="3" fill="#f0dcc0" opacity="0.4"/>
+
+  <!-- Proximal femur -->
+  <path d="M 120,108 Q 118,115 116,125 Q 112,140 110,155 Q 108,170 107,190 L 118,190 Q 120,170 122,155 Q 125,140 128,125 Q 132,115 135,108" fill="url(#bone)" stroke="#b89a6a" stroke-width="0.8"/>
+  <!-- Greater trochanter -->
+  <path d="M 135,108 Q 142,95 145,85 Q 148,78 145,75 Q 140,73 135,78 Q 130,85 128,95" fill="url(#bone)" stroke="#b89a6a" stroke-width="0.8"/>
+
+  <!-- Femoral neck -->
+  <path d="M 128,95 Q 129,97 130,98" fill="none" stroke="#b89a6a" stroke-width="0.5"/>
+
+  <!-- Hip capsule (exposed) -->
+  <path d="M 112,82 Q 120,75 135,78 Q 148,82 152,95 Q 150,108 140,115 Q 130,118 118,112 Q 108,105 108,95 Q 108,88 112,82 Z" fill="url(#capsule)" stroke="#a08050" stroke-width="0.6" opacity="0.7"/>
+  <text x="130" y="120" text-anchor="middle" fill="#fff8e0" font-family="Arial, sans-serif" font-size="6" opacity="0.9">hip capsule</text>
+
+  <!-- Gluteus maximus - reflected superiorly -->
+  <path d="M 55,35 Q 70,40 90,50 Q 105,58 110,65 Q 100,55 85,48 Q 65,38 50,32 Z" fill="url(#muscle)" stroke="#6a1515" stroke-width="0.5" opacity="0.8"/>
+  <!-- Gluteus medius reflected -->
+  <path d="M 65,32 Q 85,35 105,42 Q 115,48 118,55 L 115,50 Q 105,40 85,33 Q 70,29 60,28 Z" fill="#d45050" stroke="#6a1515" stroke-width="0.5" opacity="0.7"/>
+  <!-- Reflected muscle flap arrows -->
+  <path d="M 80,45 L 70,32" fill="none" stroke="#ff9090" stroke-width="0.6" marker-end="url(#arrowR)"/>
+  <defs>
+    <marker id="arrowR" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+      <path d="M 0,0 L 4,2 L 0,4 Z" fill="#ff9090"/>
+    </marker>
+  </defs>
+
+  <!-- Piriformis (cut, posterior approach landmark) -->
+  <path d="M 100,90 Q 115,85 125,82" fill="none" stroke="#aa4040" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="88" y="88" text-anchor="end" fill="#ffb0b0" font-family="Arial, sans-serif" font-size="6">piriformis (cut)</text>
+
+  <!-- Short external rotators -->
+  <path d="M 98,100 Q 112,97 122,95" fill="none" stroke="#aa5050" stroke-width="1" stroke-dasharray="2,1.5"/>
+  <text x="86" y="103" text-anchor="end" fill="#ffb0b0" font-family="Arial, sans-serif" font-size="5.5">ext. rotators</text>
+
+  <!-- Retractor - superior (Hohmann) -->
+  <path d="M 108,68 L 118,72 L 120,65 L 112,60 Z" fill="#b0b8c0" stroke="#707880" stroke-width="0.5"/>
+  <path d="M 110,64 L 95,40 L 92,42 L 108,67" fill="#a0a8b0" stroke="#707880" stroke-width="0.5"/>
+
+  <!-- Retractor - inferior (Cobra/Bennett) -->
+  <path d="M 115,118 L 125,122 L 128,116 L 118,112 Z" fill="#b0b8c0" stroke="#707880" stroke-width="0.5"/>
+  <path d="M 122,120 L 135,145 L 132,147 L 118,120" fill="#a0a8b0" stroke="#707880" stroke-width="0.5"/>
+
+  <!-- Surgical incision line (skin) -->
+  <path d="M 155,55 Q 148,70 145,85 Q 142,105 140,125 Q 138,140 138,155" fill="none" stroke="#ff4444" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <text x="162" y="60" fill="#ff8888" font-family="Arial, sans-serif" font-size="6">incision</text>
+
+  <!-- Skin edges retracted -->
+  <path d="M 155,75 Q 165,72 172,75" fill="none" stroke="#e8a080" stroke-width="1.5"/>
+  <path d="M 155,95 Q 165,92 172,95" fill="none" stroke="#e8a080" stroke-width="1.5"/>
+  <path d="M 153,115 Q 163,112 170,115" fill="none" stroke="#e8a080" stroke-width="1.5"/>
+
+  <!-- Labels -->
+  <line x1="60" y1="28" x2="52" y2="22" stroke="#a0e0e0" stroke-width="0.4"/>
+  <text x="50" y="20" text-anchor="end" fill="#a0e0e0" font-family="Arial, sans-serif" font-size="6">ilium</text>
+
+  <line x1="145" y1="78" x2="160" y2="72" stroke="#a0e0e0" stroke-width="0.4"/>
+  <text x="162" y="72" fill="#a0e0e0" font-family="Arial, sans-serif" font-size="6">greater trochanter</text>
+
+  <line x1="130" y1="98" x2="168" y2="100" stroke="#a0e0e0" stroke-width="0.4"/>
+  <text x="170" y="102" fill="#a0e0e0" font-family="Arial, sans-serif" font-size="6">femoral head</text>
+
+  <line x1="113" y1="155" x2="130" y2="158" stroke="#a0e0e0" stroke-width="0.4"/>
+  <text x="132" y="160" fill="#a0e0e0" font-family="Arial, sans-serif" font-size="6">femoral shaft</text>
+
+  <text x="68" y="44" fill="#ffb0b0" font-family="Arial, sans-serif" font-size="5.5">glut. max (reflected)</text>
+
+  <!-- Retractor labels -->
+  <text x="82" y="40" fill="#c0c8d0" font-family="Arial, sans-serif" font-size="5">retractor</text>
+  <text x="138" y="152" fill="#c0c8d0" font-family="Arial, sans-serif" font-size="5">retractor</text>
+
+  <!-- Orientation marker -->
+  <text x="10" y="195" fill="#60b0b0" font-family="Arial, sans-serif" font-size="6">Lateral View</text>
+  <text x="270" y="195" text-anchor="end" fill="#60b0b0" font-family="Arial, sans-serif" font-size="5">A</text>
+  <text x="250" y="195" text-anchor="end" fill="#408080" font-family="Arial, sans-serif" font-size="5">P</text>
+  <line x1="253" y1="193" x2="268" y2="193" stroke="#408080" stroke-width="0.5" marker-end="url(#arrowO)"/>
+  <defs>
+    <marker id="arrowO" markerWidth="3" markerHeight="3" refX="2" refY="1.5" orient="auto">
+      <path d="M 0,0 L 3,1.5 L 0,3 Z" fill="#60b0b0"/>
+    </marker>
+  </defs>
+</svg>

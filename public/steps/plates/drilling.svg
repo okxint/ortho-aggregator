@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e1"/>
+      <stop offset="100%" stop-color="#ffecb3"/>
+    </linearGradient>
+    <linearGradient id="boneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="40%" stop-color="#e8dcc8"/>
+      <stop offset="100%" stop-color="#d4c4a0"/>
+    </linearGradient>
+    <linearGradient id="cortexGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4c4a0"/>
+      <stop offset="100%" stop-color="#bfae8a"/>
+    </linearGradient>
+    <linearGradient id="marrowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffccbc"/>
+      <stop offset="100%" stop-color="#ef9a9a"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="20%" stop-color="#f5f5f5"/>
+      <stop offset="50%" stop-color="#bdbdbd"/>
+      <stop offset="80%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#9e9e9e"/>
+    </linearGradient>
+    <linearGradient id="drillGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#78909c"/>
+      <stop offset="30%" stop-color="#cfd8dc"/>
+      <stop offset="60%" stop-color="#b0bec5"/>
+      <stop offset="100%" stop-color="#78909c"/>
+    </linearGradient>
+    <linearGradient id="sleeveGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#90a4ae"/>
+      <stop offset="40%" stop-color="#eceff1"/>
+      <stop offset="70%" stop-color="#b0bec5"/>
+      <stop offset="100%" stop-color="#78909c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bgGrad)" rx="4"/>
+
+  <!-- Title -->
+  <text x="140" y="14" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="600" fill="#f57f17">Step 4: Drilling</text>
+
+  <!-- Bone - cross-sectional side view -->
+  <g>
+    <!-- Near cortex -->
+    <rect x="25" y="108" width="230" height="10" rx="1" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <!-- Medullary canal -->
+    <rect x="25" y="118" width="230" height="35" fill="url(#marrowGrad)" opacity="0.4"/>
+    <!-- Far cortex -->
+    <rect x="25" y="153" width="230" height="10" rx="1" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <!-- Bone outline -->
+    <rect x="25" y="108" width="230" height="55" rx="3" fill="none" stroke="#a08060" stroke-width="1"/>
+
+    <!-- Cortex internal structure (Haversian systems) -->
+    <circle cx="60" cy="113" r="0.8" fill="#bfae8a" opacity="0.6"/>
+    <circle cx="100" cy="112" r="0.6" fill="#bfae8a" opacity="0.6"/>
+    <circle cx="200" cy="114" r="0.7" fill="#bfae8a" opacity="0.6"/>
+    <circle cx="60" cy="157" r="0.8" fill="#bfae8a" opacity="0.6"/>
+    <circle cx="150" cy="158" r="0.6" fill="#bfae8a" opacity="0.6"/>
+    <circle cx="210" cy="156" r="0.7" fill="#bfae8a" opacity="0.6"/>
+  </g>
+
+  <!-- DCP Plate on bone -->
+  <g>
+    <path d="M 40,93 Q 42,91 45,91 L 230,91 Q 233,91 235,93 L 235,106 Q 233,108 230,108 L 45,108 Q 42,108 40,106 Z" fill="url(#plateGrad)" stroke="#757575" stroke-width="0.8"/>
+
+    <!-- DCP holes -->
+    <!-- Hole 1 -->
+    <ellipse cx="65" cy="99" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="65" cy="99" rx="5" ry="2.8" fill="#212121"/>
+    <!-- Hole 2 -->
+    <ellipse cx="100" cy="99" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="100" cy="99" rx="5" ry="2.8" fill="#212121"/>
+    <!-- Hole 3 - ACTIVE DRILLING HOLE -->
+    <ellipse cx="140" cy="99" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <!-- Hole 4 -->
+    <ellipse cx="178" cy="99" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="178" cy="99" rx="5" ry="2.8" fill="#212121"/>
+    <!-- Hole 5 -->
+    <ellipse cx="213" cy="99" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="213" cy="99" rx="5" ry="2.8" fill="#212121"/>
+
+    <!-- Plate surface highlights -->
+    <line x1="48" y1="94" x2="228" y2="94" stroke="#f5f5f5" stroke-width="0.5" opacity="0.5"/>
+  </g>
+
+  <!-- Drill Guide/Sleeve in plate hole -->
+  <g>
+    <!-- Sleeve body sitting in plate hole -->
+    <rect x="135" y="85" width="10" height="23" rx="2" fill="url(#sleeveGrad)" stroke="#607d8b" stroke-width="0.6"/>
+    <!-- Sleeve flange at top -->
+    <rect x="133" y="83" width="14" height="3" rx="1" fill="#b0bec5" stroke="#607d8b" stroke-width="0.5"/>
+    <!-- Sleeve bore (inner hole) -->
+    <rect x="138" y="86" width="4" height="22" rx="0.5" fill="#37474f"/>
+    <!-- Sleeve tip in plate hole -->
+    <path d="M 136,106 L 136,108 L 144,108 L 144,106" fill="#9e9e9e" stroke="#607d8b" stroke-width="0.4"/>
+  </g>
+
+  <!-- Drill Bit - going through sleeve, plate, and into bone -->
+  <g>
+    <!-- Drill shaft above sleeve -->
+    <rect x="138.5" y="24" width="3" height="62" fill="url(#drillGrad)" stroke="#546e7a" stroke-width="0.4"/>
+
+    <!-- Drill bit flutes (spiral cutting edges) -->
+    <!-- Flute marks on shaft -->
+    <line x1="138.5" y1="70" x2="141.5" y2="67" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="138.5" y1="66" x2="141.5" y2="63" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="138.5" y1="62" x2="141.5" y2="59" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="138.5" y1="58" x2="141.5" y2="55" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="138.5" y1="54" x2="141.5" y2="51" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="138.5" y1="50" x2="141.5" y2="47" stroke="#90a4ae" stroke-width="0.4"/>
+    <line x1="138.5" y1="46" x2="141.5" y2="43" stroke="#90a4ae" stroke-width="0.4"/>
+
+    <!-- Drill bit inside bone - penetrating near cortex -->
+    <rect x="138.8" y="108" width="2.4" height="14" fill="#90a4ae" stroke="#546e7a" stroke-width="0.3"/>
+
+    <!-- Drill bit tip (pointed) penetrating into medullary canal -->
+    <path d="M 138.8,122 L 140,126 L 141.2,122 Z" fill="#78909c" stroke="#546e7a" stroke-width="0.3"/>
+
+    <!-- Bone dust particles -->
+    <circle cx="136" cy="112" r="0.8" fill="#e8dcc8" opacity="0.7"/>
+    <circle cx="143" cy="110" r="0.6" fill="#e8dcc8" opacity="0.6"/>
+    <circle cx="135" cy="116" r="0.5" fill="#e8dcc8" opacity="0.5"/>
+    <circle cx="144" cy="114" r="0.7" fill="#e8dcc8" opacity="0.6"/>
+    <circle cx="137" cy="120" r="0.4" fill="#e8dcc8" opacity="0.4"/>
+
+    <!-- Drill hole in near cortex (visible around bit) -->
+    <circle cx="140" cy="108" r="2.5" fill="none" stroke="#8d6e43" stroke-width="0.4"/>
+  </g>
+
+  <!-- Drill chuck/collet at top -->
+  <g>
+    <rect x="135" y="20" width="10" height="8" rx="1.5" fill="#78909c" stroke="#546e7a" stroke-width="0.6"/>
+    <!-- Chuck jaws -->
+    <line x1="136" y1="22" x2="136" y2="26" stroke="#546e7a" stroke-width="0.4"/>
+    <line x1="144" y1="22" x2="144" y2="26" stroke="#546e7a" stroke-width="0.4"/>
+    <line x1="140" y1="20" x2="140" y2="24" stroke="#546e7a" stroke-width="0.3"/>
+  </g>
+
+  <!-- Depth gauge marking on drill bit -->
+  <rect x="137.5" y="72" width="5" height="1" fill="#f44336" opacity="0.8"/>
+
+  <!-- Rotation indicator -->
+  <path d="M 148,45 Q 153,42 153,38 Q 153,34 148,31" fill="none" stroke="#f57f17" stroke-width="0.8" marker-end="url(#arrowhead)"/>
+  <polygon points="148,30 150,33 146,33" fill="#f57f17"/>
+
+  <!-- Drill path indicator (dashed line showing intended path through far cortex) -->
+  <line x1="140" y1="128" x2="140" y2="153" stroke="#f57f17" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.5"/>
+  <path d="M 140,153 L 140,163" stroke="#f57f17" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.3"/>
+  <!-- Exit point on far cortex -->
+  <circle cx="140" cy="163" r="1.5" fill="none" stroke="#f57f17" stroke-width="0.5" stroke-dasharray="1,1" opacity="0.4"/>
+
+  <!-- Labels -->
+  <style>
+    .label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 7px; fill: #37474f; }
+    .label-line { stroke: #546e7a; stroke-width: 0.5; stroke-dasharray: 1,1; }
+  </style>
+
+  <text x="155" y="44" class="label" font-size="6" fill="#f57f17">Rotation</text>
+
+  <text x="150" y="30" class="label">Drill bit</text>
+  <line x1="149" y1="30" x2="143" y2="35" class="label-line"/>
+
+  <text x="152" y="88" class="label">Drill guide</text>
+  <line x1="151" y1="88" x2="147" y2="90" class="label-line"/>
+
+  <text x="8" y="100" class="label">DCP plate</text>
+  <line x1="36" y1="99" x2="40" y2="99" class="label-line"/>
+
+  <text x="8" y="116" class="label">Near cortex</text>
+  <line x1="42" y1="114" x2="38" y2="113" class="label-line"/>
+
+  <text x="8" y="140" class="label">Medullary canal</text>
+  <line x1="52" y1="138" x2="38" y2="135" class="label-line"/>
+
+  <text x="8" y="160" class="label">Far cortex</text>
+  <line x1="38" y1="158" x2="38" y2="155" class="label-line"/>
+
+  <text x="150" y="76" class="label" font-size="5.5" fill="#f44336">Depth mark</text>
+
+  <text x="148" y="130" class="label" font-size="6">Drill path</text>
+  <line x1="147" y1="130" x2="142" y2="130" class="label-line"/>
+
+  <text x="148" y="165" class="label" font-size="6" opacity="0.6">Far cortex exit</text>
+
+  <!-- Bone dust label -->
+  <text x="148" y="118" class="label" font-size="5.5" fill="#8d6e43">Bone debris</text>
+</svg>

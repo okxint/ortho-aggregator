@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="blueBgSc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a6a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2a5aa0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneSc" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="cortical" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8d4a8"/>
+      <stop offset="100%" style="stop-color:#d4c090"/>
+    </linearGradient>
+    <linearGradient id="cancellous" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0e4c8"/>
+      <stop offset="100%" style="stop-color:#e8dcc0"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#blueBgSc)"/>
+
+  <!-- Bone cross-section (longitudinal cut showing both cortices) -->
+  <!-- Near cortex (top) -->
+  <rect x="30" y="45" width="220" height="18" rx="1" fill="url(#cortical)" stroke="#c4a870" stroke-width="1.2"/>
+  <!-- Cancellous bone (middle) -->
+  <rect x="30" y="63" width="220" height="74" fill="url(#cancellous)" stroke="none"/>
+  <!-- Cancellous texture -->
+  <g opacity="0.3">
+    <circle cx="60" cy="80" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="80" cy="95" r="4" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="100" cy="75" r="3.5" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="120" cy="90" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="140" cy="78" r="4" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="160" cy="95" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="180" cy="82" r="3.5" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="200" cy="92" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="220" cy="78" r="4" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="70" cy="110" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="110" cy="115" r="3.5" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="150" cy="108" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="190" cy="112" r="4" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+    <circle cx="230" cy="105" r="3" fill="none" stroke="#d4c4a0" stroke-width="0.5"/>
+  </g>
+  <!-- Far cortex (bottom) -->
+  <rect x="30" y="137" width="220" height="18" rx="1" fill="url(#cortical)" stroke="#c4a870" stroke-width="1.2"/>
+  <!-- Outer periosteum lines -->
+  <line x1="30" y1="44" x2="250" y2="44" stroke="#b8a480" stroke-width="0.5" opacity="0.5"/>
+  <line x1="30" y1="156" x2="250" y2="156" stroke="#b8a480" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Drill bit going through both cortices -->
+  <g id="drillBit">
+    <!-- Drill bit shaft -->
+    <line x1="140" y1="10" x2="140" y2="148" stroke="#b0b8c8" stroke-width="4"/>
+    <line x1="140" y1="10" x2="140" y2="148" stroke="#d0d8e0" stroke-width="2"/>
+    <!-- Flutes/spiral on drill bit -->
+    <path d="M138,20 Q142,25 142,30 Q138,35 138,40 Q142,45 142,50 Q138,55 138,60 Q142,65 142,70 Q138,75 138,80 Q142,85 142,90 Q138,95 138,100 Q142,105 142,110 Q138,115 138,120 Q142,125 142,130 Q138,135 138,140"
+          fill="none" stroke="#a0a8b8" stroke-width="0.8" opacity="0.6"/>
+    <!-- Drill tip (through far cortex) -->
+    <path d="M138,148 L140,158 L142,148" fill="#d0d8e0" stroke="#a0a8b8" stroke-width="0.5"/>
+    <!-- Cutting flutes at tip -->
+    <path d="M138,148 L136,152 M142,148 L144,152" fill="none" stroke="#c0c8d0" stroke-width="0.8"/>
+  </g>
+
+  <!-- Drill hole through near cortex -->
+  <ellipse cx="140" cy="54" rx="3.5" ry="1.5" fill="#1a3a6a" stroke="#c4a870" stroke-width="0.5" opacity="0.5"/>
+  <!-- Drill hole through far cortex -->
+  <ellipse cx="140" cy="146" rx="3.5" ry="1.5" fill="#1a3a6a" stroke="#c4a870" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Bone chips/debris -->
+  <circle cx="135" cy="42" r="1" fill="#e8d4a8" opacity="0.6"/>
+  <circle cx="146" cy="40" r="0.8" fill="#e8d4a8" opacity="0.5"/>
+  <circle cx="133" cy="38" r="0.7" fill="#e8d4a8" opacity="0.4"/>
+  <circle cx="143" cy="160" r="1" fill="#e8d4a8" opacity="0.6"/>
+  <circle cx="137" cy="162" r="0.8" fill="#e8d4a8" opacity="0.5"/>
+
+  <!-- Drill (power tool) at top -->
+  <g id="drillTool" transform="translate(140,10)">
+    <!-- Chuck -->
+    <path d="M-5,-2 L-8,-5 L8,-5 L5,-2" fill="#808890" stroke="#606870" stroke-width="0.5"/>
+    <!-- Drill body -->
+    <rect x="-12" y="-18" width="24" height="14" rx="3" fill="#505860" stroke="#404850" stroke-width="0.8"/>
+    <!-- Trigger -->
+    <path d="M5,-8 L12,-5 L12,-2 L8,-4" fill="#606870" stroke="#505860" stroke-width="0.3"/>
+  </g>
+
+  <!-- Rotation indicator -->
+  <path d="M152,28 Q158,22 158,32" fill="none" stroke="#88aaff" stroke-width="1" opacity="0.5"/>
+  <polygon points="158,32 156,28 161,30" fill="#88aaff" opacity="0.5"/>
+
+  <!-- Pilot hole path indicator -->
+  <line x1="140" y1="45" x2="140" y2="155" stroke="#ff6644" stroke-width="0.5" stroke-dasharray="2,3" opacity="0.3"/>
+
+  <!-- Labels -->
+  <text x="15" y="40" fill="#c0d8f0" font-size="7" font-family="Arial">Periosteum</text>
+  <text x="255" y="55" fill="#c0d8f0" font-size="7" font-family="Arial">Near</text>
+  <text x="255" y="63" fill="#c0d8f0" font-size="7" font-family="Arial">cortex</text>
+  <text x="255" y="100" fill="#c0d8f0" font-size="7" font-family="Arial">Cancellous</text>
+  <text x="255" y="108" fill="#c0d8f0" font-size="7" font-family="Arial">bone</text>
+  <text x="255" y="145" fill="#c0d8f0" font-size="7" font-family="Arial">Far</text>
+  <text x="255" y="153" fill="#c0d8f0" font-size="7" font-family="Arial">cortex</text>
+  <text x="155" y="105" fill="#c0d8f0" font-size="7" font-family="Arial">Drill bit</text>
+  <line x1="172" y1="103" x2="143" y2="100" stroke="#c0d8f0" stroke-width="0.3" opacity="0.5"/>
+  <text x="15" y="165" fill="#c0d8f0" font-size="7" font-family="Arial">Drill penetrates</text>
+  <text x="15" y="173" fill="#c0d8f0" font-size="7" font-family="Arial">both cortices</text>
+  <line x1="68" y1="168" x2="138" y2="155" stroke="#c0d8f0" stroke-width="0.3" opacity="0.5"/>
+
+  <text x="140" y="195" fill="#c0d8f0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Pilot Hole Drilling - Bicortical</text>
+</svg>

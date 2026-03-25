@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bgPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1a4f"/>
+      <stop offset="100%" stop-color="#4a2a7a"/>
+    </linearGradient>
+    <linearGradient id="boneS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e6c8"/>
+      <stop offset="100%" stop-color="#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="stemMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#707888"/>
+      <stop offset="20%" stop-color="#b0b8c8"/>
+      <stop offset="50%" stop-color="#d0d8e8"/>
+      <stop offset="80%" stop-color="#b0b8c8"/>
+      <stop offset="100%" stop-color="#707888"/>
+    </linearGradient>
+    <linearGradient id="stemNeck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a0a8b8"/>
+      <stop offset="100%" stop-color="#c8d0e0"/>
+    </linearGradient>
+    <linearGradient id="cancellousS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d8b888"/>
+      <stop offset="100%" stop-color="#c0a070"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bgPurple)" rx="4"/>
+
+  <!-- Title -->
+  <text x="140" y="16" text-anchor="middle" fill="#c0a0f0" font-family="Arial, sans-serif" font-size="9" font-weight="bold">FEMORAL STEM INSERTION</text>
+
+  <!-- Proximal femur outer cortex - left -->
+  <path d="M 90,52 Q 82,48 75,52 Q 65,60 58,75 Q 52,92 48,112 Q 44,132 42,155 Q 40,175 39,200" fill="url(#boneS)" stroke="#b89a6a" stroke-width="0.8"/>
+
+  <!-- Proximal femur outer cortex - right -->
+  <path d="M 130,52 Q 140,50 148,56 Q 155,65 160,80 Q 164,100 166,120 Q 168,140 169,165 Q 170,180 170,200" fill="url(#boneS)" stroke="#b89a6a" stroke-width="0.8"/>
+
+  <!-- Greater trochanter -->
+  <path d="M 130,52 Q 145,40 150,32 Q 153,28 150,35 Q 148,45 148,56" fill="url(#boneS)" stroke="#b89a6a" stroke-width="0.8"/>
+
+  <!-- Neck osteotomy -->
+  <line x1="88" y1="50" x2="132" y2="50" stroke="#aa3333" stroke-width="1" stroke-dasharray="2,1.5"/>
+
+  <!-- Cancellous bone in canal -->
+  <path d="M 78,58 Q 74,75 70,95 Q 66,115 64,135 Q 62,155 61,180 Q 61,190 61,200 L 148,200 Q 148,190 148,180 Q 148,160 147,140 Q 146,120 144,100 Q 142,80 138,62 Z" fill="url(#cancellousS)" opacity="0.3"/>
+
+  <!-- Femoral stem - tapered, metallic -->
+  <path d="M 95,50 L 90,55 Q 88,65 86,80 Q 84,95 82,112 Q 80,128 79,145 Q 78,155 78,168 L 80,172 Q 84,175 90,176 Q 96,175 100,172 L 102,168 Q 102,155 101,145 Q 100,128 98,112 Q 96,95 94,80 Q 92,65 91,55 L 95,50 Z" fill="url(#stemMetal)" stroke="#606870" stroke-width="0.7"/>
+
+  <!-- Right side of wider stem body -->
+  <path d="M 115,50 L 120,55 Q 122,65 124,80 Q 125,95 126,112 Q 127,128 127,145 Q 127,155 126,168 L 124,172 Q 120,175 114,176 Q 108,175 104,172 L 102,168" fill="url(#stemMetal)" stroke="#606870" stroke-width="0.7"/>
+
+  <!-- Stem taper from top - wider proximally, narrow distally -->
+  <!-- Proximal body (wider) -->
+  <path d="M 88,58 Q 86,68 85,78 L 125,78 Q 124,68 122,58 Z" fill="url(#stemMetal)" stroke="#606870" stroke-width="0.4" opacity="0.8"/>
+
+  <!-- Stem metallic highlights -->
+  <line x1="96" y1="60" x2="94" y2="170" stroke="#e0e8f0" stroke-width="0.8" opacity="0.4"/>
+  <line x1="114" y1="60" x2="112" y2="170" stroke="#e0e8f0" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Porous coating zone (proximal 1/3) -->
+  <rect x="87" y="58" width="36" height="45" rx="2" fill="none" stroke="#9080b0" stroke-width="0.5" stroke-dasharray="2,1"/>
+  <text x="160" y="75" fill="#b090d0" font-family="Arial, sans-serif" font-size="5">porous coated</text>
+  <text x="160" y="82" fill="#b090d0" font-family="Arial, sans-serif" font-size="5">(ingrowth zone)</text>
+  <line x1="123" y1="78" x2="158" y2="78" stroke="#b090d0" stroke-width="0.3"/>
+
+  <!-- Polished distal taper -->
+  <text x="160" y="155" fill="#b090d0" font-family="Arial, sans-serif" font-size="5">polished taper</text>
+  <line x1="128" y1="155" x2="158" y2="155" stroke="#b090d0" stroke-width="0.3"/>
+
+  <!-- Neck of stem (extends from body) -->
+  <path d="M 92,50 Q 86,42 78,35 Q 72,30 68,28" fill="none" stroke="url(#stemNeck)" stroke-width="5"/>
+  <path d="M 92,50 Q 86,42 78,35 Q 72,30 68,28" fill="none" stroke="#c8d0e0" stroke-width="2.5"/>
+
+  <!-- Morse taper at top of neck -->
+  <path d="M 68,28 L 65,24 L 62,22 Q 60,21 60,24 L 62,28 L 65,30 Z" fill="#b0b8c8" stroke="#808898" stroke-width="0.5"/>
+
+  <!-- Morse taper detail callout -->
+  <line x1="62" y1="25" x2="30" y2="22" stroke="#c0a0f0" stroke-width="0.3"/>
+  <text x="8" y="20" fill="#c0a0f0" font-family="Arial, sans-serif" font-size="6">morse taper</text>
+  <text x="8" y="28" fill="#9080b0" font-family="Arial, sans-serif" font-size="5">(for head attachment)</text>
+
+  <!-- Insertion direction arrow -->
+  <path d="M 105,28 L 105,42" fill="none" stroke="#ffdd80" stroke-width="1.2" marker-end="url(#arrowDown)"/>
+  <path d="M 98,28 L 98,38" fill="none" stroke="#ffdd80" stroke-width="0.8" marker-end="url(#arrowDown)"/>
+  <path d="M 112,28 L 112,38" fill="none" stroke="#ffdd80" stroke-width="0.8" marker-end="url(#arrowDown)"/>
+  <defs>
+    <marker id="arrowDown" markerWidth="4" markerHeight="4" refX="2" refY="3" orient="auto">
+      <path d="M 0,0 L 2,4 L 4,0 Z" fill="#ffdd80"/>
+    </marker>
+  </defs>
+  <text x="105" y="24" text-anchor="middle" fill="#ffdd80" font-family="Arial, sans-serif" font-size="5.5">insertion</text>
+
+  <!-- Labels -->
+  <line x1="150" y1="35" x2="168" y2="30" stroke="#c0a0f0" stroke-width="0.3"/>
+  <text x="170" y="32" fill="#c0a0f0" font-family="Arial, sans-serif" font-size="6">greater trochanter</text>
+
+  <line x1="45" y1="112" x2="25" y2="112" stroke="#c0a0f0" stroke-width="0.3"/>
+  <text x="8" y="110" fill="#c0a0f0" font-family="Arial, sans-serif" font-size="6">cortex</text>
+
+  <line x1="170" y1="120" x2="185" y2="120" stroke="#c0a0f0" stroke-width="0.3"/>
+  <text x="187" y="122" fill="#c0a0f0" font-family="Arial, sans-serif" font-size="6">cortex</text>
+
+  <text x="105" y="192" text-anchor="middle" fill="#c0a0f0" font-family="Arial, sans-serif" font-size="6">femoral canal</text>
+
+  <!-- Stem detail box -->
+  <rect x="185" y="130" width="85" height="62" rx="3" fill="#2a1a4f" stroke="#5a3a8a" stroke-width="0.5" opacity="0.85"/>
+  <text x="228" y="142" text-anchor="middle" fill="#c0a0f0" font-family="Arial, sans-serif" font-size="6" font-weight="bold">Stem Profile</text>
+  <!-- Mini stem side view -->
+  <path d="M 218,148 L 215,152 Q 213,160 212,170 Q 212,178 213,182 L 215,184 L 218,185 L 222,185 L 225,184 L 227,182 Q 228,178 228,170 Q 227,160 225,152 L 222,148 Z" fill="url(#stemMetal)" stroke="#606870" stroke-width="0.4"/>
+  <!-- Neck -->
+  <line x1="218" y1="148" x2="210" y2="142" stroke="#a0a8b8" stroke-width="2"/>
+  <!-- Taper dot -->
+  <circle cx="208" cy="141" r="1.5" fill="#b0b8c8" stroke="#808898" stroke-width="0.3"/>
+  <text x="202" y="142" text-anchor="end" fill="#9080b0" font-family="Arial, sans-serif" font-size="4.5">taper</text>
+  <!-- Collar indicator -->
+  <text x="245" y="155" fill="#9080b0" font-family="Arial, sans-serif" font-size="4.5">shoulder</text>
+  <line x1="228" y1="152" x2="242" y2="153" stroke="#9080b0" stroke-width="0.3"/>
+  <!-- Taper label -->
+  <text x="245" y="180" fill="#9080b0" font-family="Arial, sans-serif" font-size="4.5">tapered</text>
+  <text x="245" y="187" fill="#9080b0" font-family="Arial, sans-serif" font-size="4.5">distal tip</text>
+
+  <!-- Orientation -->
+  <text x="10" y="195" fill="#8060b0" font-family="Arial, sans-serif" font-size="6">AP View</text>
+</svg>

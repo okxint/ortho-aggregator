@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="8" fill="#F4F5F7"/>
+  <!-- Screw shaft -->
+  <rect x="140" y="60" width="16" height="180" rx="2" fill="url(#screwGrad)"/>
+  <!-- Thread grooves -->
+  <g stroke="#64748B" stroke-width="0.8" opacity="0.6">
+    <line x1="140" y1="80" x2="156" y2="75"/><line x1="140" y1="90" x2="156" y2="85"/>
+    <line x1="140" y1="100" x2="156" y2="95"/><line x1="140" y1="110" x2="156" y2="105"/>
+    <line x1="140" y1="120" x2="156" y2="115"/><line x1="140" y1="130" x2="156" y2="125"/>
+    <line x1="140" y1="140" x2="156" y2="135"/><line x1="140" y1="150" x2="156" y2="145"/>
+    <line x1="140" y1="160" x2="156" y2="155"/><line x1="140" y1="170" x2="156" y2="165"/>
+    <line x1="140" y1="180" x2="156" y2="175"/><line x1="140" y1="190" x2="156" y2="185"/>
+    <line x1="140" y1="200" x2="156" y2="195"/><line x1="140" y1="210" x2="156" y2="205"/>
+    <line x1="140" y1="220" x2="156" y2="215"/><line x1="140" y1="230" x2="156" y2="225"/>
+  </g>
+  <!-- Thread outer profile -->
+  <path d="M136 75 L140 80 L136 85 L140 90 L136 95 L140 100 L136 105 L140 110 L136 115 L140 120 L136 125 L140 130 L136 135 L140 140 L136 145 L140 150 L136 155 L140 160 L136 165 L140 170 L136 175 L140 180 L136 185 L140 190 L136 195 L140 200 L136 205 L140 210 L136 215 L140 220 L136 225 L140 230" stroke="#64748B" stroke-width="1" fill="none"/>
+  <path d="M160 75 L156 80 L160 85 L156 90 L160 95 L156 100 L160 105 L156 110 L160 115 L156 120 L160 125 L156 130 L160 135 L156 140 L160 145 L156 150 L160 155 L156 160 L160 165 L156 170 L160 175 L156 180 L160 185 L156 190 L160 195 L156 200 L160 205 L156 210 L160 215 L156 220 L160 225 L156 230" stroke="#64748B" stroke-width="1" fill="none"/>
+  <!-- Screw head (hex) -->
+  <polygon points="148,60 160,55 168,62 164,75 148,75 136,62 140,55" fill="#94A3B8" stroke="#64748B" stroke-width="1.5"/>
+  <polygon points="148,62 154,59 160,62 157,68 148,68 142,62 145,59" fill="#64748B" opacity="0.4"/>
+  <!-- Tip -->
+  <path d="M140 230 L148 248 L156 230" fill="#94A3B8" stroke="#64748B" stroke-width="1"/>
+  <!-- Dimension line -->
+  <line x1="180" y1="55" x2="180" y2="248" stroke="#3B82F6" stroke-width="0.5"/>
+  <line x1="176" y1="55" x2="184" y2="55" stroke="#3B82F6" stroke-width="0.5"/>
+  <line x1="176" y1="248" x2="184" y2="248" stroke="#3B82F6" stroke-width="0.5"/>
+  <text x="188" y="155" font-family="system-ui,sans-serif" font-size="9" fill="#3B82F6">Length</text>
+  <!-- Second screw (different type - cannulated) -->
+  <rect x="240" y="60" width="16" height="180" rx="2" fill="url(#screwGrad2)"/>
+  <!-- Cannulation (hollow core) -->
+  <line x1="248" y1="55" x2="248" y2="240" stroke="#E2E8F0" stroke-width="3"/>
+  <!-- Thread - wider pitch (cancellous) -->
+  <path d="M232 80 L240 90 L232 100 L240 110 L232 120 L240 130 L232 140 L240 150 L232 160 L240 170 L232 180 L240 190 L232 200 L240 210 L232 220 L240 230" stroke="#64748B" stroke-width="1" fill="none"/>
+  <path d="M264 80 L256 90 L264 100 L256 110 L264 120 L256 130 L264 140 L256 150 L264 155 L256 170 L264 180 L256 190 L264 200 L256 210 L264 220 L256 230" stroke="#64748B" stroke-width="1" fill="none"/>
+  <!-- Head -->
+  <polygon points="248,60 260,55 268,62 264,75 248,75 236,62 240,55" fill="#94A3B8" stroke="#64748B" stroke-width="1.5"/>
+  <path d="M240 230 L248 248 L256 230" fill="#94A3B8" stroke="#64748B" stroke-width="1"/>
+  <!-- Labels -->
+  <text x="148" y="274" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#475569">Cortical</text>
+  <text x="248" y="274" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#475569">Cannulated</text>
+  <text x="200" y="294" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#94A3B8">Surgical Grade — Multiple Sizes</text>
+  <defs>
+    <linearGradient id="screwGrad" x1="140" y1="0" x2="156" y2="0"><stop offset="0%" stop-color="#B0BEC5"/><stop offset="50%" stop-color="#CFD8DC"/><stop offset="100%" stop-color="#90A4AE"/></linearGradient>
+    <linearGradient id="screwGrad2" x1="240" y1="0" x2="256" y2="0"><stop offset="0%" stop-color="#B0BEC5"/><stop offset="50%" stop-color="#CFD8DC"/><stop offset="100%" stop-color="#90A4AE"/></linearGradient>
+  </defs>
+</svg>

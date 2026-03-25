@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="greenBgS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4a2a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2a7a4a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneSD" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="nerve" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0e8a0"/>
+      <stop offset="100%" style="stop-color:#d0c870"/>
+    </linearGradient>
+    <linearGradient id="dura" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8d0e8"/>
+      <stop offset="100%" style="stop-color:#a0b0d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#greenBgS)"/>
+
+  <!-- Vertebral segment - oblique posterior view showing laminectomy -->
+  <!-- Vertebral body outline (deep/anterior) -->
+  <ellipse cx="140" cy="145" rx="55" ry="25" fill="url(#boneSD)" stroke="#c4a870" stroke-width="1" opacity="0.5"/>
+
+  <!-- Pedicles -->
+  <path d="M90,130 L80,110 Q75,100 72,90 L68,80 Q65,70 72,62 L85,55"
+        fill="url(#boneSD)" stroke="#c4a870" stroke-width="1"/>
+  <path d="M190,130 L200,110 Q205,100 208,90 L212,80 Q215,70 208,62 L195,55"
+        fill="url(#boneSD)" stroke="#c4a870" stroke-width="1"/>
+
+  <!-- Remaining lamina (left side intact) -->
+  <path d="M85,55 L90,48 Q100,40 115,38 L125,37 L125,50 Q110,52 100,55 L90,60 L85,55Z"
+        fill="url(#boneSD)" stroke="#c4a870" stroke-width="1"/>
+
+  <!-- RIGHT lamina being removed (dashed outline showing resected area) -->
+  <path d="M155,37 L165,38 Q180,40 190,48 L195,55 L190,60 Q180,55 165,50 L155,50Z"
+        fill="url(#boneSD)" stroke="#c4a870" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.3"/>
+  <!-- Bone fragments being removed -->
+  <path d="M170,42 L175,38 L180,44 L175,48Z" fill="url(#boneSD)" stroke="#c4a870" stroke-width="0.5" opacity="0.4" transform="rotate(10,175,43)"/>
+
+  <!-- Spinous process (partially removed) -->
+  <path d="M125,37 L128,28 Q130,22 132,18" fill="none" stroke="#c4a870" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.4"/>
+  <path d="M155,37 L152,28 Q150,22 148,18" fill="none" stroke="#c4a870" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.4"/>
+
+  <!-- Exposed spinal canal -->
+  <ellipse cx="140" cy="70" rx="28" ry="22" fill="#1a4a2a" stroke="none" opacity="0.5"/>
+
+  <!-- Dural sac exposed -->
+  <ellipse cx="140" cy="70" rx="20" ry="18" fill="url(#dura)" stroke="#8098b8" stroke-width="1" opacity="0.8"/>
+  <!-- Dural surface detail -->
+  <path d="M125,58 Q130,55 140,54 Q150,55 155,58" fill="none" stroke="#90a8c8" stroke-width="0.5" opacity="0.5"/>
+  <path d="M125,82 Q130,85 140,86 Q150,85 155,82" fill="none" stroke="#90a8c8" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Nerve roots exiting -->
+  <!-- Left nerve root -->
+  <path d="M125,65 Q110,62 95,58 Q85,55 75,48" fill="none" stroke="url(#nerve)" stroke-width="2.5" opacity="0.8"/>
+  <path d="M125,75 Q110,78 95,82 Q85,85 75,92" fill="none" stroke="url(#nerve)" stroke-width="2.5" opacity="0.8"/>
+  <!-- Right nerve root (now decompressed) -->
+  <path d="M155,65 Q170,62 185,58 Q195,55 205,48" fill="none" stroke="url(#nerve)" stroke-width="2.5" opacity="0.8"/>
+  <path d="M155,75 Q170,78 185,82 Q195,85 205,92" fill="none" stroke="url(#nerve)" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- Kerrison rongeur -->
+  <g id="kerrison" transform="translate(185,35)">
+    <!-- Footplate (biting end) -->
+    <path d="M-15,8 L-18,5 L-18,2 L-12,0 L-8,2 L-8,5Z" fill="#b0b8c0" stroke="#808890" stroke-width="0.6"/>
+    <!-- Shaft -->
+    <rect x="-8" y="0" width="45" height="4" rx="1" fill="#a0a8b0" stroke="#808890" stroke-width="0.6"/>
+    <!-- Spring handle -->
+    <path d="M35,0 L40,-5 Q42,-8 45,-5 L50,0 L50,4 L45,9 Q42,12 40,9 L35,4"
+          fill="none" stroke="#707880" stroke-width="1.5"/>
+    <!-- Bone chip being removed -->
+    <path d="M-16,4 L-20,2 L-18,6Z" fill="#e8d4a8" stroke="#c4a870" stroke-width="0.3" opacity="0.7"/>
+  </g>
+
+  <!-- Removed lamina outline indicator -->
+  <path d="M140,32 Q165,34 185,42 L195,55" fill="none" stroke="#ff6644" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+
+  <!-- Labels -->
+  <text x="10" y="30" fill="#c0e8d0" font-size="7" font-family="Arial">Kerrison</text>
+  <text x="10" y="38" fill="#c0e8d0" font-size="7" font-family="Arial">rongeur</text>
+  <line x1="40" y1="34" x2="170" y2="38" stroke="#c0e8d0" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="60" fill="#c0e8d0" font-size="7" font-family="Arial">Intact lamina</text>
+  <line x1="52" y1="58" x2="90" y2="50" stroke="#c0e8d0" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="80" fill="#c8d0e8" font-size="7" font-family="Arial">Dural sac</text>
+  <line x1="40" y1="78" x2="122" y2="70" stroke="#c8d0e8" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="100" fill="#e0d890" font-size="7" font-family="Arial">Nerve roots</text>
+  <line x1="48" y1="98" x2="80" y2="88" stroke="#e0d890" stroke-width="0.4" opacity="0.5"/>
+  <text x="200" y="25" fill="#ff8866" font-size="7" font-family="Arial">Resected</text>
+  <text x="200" y="33" fill="#ff8866" font-size="7" font-family="Arial">lamina</text>
+  <text x="10" y="150" fill="#c0e8d0" font-size="7" font-family="Arial">Vertebral</text>
+  <text x="10" y="158" fill="#c0e8d0" font-size="7" font-family="Arial">body</text>
+  <line x1="38" y1="154" x2="90" y2="145" stroke="#c0e8d0" stroke-width="0.4" opacity="0.5"/>
+
+  <text x="140" y="195" fill="#c0e8d0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Laminectomy / Decompression</text>
+</svg>

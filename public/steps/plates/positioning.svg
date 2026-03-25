@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e3f2fd"/>
+      <stop offset="100%" stop-color="#bbdefb"/>
+    </linearGradient>
+    <linearGradient id="boneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="40%" stop-color="#e8dcc8"/>
+      <stop offset="100%" stop-color="#d4c4a0"/>
+    </linearGradient>
+    <linearGradient id="cortexGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4c4a0"/>
+      <stop offset="100%" stop-color="#bfae8a"/>
+    </linearGradient>
+    <linearGradient id="marrowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffccbc"/>
+      <stop offset="100%" stop-color="#ef9a9a"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="20%" stop-color="#f5f5f5"/>
+      <stop offset="50%" stop-color="#bdbdbd"/>
+      <stop offset="80%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#9e9e9e"/>
+    </linearGradient>
+    <linearGradient id="steelGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b0bec5"/>
+      <stop offset="30%" stop-color="#eceff1"/>
+      <stop offset="70%" stop-color="#cfd8dc"/>
+      <stop offset="100%" stop-color="#90a4ae"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bgGrad)" rx="4"/>
+
+  <!-- Title -->
+  <text x="140" y="14" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="600" fill="#1565c0">Step 3: Plate Positioning</text>
+
+  <!-- Bone - side view, long bone shaft (reduced fracture) -->
+  <g>
+    <!-- Near cortex (top surface where plate sits) -->
+    <rect x="30" y="100" width="220" height="8" rx="1" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <!-- Medullary canal -->
+    <rect x="30" y="108" width="220" height="40" fill="url(#marrowGrad)" opacity="0.4"/>
+    <!-- Far cortex (bottom) -->
+    <rect x="30" y="148" width="220" height="8" rx="1" fill="url(#cortexGrad)" stroke="#a08060" stroke-width="0.8"/>
+    <!-- Bone outline -->
+    <rect x="30" y="100" width="220" height="56" rx="3" fill="none" stroke="#a08060" stroke-width="1"/>
+
+    <!-- Reduced fracture line (mid-shaft) -->
+    <path d="M 140,100 L 142,108 L 138,116 L 141,124 L 139,132 L 142,140 L 138,148 L 140,156" stroke="#604020" stroke-width="0.8" fill="none"/>
+
+    <!-- Periosteum on bone surface (thin layer) -->
+    <rect x="32" y="97" width="216" height="3" rx="1" fill="#f0e68c" opacity="0.4" stroke="#c0a030" stroke-width="0.3"/>
+
+    <!-- Cortex texture lines -->
+    <line x1="60" y1="102" x2="60" y2="106" stroke="#bfae8a" stroke-width="0.3" opacity="0.5"/>
+    <line x1="100" y1="102" x2="100" y2="106" stroke="#bfae8a" stroke-width="0.3" opacity="0.5"/>
+    <line x1="180" y1="102" x2="180" y2="106" stroke="#bfae8a" stroke-width="0.3" opacity="0.5"/>
+    <line x1="220" y1="102" x2="220" y2="106" stroke="#bfae8a" stroke-width="0.3" opacity="0.5"/>
+  </g>
+
+  <!-- DCP Bone Plate - contoured to bone surface -->
+  <g>
+    <!-- Plate body - slightly curved to match bone contour -->
+    <path d="M 55,85 Q 57,83 60,83 L 222,83 Q 225,83 227,85 L 227,96 Q 225,98 222,98 L 60,98 Q 57,98 55,96 Z" fill="url(#plateGrad)" stroke="#757575" stroke-width="0.8"/>
+
+    <!-- Plate thickness/3D edge -->
+    <path d="M 55,96 L 55,99 Q 57,101 60,101 L 222,101 Q 225,101 227,99 L 227,96" fill="#9e9e9e" stroke="#757575" stroke-width="0.5"/>
+
+    <!-- DCP oval screw holes (6 holes) -->
+    <!-- Hole 1 -->
+    <ellipse cx="75" cy="90" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="75" cy="90" rx="5" ry="2.8" fill="#212121" stroke="#424242" stroke-width="0.3"/>
+    <!-- DCP slope detail -->
+    <path d="M 69,90 Q 71,88 75,88 Q 79,88 81,90" fill="none" stroke="#616161" stroke-width="0.3"/>
+
+    <!-- Hole 2 -->
+    <ellipse cx="105" cy="90" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="105" cy="90" rx="5" ry="2.8" fill="#212121" stroke="#424242" stroke-width="0.3"/>
+    <path d="M 99,90 Q 101,88 105,88 Q 109,88 111,90" fill="none" stroke="#616161" stroke-width="0.3"/>
+
+    <!-- Hole 3 (near fracture) -->
+    <ellipse cx="130" cy="90" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="130" cy="90" rx="5" ry="2.8" fill="#212121" stroke="#424242" stroke-width="0.3"/>
+    <path d="M 124,90 Q 126,88 130,88 Q 134,88 136,90" fill="none" stroke="#616161" stroke-width="0.3"/>
+
+    <!-- Hole 4 (near fracture) -->
+    <ellipse cx="155" cy="90" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="155" cy="90" rx="5" ry="2.8" fill="#212121" stroke="#424242" stroke-width="0.3"/>
+    <path d="M 149,90 Q 151,88 155,88 Q 159,88 161,90" fill="none" stroke="#616161" stroke-width="0.3"/>
+
+    <!-- Hole 5 -->
+    <ellipse cx="182" cy="90" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="182" cy="90" rx="5" ry="2.8" fill="#212121" stroke="#424242" stroke-width="0.3"/>
+    <path d="M 176,90 Q 178,88 182,88 Q 186,88 188,90" fill="none" stroke="#616161" stroke-width="0.3"/>
+
+    <!-- Hole 6 -->
+    <ellipse cx="210" cy="90" rx="6" ry="3.5" fill="#424242" stroke="#616161" stroke-width="0.5"/>
+    <ellipse cx="210" cy="90" rx="5" ry="2.8" fill="#212121" stroke="#424242" stroke-width="0.3"/>
+    <path d="M 204,90 Q 206,88 210,88 Q 214,88 216,90" fill="none" stroke="#616161" stroke-width="0.3"/>
+
+    <!-- Plate surface highlight -->
+    <line x1="62" y1="86" x2="220" y2="86" stroke="#f5f5f5" stroke-width="0.5" opacity="0.6"/>
+  </g>
+
+  <!-- Plate Holding Forceps -->
+  <g>
+    <!-- Upper jaw gripping plate from above -->
+    <path d="M 138,60 L 142,60 L 144,72 Q 145,78 144,82 L 142,84 L 138,84 L 136,82 Q 135,78 136,72 Z" fill="url(#steelGrad)" stroke="#607d8b" stroke-width="0.6"/>
+    <!-- Jaw tip -->
+    <rect x="136" y="82" width="8" height="4" rx="1" fill="#b0bec5" stroke="#607d8b" stroke-width="0.5"/>
+
+    <!-- Lower jaw going under plate -->
+    <path d="M 136,100 L 144,100 L 145,104 Q 145,106 143,107 L 137,107 Q 135,106 135,104 Z" fill="url(#steelGrad)" stroke="#607d8b" stroke-width="0.6"/>
+
+    <!-- Instrument shaft going up -->
+    <rect x="137" y="24" width="6" height="36" rx="1.5" fill="url(#steelGrad)" stroke="#607d8b" stroke-width="0.6"/>
+
+    <!-- Handle -->
+    <rect x="134" y="20" width="12" height="8" rx="2" fill="#90a4ae" stroke="#607d8b" stroke-width="0.6"/>
+    <rect x="132" y="18" width="16" height="4" rx="1" fill="#78909c" stroke="#546e7a" stroke-width="0.5"/>
+
+    <!-- Grip knurling -->
+    <line x1="135" y1="22" x2="145" y2="22" stroke="#78909c" stroke-width="0.3"/>
+    <line x1="135" y1="24" x2="145" y2="24" stroke="#78909c" stroke-width="0.3"/>
+    <line x1="135" y1="26" x2="145" y2="26" stroke="#78909c" stroke-width="0.3"/>
+  </g>
+
+  <!-- Contour indicator arrows showing plate matches bone curve -->
+  <path d="M 50,95 Q 52,92 55,92" stroke="#1565c0" stroke-width="0.6" fill="none" marker-end="none"/>
+  <path d="M 232,95 Q 230,92 227,92" stroke="#1565c0" stroke-width="0.6" fill="none"/>
+
+  <!-- Gap between plate and bone showing positioning -->
+  <line x1="60" y1="98" x2="60" y2="100" stroke="#1565c0" stroke-width="0.4" stroke-dasharray="0.5,0.5" opacity="0.6"/>
+  <line x1="140" y1="101" x2="140" y2="100" stroke="#1565c0" stroke-width="0.4" stroke-dasharray="0.5,0.5" opacity="0.6"/>
+  <line x1="220" y1="98" x2="220" y2="100" stroke="#1565c0" stroke-width="0.4" stroke-dasharray="0.5,0.5" opacity="0.6"/>
+
+  <!-- Labels -->
+  <style>
+    .label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 7px; fill: #37474f; }
+    .label-line { stroke: #546e7a; stroke-width: 0.5; stroke-dasharray: 1,1; }
+  </style>
+
+  <text x="8" y="92" class="label">DCP plate</text>
+  <line x1="34" y1="91" x2="54" y2="91" class="label-line"/>
+
+  <text x="160" y="40" class="label">Plate holder</text>
+  <line x1="168" y1="42" x2="148" y2="55" class="label-line"/>
+
+  <text x="62" y="80" class="label" font-size="6">Oval holes (DCP)</text>
+
+  <text x="8" y="130" class="label">Near cortex</text>
+  <line x1="40" y1="128" x2="42" y2="108" class="label-line"/>
+
+  <text x="8" y="155" class="label">Far cortex</text>
+  <line x1="38" y1="153" x2="40" y2="150" class="label-line"/>
+
+  <text x="135" y="175" class="label" text-anchor="middle">Fracture line</text>
+  <line x1="140" y1="168" x2="140" y2="158" class="label-line"/>
+
+  <text x="8" y="105" class="label" font-size="6" fill="#c0a030">Periosteum</text>
+</svg>

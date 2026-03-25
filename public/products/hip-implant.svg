@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="8" fill="#FFF5F5"/>
+  <!-- Pelvis outline -->
+  <path d="M100 40 Q200 20 300 40 Q320 80 310 120 Q280 160 260 140 L250 150 Q200 180 150 150 L140 140 Q120 160 90 120 Q80 80 100 40Z" fill="none" stroke="#D4A574" stroke-width="1" stroke-dasharray="4 2" opacity="0.5"/>
+  <!-- Acetabular cup -->
+  <path d="M175 115 Q200 95 225 115 Q230 130 225 145 Q200 155 175 145 Q170 130 175 115Z" fill="#94A3B8" stroke="#64748B" stroke-width="1.5"/>
+  <path d="M180 120 Q200 105 220 120" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+  <!-- Liner -->
+  <path d="M182 125 Q200 112 218 125 Q222 135 218 142 Q200 148 182 142 Q178 135 182 125Z" fill="#E8E8E8" stroke="#9CA3AF" stroke-width="0.5"/>
+  <!-- Femoral head (ball) -->
+  <circle cx="200" cy="132" r="14" fill="url(#headGrad)" stroke="#64748B" stroke-width="1.5"/>
+  <ellipse cx="196" cy="128" rx="4" ry="3" fill="white" opacity="0.3"/>
+  <!-- Neck -->
+  <path d="M192 145 L185 175 Q183 180 187 182 L213 182 Q217 180 215 175 L208 145" fill="url(#stemGrad)" stroke="#64748B" stroke-width="1.5"/>
+  <!-- Stem -->
+  <path d="M187 182 L193 270 Q200 280 207 270 L213 182" fill="url(#stemGrad)" stroke="#64748B" stroke-width="1.5"/>
+  <!-- Femur outline -->
+  <path d="M165 175 L168 270 Q175 290 200 290 Q225 290 232 270 L235 175" fill="none" stroke="#D4A574" stroke-width="1" stroke-dasharray="4 2" opacity="0.5"/>
+  <!-- Labels -->
+  <line x1="235" y1="120" x2="280" y2="100" stroke="#9CA3AF" stroke-width="0.5"/>
+  <text x="285" y="103" font-family="system-ui,sans-serif" font-size="8" fill="#64748B">Acetabular Cup</text>
+  <line x1="218" y1="132" x2="280" y2="132" stroke="#9CA3AF" stroke-width="0.5"/>
+  <text x="285" y="135" font-family="system-ui,sans-serif" font-size="8" fill="#64748B">Femoral Head</text>
+  <line x1="220" y1="170" x2="280" y2="165" stroke="#9CA3AF" stroke-width="0.5"/>
+  <text x="285" y="168" font-family="system-ui,sans-serif" font-size="8" fill="#64748B">Neck</text>
+  <line x1="212" y1="230" x2="280" y2="220" stroke="#9CA3AF" stroke-width="0.5"/>
+  <text x="285" y="223" font-family="system-ui,sans-serif" font-size="8" fill="#64748B">Femoral Stem</text>
+  <defs>
+    <linearGradient id="headGrad" cx="0.4" cy="0.4" r="0.6" fx="0.35" fy="0.35"><stop offset="0%" stop-color="#E0E0E0"/><stop offset="100%" stop-color="#78909C"/></linearGradient>
+    <linearGradient id="stemGrad" x1="187" y1="0" x2="213" y2="0"><stop offset="0%" stop-color="#B0BEC5"/><stop offset="50%" stop-color="#CFD8DC"/><stop offset="100%" stop-color="#90A4AE"/></linearGradient>
+  </defs>
+</svg>

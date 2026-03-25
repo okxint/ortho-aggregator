@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d3b3f"/>
+      <stop offset="100%" stop-color="#1a6b6d"/>
+    </linearGradient>
+    <linearGradient id="bone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8dcc8"/>
+      <stop offset="40%" stop-color="#f5ead6"/>
+      <stop offset="100%" stop-color="#d4c4a8"/>
+    </linearGradient>
+    <linearGradient id="cortex" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c4b496"/>
+      <stop offset="100%" stop-color="#b0a080"/>
+    </linearGradient>
+    <linearGradient id="canal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b2020"/>
+      <stop offset="100%" stop-color="#a03030"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a0a0a0"/>
+      <stop offset="50%" stop-color="#d0d0d0"/>
+      <stop offset="100%" stop-color="#909090"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="140" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#a0e0e0" letter-spacing="1">ENTRY POINT CREATION</text>
+
+  <!-- Proximal Femur - lateral view -->
+  <!-- Greater Trochanter -->
+  <path d="M 85,30 C 70,32 58,45 55,60 C 52,72 54,82 60,88 C 64,92 70,94 78,93 L 82,90" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+  <!-- Femoral head -->
+  <ellipse cx="108" cy="42" rx="22" ry="20" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+  <!-- Femoral neck -->
+  <path d="M 90,52 C 88,58 85,68 83,78 L 78,93 C 80,96 88,98 95,96 C 92,82 94,68 96,56 Z" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+  <!-- Femoral shaft - proximal portion -->
+  <path d="M 70,88 C 68,100 66,120 65,145 C 64,160 63,175 63,192 L 63,200 L 105,200 L 105,192 C 105,175 104,160 103,145 C 102,120 100,100 98,88 Z" fill="url(#bone)" stroke="#a09070" stroke-width="0.8"/>
+
+  <!-- Cortex detail lines -->
+  <path d="M 68,95 C 67,110 66,130 65,150" stroke="#b5a585" stroke-width="0.5" fill="none" stroke-dasharray="2,3"/>
+  <path d="M 100,95 C 101,110 102,130 103,150" stroke="#b5a585" stroke-width="0.5" fill="none" stroke-dasharray="2,3"/>
+
+  <!-- Medullary canal (dark interior) -->
+  <path d="M 78,90 C 77,100 76,115 75,135 C 74,155 74,175 74,200 L 94,200 C 94,175 94,155 93,135 C 92,115 91,100 90,90 Z" fill="url(#canal)" opacity="0.6"/>
+
+  <!-- Piriformis fossa detail -->
+  <ellipse cx="84" cy="48" rx="5" ry="3" fill="#c8b898" stroke="#a09070" stroke-width="0.5"/>
+  <path d="M 82,46 C 83,50 83,55 83,60" stroke="#a09070" stroke-width="0.4" fill="none"/>
+
+  <!-- Greater trochanter tip prominence -->
+  <path d="M 62,42 C 58,38 57,34 60,31 C 64,28 72,30 78,33" stroke="#b5a585" stroke-width="0.6" fill="none"/>
+
+  <!-- Awl tool -->
+  <!-- Handle -->
+  <rect x="77" y="2" width="14" height="22" rx="3" fill="#505050" stroke="#404040" stroke-width="0.6"/>
+  <rect x="79" y="4" width="10" height="18" rx="2" fill="url(#metal)"/>
+  <line x1="82" y1="6" x2="82" y2="20" stroke="#b8b8b8" stroke-width="0.4"/>
+  <!-- T-handle cross -->
+  <rect x="72" y="2" width="24" height="5" rx="2" fill="#606060" stroke="#404040" stroke-width="0.5"/>
+  <!-- Awl shaft -->
+  <path d="M 82,24 L 82,52 L 86,52 L 86,24 Z" fill="url(#metal)" stroke="#707070" stroke-width="0.4"/>
+  <!-- Awl tip (curved, entering bone) -->
+  <path d="M 82,52 C 82,60 83,68 84,78 L 84,86 L 84.5,86 L 85,78 C 85.5,68 86,60 86,52" fill="#c0c0c0" stroke="#707070" stroke-width="0.4"/>
+
+  <!-- Guide wire (thin, through awl center) -->
+  <line x1="84" y1="50" x2="84" y2="180" stroke="#e0c030" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <circle cx="84" cy="180" r="1" fill="#e0c030"/>
+
+  <!-- Entry point penetration marks -->
+  <circle cx="84" cy="48" r="3" fill="none" stroke="#ff6060" stroke-width="0.5" stroke-dasharray="1,1"/>
+
+  <!-- Labels -->
+  <!-- Greater Trochanter label -->
+  <line x1="56" y1="38" x2="42" y2="32" stroke="#80d0d0" stroke-width="0.4"/>
+  <text x="10" y="31" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Greater</text>
+  <text x="10" y="39" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Trochanter</text>
+
+  <!-- Femoral Head label -->
+  <line x1="120" y1="30" x2="132" y2="25" stroke="#80d0d0" stroke-width="0.4"/>
+  <text x="134" y="22" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Femoral</text>
+  <text x="134" y="30" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Head</text>
+
+  <!-- Piriformis Fossa label -->
+  <line x1="84" y1="45" x2="130" y2="50" stroke="#80d0d0" stroke-width="0.4"/>
+  <text x="132" y="48" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Piriformis</text>
+  <text x="132" y="56" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Fossa</text>
+
+  <!-- Entry Point label -->
+  <line x1="84" y1="52" x2="130" y2="72" stroke="#ff8080" stroke-width="0.4"/>
+  <text x="132" y="70" font-family="Arial, sans-serif" font-size="7" fill="#ff8080" font-weight="bold">Entry Point</text>
+
+  <!-- Awl label -->
+  <line x1="72" y1="35" x2="50" y2="55" stroke="#80d0d0" stroke-width="0.4"/>
+  <text x="30" y="58" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Awl</text>
+
+  <!-- Guide Wire label -->
+  <line x1="84" y1="160" x2="110" y2="160" stroke="#e0c030" stroke-width="0.4"/>
+  <text x="112" y="158" font-family="Arial, sans-serif" font-size="7" fill="#e0c030">Guide</text>
+  <text x="112" y="166" font-family="Arial, sans-serif" font-size="7" fill="#e0c030">Wire</text>
+
+  <!-- Medullary Canal label -->
+  <line x1="84" y1="130" x2="110" y2="130" stroke="#80d0d0" stroke-width="0.4"/>
+  <text x="112" y="128" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Medullary</text>
+  <text x="112" y="136" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Canal</text>
+
+  <!-- Femoral neck label -->
+  <line x1="90" y1="70" x2="130" y2="86" stroke="#80d0d0" stroke-width="0.4"/>
+  <text x="132" y="84" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0">Femoral Neck</text>
+
+  <!-- Shaft label -->
+  <text x="40" y="150" font-family="Arial, sans-serif" font-size="7" fill="#80d0d0" transform="rotate(-90,40,150)">Femoral Shaft</text>
+
+  <!-- Subtle grid overlay -->
+  <line x1="0" y1="100" x2="280" y2="100" stroke="#ffffff" stroke-width="0.1" opacity="0.15"/>
+  <line x1="140" y1="0" x2="140" y2="200" stroke="#ffffff" stroke-width="0.1" opacity="0.15"/>
+</svg>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-sans: var(--font-poppins);
   --color-primary: #0d6efd;
@@ -9,10 +11,9 @@
 
 body {
   font-family: var(--font-poppins), "Poppins", sans-serif;
-  background: #f8f9fa;
-  color: #212529;
 }
 
+/* Product cards */
 .product-card {
   background: #fff;
   border: 1px solid #e9ecef;
@@ -27,6 +28,17 @@ body {
   transform: translateY(-2px);
 }
 
+:is(.dark .product-card) {
+  background: #111827;
+  border-color: #1e3a5f;
+}
+
+:is(.dark .product-card:hover) {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Category cards */
 .category-card {
   background: #fff;
   border: 1px solid #e9ecef;
@@ -42,6 +54,17 @@ body {
   transform: translateY(-3px);
 }
 
+:is(.dark .category-card) {
+  background: #111827;
+  border-color: #1e3a5f;
+}
+
+:is(.dark .category-card:hover) {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+}
+
+/* Brand rows */
 .brand-row {
   border: 1px solid #e9ecef;
   border-radius: 10px;
@@ -55,6 +78,17 @@ body {
   background: #f0f7ff;
 }
 
+:is(.dark .brand-row) {
+  background: #111827;
+  border-color: #1e3a5f;
+}
+
+:is(.dark .brand-row:hover) {
+  border-color: #3b82f6;
+  background: #0c2340;
+}
+
+/* Search input */
 .search-input {
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 2.75rem;
@@ -63,10 +97,55 @@ body {
   font-size: 0.9375rem;
   transition: border-color 0.2s;
   background: white;
+  color: #212529;
   outline: none;
 }
 
 .search-input:focus {
   border-color: #0d6efd;
   box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+:is(.dark .search-input) {
+  background: #0f172a;
+  border-color: #1e3a5f;
+  color: #e2e8f0;
+}
+
+:is(.dark .search-input:focus) {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+:is(.dark .search-input)::placeholder {
+  color: #64748b;
+}
+
+/* Mobile app utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <linearGradient id="tealBgS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d4f4f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a8a8a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="boneS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5e6c8"/>
+      <stop offset="100%" style="stop-color:#e8d4a8"/>
+    </linearGradient>
+    <linearGradient id="muscle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c06868"/>
+      <stop offset="100%" style="stop-color:#a04848"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#tealBgS)"/>
+
+  <!-- Retracted paraspinal muscles - left side -->
+  <path d="M30,20 Q40,20 55,25 L60,30 L62,50 L63,80 L64,110 L63,140 L62,165 L58,175 Q45,180 30,180"
+        fill="url(#muscle)" stroke="#903838" stroke-width="1" opacity="0.7"/>
+  <!-- Muscle fiber lines -->
+  <line x1="40" y1="35" x2="55" y2="40" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+  <line x1="40" y1="65" x2="58" y2="68" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+  <line x1="40" y1="95" x2="58" y2="98" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+  <line x1="40" y1="125" x2="58" y2="128" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+  <line x1="40" y1="155" x2="55" y2="158" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Retracted paraspinal muscles - right side -->
+  <path d="M250,20 Q240,20 225,25 L220,30 L218,50 L217,80 L216,110 L217,140 L218,165 L222,175 Q235,180 250,180"
+        fill="url(#muscle)" stroke="#903838" stroke-width="1" opacity="0.7"/>
+  <line x1="240" y1="35" x2="225" y2="40" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+  <line x1="240" y1="65" x2="222" y2="68" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+  <line x1="240" y1="95" x2="222" y2="98" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+  <line x1="240" y1="125" x2="222" y2="128" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+  <line x1="240" y1="155" x2="225" y2="158" stroke="#b05858" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Retractors -->
+  <path d="M58,60 L45,55 L43,60 L56,65" fill="#b0b8c0" stroke="#8090a0" stroke-width="0.8"/>
+  <path d="M222,60 L235,55 L237,60 L224,65" fill="#b0b8c0" stroke="#8090a0" stroke-width="0.8"/>
+  <path d="M58,130 L45,125 L43,130 L56,135" fill="#b0b8c0" stroke="#8090a0" stroke-width="0.8"/>
+  <path d="M222,130 L235,125 L237,130 L224,135" fill="#b0b8c0" stroke="#8090a0" stroke-width="0.8"/>
+
+  <!-- L3 Vertebra posterior view -->
+  <g id="L3" transform="translate(140,40)">
+    <!-- Laminae -->
+    <path d="M-50,0 Q-45,-5 -30,-3 L-8,-2 L-8,8 L-30,7 Q-45,5 -50,10Z" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <path d="M50,0 Q45,-5 30,-3 L8,-2 L8,8 L30,7 Q45,5 50,10Z" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <!-- Spinous process -->
+    <path d="M-6,-2 L-3,-12 Q0,-16 3,-12 L6,-2" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <line x1="0" y1="-14" x2="0" y2="-2" stroke="#c4a870" stroke-width="0.5"/>
+    <!-- Transverse processes -->
+    <path d="M-50,3 L-62,0 Q-68,2 -62,6 L-50,8" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M50,3 L62,0 Q68,2 62,6 L50,8" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.8"/>
+    <!-- Facet joints -->
+    <ellipse cx="-48" cy="5" rx="5" ry="4" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.6"/>
+    <ellipse cx="48" cy="5" rx="5" ry="4" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.6"/>
+  </g>
+
+  <!-- L4 Vertebra -->
+  <g id="L4" transform="translate(140,85)">
+    <path d="M-50,0 Q-45,-5 -30,-3 L-8,-2 L-8,8 L-30,7 Q-45,5 -50,10Z" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <path d="M50,0 Q45,-5 30,-3 L8,-2 L8,8 L30,7 Q45,5 50,10Z" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <path d="M-6,-2 L-3,-12 Q0,-16 3,-12 L6,-2" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <line x1="0" y1="-14" x2="0" y2="-2" stroke="#c4a870" stroke-width="0.5"/>
+    <path d="M-50,3 L-62,0 Q-68,2 -62,6 L-50,8" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M50,3 L62,0 Q68,2 62,6 L50,8" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.8"/>
+    <ellipse cx="-48" cy="5" rx="5" ry="4" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.6"/>
+    <ellipse cx="48" cy="5" rx="5" ry="4" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.6"/>
+  </g>
+
+  <!-- L5 Vertebra -->
+  <g id="L5" transform="translate(140,130)">
+    <path d="M-50,0 Q-45,-5 -30,-3 L-8,-2 L-8,8 L-30,7 Q-45,5 -50,10Z" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <path d="M50,0 Q45,-5 30,-3 L8,-2 L8,8 L30,7 Q45,5 50,10Z" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <path d="M-6,-2 L-3,-12 Q0,-16 3,-12 L6,-2" fill="url(#boneS)" stroke="#c4a870" stroke-width="1"/>
+    <line x1="0" y1="-14" x2="0" y2="-2" stroke="#c4a870" stroke-width="0.5"/>
+    <path d="M-50,3 L-62,0 Q-68,2 -62,6 L-50,8" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.8"/>
+    <path d="M50,3 L62,0 Q68,2 62,6 L50,8" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.8"/>
+    <ellipse cx="-48" cy="5" rx="5" ry="4" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.6"/>
+    <ellipse cx="48" cy="5" rx="5" ry="4" fill="url(#boneS)" stroke="#c4a870" stroke-width="0.6"/>
+  </g>
+
+  <!-- Interspinous ligaments between levels -->
+  <path d="M140,52 L140,73" fill="none" stroke="#cc9966" stroke-width="1.5" opacity="0.4"/>
+  <path d="M140,97 L140,118" fill="none" stroke="#cc9966" stroke-width="1.5" opacity="0.4"/>
+  <path d="M140,142 L140,160" fill="none" stroke="#cc9966" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Midline incision -->
+  <line x1="140" y1="5" x2="140" y2="178" stroke="#cc3333" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>
+
+  <!-- Labels -->
+  <text x="10" y="45" fill="#e0f0f0" font-size="7" font-family="Arial">Paraspinal</text>
+  <text x="10" y="53" fill="#e0f0f0" font-size="7" font-family="Arial">muscles</text>
+  <text x="230" y="30" fill="#e0f0f0" font-size="7.5" font-family="Arial" font-weight="bold">L3</text>
+  <text x="230" y="75" fill="#e0f0f0" font-size="7.5" font-family="Arial" font-weight="bold">L4</text>
+  <text x="230" y="120" fill="#e0f0f0" font-size="7.5" font-family="Arial" font-weight="bold">L5</text>
+  <text x="10" y="30" fill="#e0f0f0" font-size="7" font-family="Arial">Spinous</text>
+  <text x="10" y="38" fill="#e0f0f0" font-size="7" font-family="Arial">processes</text>
+  <line x1="43" y1="34" x2="137" y2="28" stroke="#e0f0f0" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="100" fill="#e0f0f0" font-size="7" font-family="Arial">Laminae</text>
+  <line x1="38" y1="98" x2="108" y2="86" stroke="#e0f0f0" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="140" fill="#e0f0f0" font-size="7" font-family="Arial">Facet joint</text>
+  <line x1="45" y1="138" x2="88" y2="135" stroke="#e0f0f0" stroke-width="0.4" opacity="0.5"/>
+  <text x="10" y="72" fill="#b0b8c0" font-size="6" font-family="Arial">Retractor</text>
+  <line x1="40" y1="70" x2="50" y2="60" stroke="#b0b8c0" stroke-width="0.3" opacity="0.5"/>
+
+  <text x="140" y="195" fill="#e0f0f0" font-size="7.5" font-family="Arial" text-anchor="middle" font-weight="bold">Posterior Midline Exposure - Lumbar Spine</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="8" fill="#ECFDF5"/>
+  <!-- Multiple K-wires fanned out -->
+  <g>
+    <!-- Wire 1 -->
+    <line x1="80" y1="260" x2="320" y2="50" stroke="url(#kwGrad1)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="320" cy="50" r="2" fill="#64748B"/>
+    <!-- Wire 2 -->
+    <line x1="100" y1="265" x2="330" y2="70" stroke="url(#kwGrad2)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="330" cy="70" r="1.5" fill="#64748B"/>
+    <!-- Wire 3 (thinner) -->
+    <line x1="120" y1="268" x2="335" y2="95" stroke="url(#kwGrad3)" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="335" cy="95" r="1.5" fill="#64748B"/>
+  </g>
+  <!-- Trocar tip detail (zoomed) -->
+  <rect x="240" y="170" width="130" height="90" rx="8" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="305" y="185" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="600" fill="#475569">TROCAR TIP DETAIL</text>
+  <line x1="260" y1="225" x2="330" y2="225" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M330 225 L345 221 L345 229 Z" fill="#94A3B8"/>
+  <line x1="260" y1="240" x2="330" y2="240" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M330 240 L340 236 L345 240 L340 244 Z" fill="#94A3B8"/>
+  <text x="300" y="215" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#6B7280">Single trocar</text>
+  <text x="300" y="255" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#6B7280">Diamond tip</text>
+  <!-- Diameter labels -->
+  <text x="65" y="245" font-family="system-ui,sans-serif" font-size="9" fill="#166534">1.5mm</text>
+  <text x="85" y="255" font-family="system-ui,sans-serif" font-size="8" fill="#166534">1.0mm</text>
+  <text x="108" y="262" font-family="system-ui,sans-serif" font-size="7" fill="#166534">0.8mm</text>
+  <text x="200" y="290" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#475569">Kirschner Wires &amp; Pins</text>
+  <defs>
+    <linearGradient id="kwGrad1" x1="80" y1="260" x2="320" y2="50"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient>
+    <linearGradient id="kwGrad2" x1="100" y1="265" x2="330" y2="70"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient>
+    <linearGradient id="kwGrad3" x1="120" y1="268" x2="335" y2="95"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient>
+  </defs>
+</svg>

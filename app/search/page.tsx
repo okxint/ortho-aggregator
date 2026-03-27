@@ -15,11 +15,13 @@ function SearchResults() {
   if (!query) {
     return (
       <div className="text-center py-20">
-        <svg className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-        </svg>
-        <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">Search OrthoAggregator</h2>
-        <p className="text-gray-500 dark:text-gray-400">Search for implants, brands, vendors, or categories</p>
+        <div className="w-20 h-20 bg-blue-500/10 dark:bg-blue-500/5 rounded-3xl flex items-center justify-center mx-auto mb-5 border border-blue-500/10">
+          <svg className="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </div>
+        <h2 className="text-xl font-bold text-gray-700 dark:text-gray-300 mb-2">Search OrthoAggregator</h2>
+        <p className="text-gray-500 dark:text-gray-400 text-sm">Search for implants, brands, vendors, or categories</p>
       </div>
     );
   }
@@ -68,7 +70,7 @@ function SearchResults() {
   return (
     <>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+        <h1 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1">
           Search results for &quot;{searchParams.get("q")}&quot;
         </h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -78,28 +80,30 @@ function SearchResults() {
 
       {totalResults === 0 && (
         <div className="text-center py-16">
-          <svg className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-          </svg>
+          <div className="w-16 h-16 bg-gray-100 dark:bg-white/[0.04] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg className="w-8 h-8 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </div>
           <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">No results found</h2>
-          <p className="text-gray-500 dark:text-gray-400 mb-4">Try a different search term or browse our categories</p>
-          <Link href="/" className="text-blue-600 hover:underline font-medium">Browse all categories</Link>
+          <p className="text-gray-500 dark:text-gray-400 mb-4 text-sm">Try a different search term or browse our categories</p>
+          <Link href="/" className="text-blue-500 hover:underline font-medium text-sm">Browse all categories</Link>
         </div>
       )}
 
       {/* Categories */}
       {matchedCategories.length > 0 && (
         <section className="mb-10">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Categories ({matchedCategories.length})</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-500/80 mb-4">Categories ({matchedCategories.length})</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {matchedCategories.map((cat) => (
               <Link
                 key={cat.id}
                 href={`/category/${cat.id}`}
-                className="bg-white dark:bg-[#0f172a] border border-gray-200 dark:border-blue-900/30 rounded-xl p-4 hover:border-blue-500 transition flex items-center gap-4"
+                className="glass-card p-4 hover:border-blue-500/30 transition-all duration-300 flex items-center gap-4 group"
               >
-                <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center shrink-0">
-                  <span className="text-sm font-bold text-blue-600">{cat.number}</span>
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/15 to-cyan-500/10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 border border-blue-500/10">
+                  <span className="text-sm font-bold gradient-text">{cat.number}</span>
                 </div>
                 <div className="min-w-0">
                   <h3 className="font-semibold text-gray-900 dark:text-white text-sm">{cat.name}</h3>
@@ -114,12 +118,12 @@ function SearchResults() {
       {/* Brands */}
       {matchedBrands.length > 0 && (
         <section className="mb-10">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Brands ({matchedBrands.length})</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-500/80 mb-4">Brands ({matchedBrands.length})</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             {matchedBrands.map((brand) => (
               <div
                 key={brand.name}
-                className="bg-white dark:bg-[#0f172a] border border-gray-200 dark:border-blue-900/30 rounded-xl p-4"
+                className="glass-card p-4"
               >
                 <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">{brand.name}</h3>
                 <div className="flex items-center gap-2 mb-2">
@@ -136,16 +140,16 @@ function SearchResults() {
       {/* Vendors */}
       {matchedVendors.length > 0 && (
         <section className="mb-10">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Vendors in {cityName} ({matchedVendors.length})</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-500/80 mb-4">Vendors in {cityName} ({matchedVendors.length})</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {matchedVendors.map((vendor) => (
               <Link
                 key={vendor.name}
                 href={`/vendor/${toSlug(vendor.name)}`}
-                className="bg-white dark:bg-[#0f172a] border border-gray-200 dark:border-blue-900/30 rounded-xl p-4 hover:border-blue-500 transition flex items-center gap-3"
+                className="glass-card p-4 hover:border-blue-500/30 transition-all duration-300 flex items-center gap-3 group"
               >
-                <div className="w-9 h-9 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/15 to-blue-400/5 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform border border-blue-500/10">
+                  <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                   </svg>
@@ -154,7 +158,7 @@ function SearchResults() {
                   <h3 className="font-semibold text-blue-700 dark:text-blue-400 text-sm">{vendor.name}</h3>
                   <p className="text-xs text-gray-500 dark:text-gray-400">{cityName} {vendor.phone && `- ${vendor.phone}`}</p>
                 </div>
-                <svg className="w-4 h-4 text-gray-400 ml-auto shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <svg className="w-4 h-4 text-gray-400 ml-auto shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
               </Link>
@@ -166,7 +170,7 @@ function SearchResults() {
       {/* Products */}
       {matchedProducts.length > 0 && (
         <section className="mb-10">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Products ({matchedProducts.length})</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-500/80 mb-4">Products ({matchedProducts.length})</h2>
           <div className="space-y-3">
             {matchedProducts.map((product) => {
               const topBrand = product.brands.reduce((best, b) => (b.rating > best.rating ? b : best), product.brands[0]);
@@ -176,22 +180,22 @@ function SearchResults() {
                 <Link
                   key={product.id}
                   href={`/product/${product.id}`}
-                  className="bg-white dark:bg-[#0f172a] border border-gray-200 dark:border-blue-900/30 rounded-xl p-4 hover:border-blue-500 transition flex items-center gap-4 group"
+                  className="glass-card p-4 hover:border-blue-500/30 transition-all duration-300 flex items-center gap-4 group block"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-16 h-16 object-cover rounded-lg shrink-0"
+                    className="w-16 h-16 object-cover rounded-xl shrink-0 group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-0.5">
                       {cat && (
-                        <span className="text-[10px] font-semibold text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-0.5 rounded-full">{cat.name}</span>
+                        <span className="text-[10px] font-semibold text-blue-500 bg-blue-500/10 px-2 py-0.5 rounded-full">{cat.name}</span>
                       )}
                     </div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white text-sm group-hover:text-blue-600 transition">{product.name}</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-white text-sm group-hover:text-blue-500 transition">{product.name}</h3>
                     <div className="flex items-center gap-3 mt-1">
                       <span className="text-xs text-gray-500 dark:text-gray-400">{product.brands.length} brands</span>
                       <span className="text-xs text-gray-400">-</span>
@@ -200,7 +204,7 @@ function SearchResults() {
                       <Stars rating={topBrand.rating} size="sm" />
                     </div>
                   </div>
-                  <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 dark:bg-amber-900/20 px-2.5 py-1 rounded-full shrink-0">
+                  <span className="text-[10px] font-semibold text-amber-600 bg-amber-500/10 px-2.5 py-1 rounded-full shrink-0 hidden sm:block">
                     Call for availability
                   </span>
                 </Link>
@@ -215,7 +219,7 @@ function SearchResults() {
 
 export default function SearchPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-4xl mx-auto px-5 md:px-6 py-8">
       <Suspense fallback={<div className="text-center py-20 text-gray-400">Loading...</div>}>
         <SearchResults />
       </Suspense>

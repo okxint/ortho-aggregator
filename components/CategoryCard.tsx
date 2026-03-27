@@ -14,25 +14,32 @@ const categoryIcons: Record<string, string> = {
   "specialized-implants": "M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5",
 };
 
-export default function CategoryCard({ category }: { category: Category }) {
+export default function CategoryCard({ category, featured = false }: { category: Category; featured?: boolean }) {
   const count = getCategoryProducts(category.id).length;
   const icon = categoryIcons[category.id] || categoryIcons["bone-plates"];
 
   return (
-    <Link href={`/category/${category.id}`} className="category-card block group">
-      <div className="flex items-start gap-4">
-        <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/40 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/60 transition">
-          <svg className="w-7 h-7 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+    <Link href={`/category/${category.id}`} className={`category-card block group ${featured ? "h-full" : ""}`}>
+      <div className={`flex ${featured ? "flex-col gap-5" : "items-start gap-5"}`}>
+        <div className={`bg-gradient-to-br from-blue-500/15 to-cyan-500/10 dark:from-blue-500/15 dark:to-cyan-500/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-blue-500/5 dark:border-blue-500/10 ${
+          featured ? "w-16 h-16" : "w-14 h-14"
+        }`}>
+          <svg className={`text-blue-500 dark:text-blue-400 ${featured ? "w-8 h-8" : "w-7 h-7"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d={icon} />
           </svg>
         </div>
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/40 rounded-full px-2 py-0.5">{category.number}</span>
-            <h3 className="font-semibold text-gray-900 dark:text-white text-[15px] truncate">{category.name}</h3>
+          <div className="flex items-center gap-2.5 mb-1.5">
+            <span className="text-[11px] font-bold text-blue-500 bg-blue-500/8 dark:bg-blue-500/10 rounded-full px-2.5 py-0.5">{category.number}</span>
+            <h3 className={`font-bold text-gray-900 dark:text-white truncate tracking-[-0.01em] ${featured ? "text-lg" : "text-[15px]"}`}>{category.name}</h3>
           </div>
-          <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-2">{category.description}</p>
-          <span className="text-xs font-medium text-blue-600 dark:text-blue-400">{count} products &rarr;</span>
+          <p className={`text-gray-500 dark:text-gray-400 mb-3 leading-relaxed ${featured ? "text-sm line-clamp-3" : "text-[13px] line-clamp-2"}`}>{category.description}</p>
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-500 group-hover:gap-3 transition-all duration-300">
+            {count} products
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </span>
         </div>
       </div>
     </Link>

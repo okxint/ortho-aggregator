@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
 });
 
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#2563eb",
+  themeColor: "#030712",
 };
 
 export default function RootLayout({
@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} font-sans bg-gray-50 dark:bg-[#030712] text-gray-900 dark:text-gray-100 antialiased transition-colors`}>
+      <body className={`${poppins.variable} font-sans bg-[#fafafa] dark:bg-[#030712] text-gray-900 dark:text-gray-100 antialiased transition-colors selection:bg-blue-500/30 noise-overlay`}>
         <ThemeProvider>
           <CityProvider>
             <Header />

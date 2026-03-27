@@ -37,10 +37,10 @@ export default function MobileSearchOverlay({ isOpen, onClose }: Props) {
 
   const typeColor = (type: string) => {
     switch (type) {
-      case "category": return "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400";
-      case "vendor": return "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400";
-      case "brand": return "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400";
-      default: return "bg-gray-100 dark:bg-[#1e293b] text-gray-600 dark:text-gray-400";
+      case "category": return "bg-purple-500/10 text-purple-400";
+      case "vendor": return "bg-blue-500/10 text-blue-400";
+      case "brand": return "bg-emerald-500/10 text-emerald-400";
+      default: return "bg-white/[0.04] text-gray-400";
     }
   };
 
@@ -59,15 +59,15 @@ export default function MobileSearchOverlay({ isOpen, onClose }: Props) {
 
   const renderResult = (s: SearchResult, i: number) => {
     const inner = (
-      <div className="flex items-center gap-3 px-4 py-3.5 active:bg-gray-50 dark:active:bg-[#1e293b] transition">
-        <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${typeColor(s.type)}`}>
+      <div className="flex items-center gap-3.5 px-5 py-4 active:bg-white/[0.02] transition-all duration-200">
+        <div className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 ${typeColor(s.type)}`}>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
             {typeIcon(s.type)}
           </svg>
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium text-gray-900 dark:text-white truncate">{s.label}</p>
-          <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{s.sublabel}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">{s.sublabel}</p>
         </div>
         <svg className="w-4 h-4 text-gray-300 dark:text-gray-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -90,66 +90,76 @@ export default function MobileSearchOverlay({ isOpen, onClose }: Props) {
   };
 
   return (
-    <div className="fixed inset-0 z-[60] bg-white dark:bg-[#030712] md:hidden">
-      {/* Header */}
-      <div className="flex items-center gap-3 px-4 pt-3 pb-2 border-b border-gray-100 dark:border-blue-900/30">
-        <button
-          onClick={onClose}
-          className="w-10 h-10 flex items-center justify-center rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#1e293b] transition shrink-0"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <div className="flex-1 relative">
-          <svg className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-          </svg>
-          <input
-            ref={inputRef}
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search implants, brands, vendors..."
-            className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-[#0f172a] border border-gray-200 dark:border-blue-900/30 rounded-xl text-sm text-gray-900 dark:text-white outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition"
-          />
-          {query && (
-            <button
-              onClick={() => setQuery("")}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
-          )}
-        </div>
-      </div>
+    <div className="fixed inset-0 z-[60] md:hidden">
+      {/* Dark glass background */}
+      <div className="absolute inset-0 bg-[#030712]/95 backdrop-blur-2xl" />
 
-      {/* Results */}
-      <div className="overflow-y-auto h-[calc(100vh-72px)]">
-        {query.trim().length < 2 && (
-          <div className="px-4 py-12 text-center">
-            <svg className="w-12 h-12 text-gray-200 dark:text-gray-700 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
+      <div className="relative h-full flex flex-col">
+        {/* Header */}
+        <div className="flex items-center gap-3 px-4 pt-4 pb-3">
+          <button
+            onClick={onClose}
+            className="w-10 h-10 flex items-center justify-center rounded-xl text-gray-400 hover:bg-white/[0.04] transition shrink-0"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div className="flex-1 relative">
+            <svg className="w-5 h-5 text-gray-500 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
-            <p className="text-sm text-gray-400 dark:text-gray-500">Search for implants, brands, or vendors</p>
-            <p className="text-xs text-gray-300 dark:text-gray-600 mt-1">Showing results for {cityName}</p>
+            <input
+              ref={inputRef}
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search implants, brands, vendors..."
+              className="w-full pl-12 pr-10 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-2xl text-[15px] text-white outline-none focus:border-blue-500/50 focus:shadow-[0_0_0_4px_rgba(59,130,246,0.15)] transition-all placeholder:text-gray-500"
+            />
+            {query && (
+              <button
+                onClick={() => setQuery("")}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
           </div>
-        )}
+        </div>
 
-        {query.trim().length >= 2 && suggestions.length === 0 && (
-          <div className="px-4 py-12 text-center">
-            <p className="text-sm text-gray-500 dark:text-gray-400">No results for &quot;{query.trim()}&quot;</p>
-            <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Try a different search term</p>
-          </div>
-        )}
+        {/* Divider */}
+        <div className="section-divider mx-4" />
 
-        {suggestions.length > 0 && (
-          <div className="divide-y divide-gray-50 dark:divide-blue-900/20">
-            {suggestions.map((s, i) => renderResult(s, i))}
-          </div>
-        )}
+        {/* Results */}
+        <div className="flex-1 overflow-y-auto">
+          {query.trim().length < 2 && (
+            <div className="px-5 py-16 text-center">
+              <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5 border border-blue-500/10">
+                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+              </div>
+              <p className="text-sm text-gray-400">Search for implants, brands, or vendors</p>
+              <p className="text-xs text-gray-600 mt-2">Showing results for {cityName}</p>
+            </div>
+          )}
+
+          {query.trim().length >= 2 && suggestions.length === 0 && (
+            <div className="px-5 py-16 text-center">
+              <p className="text-sm text-gray-400">No results for &quot;{query.trim()}&quot;</p>
+              <p className="text-xs text-gray-500 mt-2">Try a different search term</p>
+            </div>
+          )}
+
+          {suggestions.length > 0 && (
+            <div className="divide-y divide-white/[0.04]">
+              {suggestions.map((s, i) => renderResult(s, i))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

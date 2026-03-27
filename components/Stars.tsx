@@ -1,12 +1,12 @@
 export default function Stars({ rating, size = "sm" }: { rating: number; size?: "sm" | "md" }) {
-  const px = size === "sm" ? "w-3.5 h-3.5" : "w-4 h-4";
+  const px = size === "sm" ? "w-3.5 h-3.5" : "w-4.5 h-4.5";
 
   return (
     <div className="flex items-center gap-0.5">
       {[1, 2, 3, 4, 5].map((i) => (
         <svg
           key={i}
-          className={`${px} ${i <= Math.round(rating) ? "text-amber-400" : "text-gray-200 dark:text-gray-600"}`}
+          className={`${px} ${i <= Math.round(rating) ? "text-amber-400 drop-shadow-[0_0_3px_rgba(251,191,36,0.3)]" : "text-gray-200 dark:text-gray-600"}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >

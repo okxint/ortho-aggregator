@@ -9,8 +9,8 @@ export default function MobileShell() {
 
   return (
     <>
-      {/* Spacer to prevent content from being hidden behind bottom bar */}
-      <div className="h-16 md:hidden" />
+      {/* Spacer to prevent content from being hidden behind bottom bar — matches h-[72px] */}
+      <div className="h-[72px] md:hidden" />
       <BottomTabBar onSearchOpen={() => setSearchOpen(true)} />
       <MobileSearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </>

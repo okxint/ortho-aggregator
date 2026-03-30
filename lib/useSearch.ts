@@ -41,7 +41,7 @@ export function useSearch(query: string, city: CityId, cityName: string): Search
       p.brands.forEach((b) => {
         if (!seenBrands.has(b.name) && b.name.toLowerCase().includes(q)) {
           seenBrands.add(b.name);
-          results.push({ type: "brand", label: b.name, sublabel: `${b.rating} stars - ${b.reviews} reviews`, href: `/search?q=${encodeURIComponent(b.name)}` });
+          results.push({ type: "brand", label: b.name, sublabel: `${b.rating} stars - ${b.reviews} reviews`, href: `/brand/${toSlug(b.name)}` });
         }
       });
     });

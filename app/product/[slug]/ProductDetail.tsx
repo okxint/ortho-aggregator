@@ -2,7 +2,7 @@
 
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getProduct, getCategory, slug as toSlug, getStepImage } from "@/lib/data";
+import { getProduct, getCategory, slug as toSlug, getStepImage, getBrandBySlug } from "@/lib/data";
 import Stars from "@/components/Stars";
 import ProductDetailCTA from "@/components/ProductDetailCTA";
 import { useCity } from "@/context/CityContext";
@@ -127,7 +127,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="font-semibold text-gray-900 dark:text-white text-base md:text-lg">{brand.name}</span>
+                      <Link href={`/brand/${toSlug(brand.name)}`} className="font-semibold text-gray-900 dark:text-white text-base md:text-lg hover:text-blue-500 transition-colors">{brand.name}</Link>
                       {i === 0 && (
                         <span className="text-[10px] font-bold uppercase bg-green-500/10 text-green-500 px-2 py-0.5 rounded-full border border-green-500/10">
                           Top Rated

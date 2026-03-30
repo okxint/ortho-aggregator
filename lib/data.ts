@@ -395,7 +395,7 @@ const brandPool: BrandInfo[] = [
   { name: "Plus Orthopedics", rating: 4.3, reviews: 92, tier: "tier1", categories: ["hip-replacement","knee-replacement"] },
   { name: "Greens Surgicals", rating: 4.1, reviews: 54, tier: "tier1", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","spine-implants","external-fixation","specialized-implants"] },
   // ── Indian brands - Tier 2 (3-6 dealers per city) ──
-  { name: "Hardik International", rating: 4.3, reviews: 105, tier: "tier2", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","spine-implants","external-fixation","specialized-implants"] },
+  { name: "Hardik International", rating: 4.3, reviews: 105, tier: "tier2", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","spine-implants","external-fixation","specialized-implants"] },
   { name: "Zealmax Innovations", rating: 4.2, reviews: 78, tier: "tier2", categories: ["bone-plates","bone-screws","intramedullary-nails","spine-implants","external-fixation","specialized-implants"] },
   { name: "Matrix Meditec", rating: 4.1, reviews: 65, tier: "tier2", categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","knee-replacement","spine-implants","external-fixation","specialized-implants"] },
   { name: "Biorad Medisys", rating: 4.2, reviews: 82, tier: "tier2", categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","knee-replacement","specialized-implants"] },
@@ -406,8 +406,8 @@ const brandPool: BrandInfo[] = [
   { name: "MJ Surgical", rating: 4.0, reviews: 55, tier: "tier2", categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","specialized-implants"] },
   { name: "Response Ortho", rating: 4.1, reviews: 61, tier: "tier2", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","external-fixation"] },
   // ── Indian brands - Tier 3 (2-4 dealers per city, regional/niche) ──
-  { name: "Biotek India", rating: 4.3, reviews: 89, tier: "tier3", categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","shoulder-upper-limb","spine-implants","specialized-implants"] },
-  { name: "Nebula Surgical", rating: 4.0, reviews: 67, tier: "tier3", categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","spine-implants","external-fixation"] },
+  { name: "Biotek India", rating: 4.3, reviews: 89, tier: "tier3", categories: ["bone-plates","bone-screws","intramedullary-nails","shoulder-upper-limb","spine-implants","specialized-implants"] },
+  { name: "Nebula Surgical", rating: 4.0, reviews: 67, tier: "tier3", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","spine-implants","external-fixation","specialized-implants"] },
   { name: "Genius Ortho", rating: 4.1, reviews: 58, tier: "tier3", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","spine-implants","external-fixation"] },
   { name: "Inor Orthopaedics", rating: 4.2, reviews: 63, tier: "tier3", categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","knee-replacement"] },
   { name: "Hi-Tech Ortho", rating: 4.0, reviews: 45, tier: "tier3", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","external-fixation"] },
@@ -2312,4 +2312,50 @@ export function getAllVendorSlugs(): string[] {
     }
   }
   return Array.from(allSlugs);
+}
+
+// ── Brand page helpers ──────────────────────────────────────────
+
+export interface BrandDetail {
+  name: string;
+  rating: number;
+  reviews: number;
+  tier: string;
+  categories: string[];
+  technicianSupport?: { available: boolean; type: string; details: string };
+}
+
+export function getBrandBySlug(brandSlug: string): BrandDetail | undefined {
+  const brand = brandPool.find((b) => slug(b.name) === brandSlug);
+  if (!brand) return undefined;
+  return {
+    name: brand.name,
+    rating: brand.rating,
+    reviews: brand.reviews,
+    tier: brand.tier,
+    categories: brand.categories,
+    ...(brand.technicianSupport ? { technicianSupport: brand.technicianSupport } : {}),
+  };
+}
+
+export function getBrandProducts(brandName: string, city: CityId = "pondicherry") {
+  const allProducts = getProductsForCity(city);
+  return allProducts.filter((p) =>
+    p.brands.some((b) => b.name === brandName)
+  );
+}
+
+export function getAllBrandSlugs(): string[] {
+  return brandPool.map((b) => slug(b.name));
+}
+
+export function getAllBrands(): BrandDetail[] {
+  return brandPool.map((b) => ({
+    name: b.name,
+    rating: b.rating,
+    reviews: b.reviews,
+    tier: b.tier,
+    categories: b.categories,
+    ...(b.technicianSupport ? { technicianSupport: b.technicianSupport } : {}),
+  }));
 }

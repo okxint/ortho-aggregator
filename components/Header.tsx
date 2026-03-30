@@ -145,10 +145,10 @@ export default function Header() {
 
   const typeColor = (type: string) => {
     switch (type) {
-      case "category": return "bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400";
-      case "vendor": return "bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400";
-      case "brand": return "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400";
-      default: return "bg-gray-50 dark:bg-white/[0.04] text-gray-600 dark:text-gray-400";
+      case "category": return "bg-purple-500/10 text-purple-400";
+      case "vendor": return "bg-blue-500/10 text-blue-400";
+      case "brand": return "bg-emerald-500/10 text-emerald-400";
+      default: return "bg-white/[0.04] text-gray-400";
     }
   };
 
@@ -169,17 +169,17 @@ export default function Header() {
 
       {/* Live search dropdown */}
       {searchFocused && search.trim().length >= 2 && suggestions.length > 0 && !isMobile && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#0a1628] border border-gray-200 dark:border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden z-50 max-h-[420px] overflow-y-auto dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-[#111111] border border-white/[0.08] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden z-50 max-h-[420px] overflow-y-auto">
           {suggestions.map((s, i) => {
-            const className = "flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-white/[0.03] transition-all duration-200 cursor-pointer border-b border-gray-100 dark:border-white/[0.04] last:border-0";
+            const className = "flex items-center gap-3 px-4 py-3 hover:bg-white/[0.04] transition-all duration-200 cursor-pointer border-b border-white/[0.04] last:border-0";
             const inner = (
               <>
                 <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${typeColor(s.type)}`}>
                   {typeIcon(s.type)}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900 dark:text-white truncate">{s.label}</p>
-                  <p className="text-[11px] text-gray-500 dark:text-gray-400 truncate">{s.sublabel}</p>
+                  <p className="text-sm font-medium text-white truncate">{s.label}</p>
+                  <p className="text-[11px] text-gray-400 truncate">{s.sublabel}</p>
                 </div>
                 <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0 ${typeColor(s.type)}`}>
                   {typeLabel(s.type)}
@@ -204,7 +204,7 @@ export default function Header() {
             );
           })}
           <div
-            className="px-4 py-3 text-center text-xs text-blue-500 font-semibold hover:bg-blue-50 dark:hover:bg-blue-500/5 cursor-pointer transition"
+            className="px-4 py-3 text-center text-xs text-blue-400 font-semibold hover:bg-blue-500/5 cursor-pointer transition"
             onClick={() => {
               setSearchFocused(false);
               router.push(`/search?q=${encodeURIComponent(search.trim())}`);
@@ -216,9 +216,9 @@ export default function Header() {
       )}
 
       {searchFocused && search.trim().length >= 2 && suggestions.length === 0 && !isMobile && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#0a1628] border border-gray-200 dark:border-white/[0.08] rounded-2xl shadow-2xl z-50 p-6 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">No results for &quot;{search.trim()}&quot;</p>
-          <p className="text-xs text-gray-400 mt-1">Try searching for implants, brands, or vendors</p>
+        <div className="absolute top-full left-0 right-0 mt-2 bg-[#111111] border border-white/[0.08] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] z-50 p-6 text-center">
+          <p className="text-sm text-gray-400">No results for &quot;{search.trim()}&quot;</p>
+          <p className="text-xs text-gray-500 mt-1">Try searching for implants, brands, or vendors</p>
         </div>
       )}
     </div>
@@ -227,8 +227,8 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-500 ${
       scrolled
-        ? "bg-white/80 dark:bg-[#030712]/80 backdrop-blur-2xl border-b border-gray-200/50 dark:border-white/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.05)] dark:shadow-[0_1px_20px_rgba(0,0,0,0.3)]"
-        : "bg-white dark:bg-transparent border-b border-gray-200 dark:border-white/[0.04]"
+        ? "bg-[#0a0a0a]/95 backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_1px_20px_rgba(0,0,0,0.4)]"
+        : "bg-[#0a0a0a] border-b border-white/[0.06]"
     }`}>
       {/* Top announcement bar with shimmer */}
       <div className="relative overflow-hidden">
@@ -248,7 +248,7 @@ export default function Header() {
             </svg>
           </div>
           <div className="hidden sm:block">
-            <span className="text-base md:text-lg font-bold text-gray-900 dark:text-white">Ortho<span className="gradient-text">Aggregator</span></span>
+            <span className="text-base md:text-lg font-bold text-white">Ortho<span className="gradient-text">Aggregator</span></span>
           </div>
         </Link>
 
@@ -256,7 +256,7 @@ export default function Header() {
         <div className="relative hidden sm:block">
           <button
             onClick={() => setCityOpen(!cityOpen)}
-            className="flex items-center gap-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-white/[0.04] hover:bg-gray-200 dark:hover:bg-white/[0.06] px-3 py-2 rounded-xl transition-all border border-transparent dark:border-white/[0.06]"
+            className="flex items-center gap-1.5 text-sm font-medium text-gray-300 bg-white/[0.06] hover:bg-white/[0.1] px-3 py-2 rounded-xl transition-all border border-white/[0.08]"
           >
             <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -271,16 +271,16 @@ export default function Header() {
           {cityOpen && (
             <>
               <div className="fixed inset-0 z-40" onClick={() => setCityOpen(false)} />
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-[#0a1628] border border-gray-200 dark:border-white/[0.08] rounded-2xl shadow-xl dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] py-2 z-50">
-                <div className="px-3 py-1.5 text-[10px] font-bold uppercase text-gray-400 tracking-wider">Available</div>
+              <div className="absolute top-full left-0 mt-2 w-56 bg-[#111111] border border-white/[0.08] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] py-2 z-50">
+                <div className="px-3 py-1.5 text-[10px] font-bold uppercase text-gray-500 tracking-wider">Available</div>
                 {supportedCities.map((c) => (
                   <button
                     key={c.id}
                     onClick={() => { setCity(c.id as CityId); setCityOpen(false); }}
                     className={`w-full text-left px-4 py-2.5 text-sm transition flex items-center gap-2 ${
                       city === c.id
-                        ? "bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 font-medium"
-                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/[0.03]"
+                        ? "bg-blue-500/10 text-blue-400 font-medium"
+                        : "text-gray-300 hover:bg-white/[0.04]"
                     }`}
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -295,16 +295,16 @@ export default function Header() {
                     )}
                   </button>
                 ))}
-                <div className="border-t border-gray-100 dark:border-white/[0.04] mt-1 pt-1">
-                  <div className="px-3 py-1.5 text-[10px] font-bold uppercase text-gray-400 tracking-wider">Coming Soon</div>
+                <div className="border-t border-white/[0.06] mt-1 pt-1">
+                  <div className="px-3 py-1.5 text-[10px] font-bold uppercase text-gray-500 tracking-wider">Coming Soon</div>
                   {comingSoonCities.map((name) => (
-                    <div key={name} className="px-4 py-2 text-sm text-gray-400 flex items-center gap-2 cursor-not-allowed">
+                    <div key={name} className="px-4 py-2 text-sm text-gray-500 flex items-center gap-2 cursor-not-allowed">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                       </svg>
                       {name}
-                      <span className="ml-auto text-[10px] bg-gray-100 dark:bg-white/[0.04] text-gray-400 px-1.5 py-0.5 rounded-full">Soon</span>
+                      <span className="ml-auto text-[10px] bg-white/[0.04] text-gray-500 px-1.5 py-0.5 rounded-full">Soon</span>
                     </div>
                   ))}
                 </div>
@@ -319,7 +319,7 @@ export default function Header() {
         {/* Dark mode toggle */}
         <button
           onClick={toggleTheme}
-          className="p-2 md:p-2.5 rounded-xl text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/[0.04] transition-all border border-transparent dark:border-white/[0.04] hover:scale-105"
+          className="p-2 md:p-2.5 rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.06] transition-all border border-white/[0.04] hover:scale-105"
           aria-label="Toggle dark mode"
         >
           {theme === "light" ? (
@@ -334,7 +334,7 @@ export default function Header() {
         </button>
 
         {/* Nav links */}
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-600 dark:text-gray-400">
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-400">
           <Link href="/" className="hover:text-blue-500 transition-colors duration-200">Home</Link>
           <Link href="/about" className="hover:text-blue-500 transition-colors duration-200">About</Link>
           <div className="relative group">
@@ -344,12 +344,12 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
             </button>
-            <div className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-[#0a1628] border border-gray-200 dark:border-white/[0.08] rounded-2xl shadow-xl dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <div className="absolute top-full left-0 mt-2 w-72 bg-[#111111] border border-white/[0.08] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               {categories.map((cat) => (
                 <Link
                   key={cat.id}
                   href={`/category/${cat.id}`}
-                  className="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-500/5 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                  className="block px-4 py-2.5 text-sm text-gray-300 hover:bg-blue-500/5 hover:text-blue-400 transition"
                 >
                   <span className="text-blue-500 font-semibold mr-2">{cat.number}.</span>
                   {cat.name}

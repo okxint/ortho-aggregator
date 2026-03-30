@@ -117,14 +117,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-4 divide-x divide-gray-100 dark:divide-white/[0.04]">
             {[
-              { value: "100+", label: "Implant Types" },
-              { value: "12+", label: "Verified Brands" },
-              { value: "40+", label: "Local Vendors" },
-              { value: "10", label: "Categories" },
+              { value: "100+", label: "Implant Types", icon: "M20.25 7.5l-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" },
+              { value: "12+", label: "Verified Brands", icon: "M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" },
+              { value: "40+", label: "Local Vendors", icon: "M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" },
+              { value: "10", label: "Categories", icon: "M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6Z" },
             ].map((s) => (
               <div key={s.label} className="text-center py-8 group cursor-default">
-                <p className="text-4xl font-bold text-gray-900 dark:text-white mb-2 group-hover:scale-110 transition-transform duration-300 tracking-tight">{s.value}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">{s.label}</p>
+                <div className="flex items-center justify-center gap-3">
+                  <svg className="w-5 h-5 text-blue-500 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d={s.icon} />
+                  </svg>
+                  <p className="text-4xl font-bold text-gray-900 dark:text-white group-hover:scale-105 transition-transform duration-300 tracking-tight">{s.value}</p>
+                </div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 font-medium mt-2">{s.label}</p>
               </div>
             ))}
           </div>
@@ -195,7 +200,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* =================== POPULAR PRODUCTS =================== */}
-      <section id="popular" className="relative bg-gray-50/50 dark:bg-transparent">
+      <section id="popular" className="relative bg-gray-50 dark:bg-transparent">
         <div className="absolute inset-0 dark:bg-gradient-to-b dark:from-[#030712] dark:via-[#050d1a] dark:to-[#030712]" />
         <div className="absolute inset-0 dot-grid opacity-20 dark:opacity-[0.07]" />
 
@@ -233,18 +238,21 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-5 md:gap-6">
           {[
             {
+              step: "01",
               title: "Verified Brands",
               desc: "All listed brands are verified manufacturers with ISO and CE certifications. From DePuy Synthes to Meril Life Sciences.",
               icon: "M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z",
               gradient: "from-blue-500/15 to-cyan-500/10",
             },
             {
+              step: "02",
               title: "Real Vendor Data",
               desc: "Every vendor is verified through Google Maps with real addresses, phone numbers, and brand inventory mapping.",
               icon: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z",
               gradient: "from-blue-500/10 to-blue-400/5",
             },
             {
+              step: "03",
               title: "Surgical Grade",
               desc: "All implants are manufactured from surgical-grade stainless steel or titanium alloy with CE and FDA certifications.",
               icon: "M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z",
@@ -253,6 +261,7 @@ export default function Home() {
           ].map((item) => (
             <div key={item.title} className="rotating-border glass-card p-7 md:p-8 text-center group">
               <div className="relative z-10">
+                <span className="text-[10px] font-bold text-blue-500/40 tracking-[0.2em] block mb-4">{item.step}</span>
                 <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-white/[0.06]`}>
                   <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />

@@ -212,8 +212,9 @@ html {
 .product-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow:
-    0 32px 64px -16px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(59, 130, 246, 0.15);
+    0 32px 64px -16px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(59, 130, 246, 0.2),
+    0 0 30px rgba(59, 130, 246, 0.04);
 }
 
 :is(.dark .product-card) {
@@ -309,34 +310,23 @@ html {
 .search-input {
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 2.75rem;
-  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   font-size: 0.9375rem;
   transition: all 0.3s ease;
-  background: white;
-  color: #212529;
+  background: rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
   outline: none;
+  backdrop-filter: blur(12px);
+}
+
+.search-input::placeholder {
+  color: #64748b;
 }
 
 .search-input:focus {
   border-color: #3b82f6;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 4px 24px rgba(59, 130, 246, 0.08);
-}
-
-:is(.dark .search-input) {
-  background: rgba(15, 23, 42, 0.5);
-  border-color: rgba(255, 255, 255, 0.06);
-  color: #e2e8f0;
-  backdrop-filter: blur(12px);
-}
-
-:is(.dark .search-input:focus) {
-  border-color: #3b82f6;
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15), 0 4px 32px rgba(59, 130, 246, 0.12);
-}
-
-:is(.dark .search-input)::placeholder {
-  color: #64748b;
 }
 
 /* ===== STAT NUMBER ===== */

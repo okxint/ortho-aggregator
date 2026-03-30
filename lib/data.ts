@@ -2,6 +2,11 @@ export interface Vendor {
   name: string;
   phone: string;
   url: string; // Google Maps link
+  technicianSupport?: {
+    available: boolean;
+    type: string; // e.g. "OT Technician", "Clinical Specialist", "Field Service"
+    details: string;
+  };
 }
 
 export interface BrandEntry {
@@ -9,6 +14,11 @@ export interface BrandEntry {
   rating: number;
   reviews: number;
   vendors: Vendor[];
+  technicianSupport?: {
+    available: boolean;
+    type: string;
+    details: string;
+  };
 }
 
 export interface SurgicalStep {
@@ -310,11 +320,11 @@ const vendorsByCity: Record<CityId, Vendor[]> = {
     { name: "Plus Orthopedics India", phone: "044-4210 4112", url: "https://www.google.com/maps/search/Plus+Orthopedics+India+Chennai" },
     { name: "Paul Medical Systems", phone: "080486 06605", url: "https://www.google.com/maps/search/Paul+Medical+Systems+Chennai" },
     { name: "Rex Enterprises", phone: "080478 18453", url: "https://www.google.com/maps/search/Rex+Enterprises+Chennai+surgical" },
-    { name: "Dynamed Equipments Pvt. Ltd.", phone: "044-2650 2264", url: "https://www.google.com/maps/search/Dynamed+Equipments+Chennai" },
+    { name: "Dynamed Equipments Pvt. Ltd.", phone: "044-2650 2264", url: "https://www.google.com/maps/search/Dynamed+Equipments+Chennai", technicianSupport: { available: true, type: "Clinical Specialist", details: "Authorized Stryker & Zimmer Biomet distributor. 45+ staff across TN including Puducherry. Provides training and on-site technical support till customers are familiarized." } },
     { name: "Jayon Implants Pvt. Ltd.", phone: "080457 29507", url: "https://www.google.com/maps/search/Jayon+Implants+Chennai" },
-    { name: "Tetramed Surgicals", phone: "080438 68802", url: "https://www.google.com/maps/search/Tetramed+Surgicals+Chennai" },
+    { name: "Tetramed Surgicals", phone: "080438 68802", url: "https://www.google.com/maps/search/Tetramed+Surgicals+Chennai", technicianSupport: { available: true, type: "Field Service Staff", details: "Service staff in every district of Tamil Nadu with 20+ branches. Named technical support contact available. 18+ years serving orthopaedic surgeons across TN." } },
     { name: "V. S. Surgicals Co.", phone: "080410 14324", url: "https://www.google.com/maps/search/VS+Surgicals+Chennai" },
-    { name: "Medifield Equipments Corp", phone: "080444 64610", url: "https://www.google.com/maps/search/Medifield+Equipments+Chennai" },
+    { name: "Medifield Equipments Corp", phone: "080444 64610", url: "https://www.google.com/maps/search/Medifield+Equipments+Chennai", technicianSupport: { available: true, type: "Field Service Personnel", details: "Team of trained marketing & service personnel across South India. Offices in Chennai, Coimbatore, Hyderabad, Madurai, Trichy, and more. Established 1985." } },
     { name: "Eagle Osteon Technologies", phone: "", url: "https://www.google.com/maps/search/Eagle+Osteon+Technologies+Chennai" },
     { name: "Sudar Surgical Pvt Ltd", phone: "", url: "https://www.google.com/maps/search/Sudar+Surgical+Chennai" },
     { name: "Medyssey India Pvt. Ltd.", phone: "080445 63506", url: "https://www.google.com/maps/search/Medyssey+India+Chennai" },
@@ -344,6 +354,11 @@ interface BrandInfo {
   tier: BrandTier;
   categories: string[]; // which product categories this brand manufactures
   priority?: boolean; // always include in results for matching categories
+  technicianSupport?: {
+    available: boolean;
+    type: string;
+    details: string;
+  };
 }
 
 // Known brand → vendor pairings (brand name → vendor name)
@@ -354,12 +369,12 @@ const knownBrandVendors: Record<string, string[]> = {
 
 const brandPool: BrandInfo[] = [
   // ── International / Multinational brands (2-4 authorized distributors per city) ──
-  { name: "DePuy Synthes (J&J)", rating: 4.9, reviews: 210, tier: "intl", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","external-fixation","specialized-implants"] },
-  { name: "Stryker", rating: 4.8, reviews: 198, tier: "intl", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","external-fixation","specialized-implants"] },
-  { name: "Zimmer Biomet", rating: 4.7, reviews: 189, tier: "intl", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","external-fixation","specialized-implants"] },
-  { name: "Smith+Nephew", rating: 4.7, reviews: 176, tier: "intl", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","shoulder-upper-limb","external-fixation"] },
-  { name: "Medtronic", rating: 4.8, reviews: 165, tier: "intl", categories: ["spine-implants"] },
-  { name: "B. Braun", rating: 4.6, reviews: 142, tier: "intl", categories: ["hip-replacement","knee-replacement","spine-implants"] },
+  { name: "DePuy Synthes (J&J)", rating: 4.9, reviews: 210, tier: "intl", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","external-fixation","specialized-implants"], technicianSupport: { available: true, type: "Clinical Specialist", details: "Field-based Clinical & Product Specialists provide in-theatre procedural support, technical guidance, and surgeon training for trauma, spine, and joint reconstruction." } },
+  { name: "Stryker", rating: 4.8, reviews: 198, tier: "intl", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","external-fixation","specialized-implants"], technicianSupport: { available: true, type: "Onsite Specialist", details: "Onsite Specialists and Mako Product Specialists provide intraoperative surgical support including equipment setup, troubleshooting, and technical expertise. Chennai regional office with 1000+ India employees." } },
+  { name: "Zimmer Biomet", rating: 4.7, reviews: 189, tier: "intl", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","external-fixation","specialized-implants"], technicianSupport: { available: true, type: "Product Specialist SET", details: "Surgical Excellence Team (SET) product specialists in Chennai. Provide surgical demonstrations, peer-to-peer engagement, and technical support for hip, knee, and shoulder systems." } },
+  { name: "Smith+Nephew", rating: 4.7, reviews: 176, tier: "intl", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","shoulder-upper-limb","external-fixation"], technicianSupport: { available: true, type: "Clinical Support Specialist", details: "Clinical and Medical Affairs specialists dedicated to Orthopaedics, Sports Medicine & ENT. Medical education and commercial support teams." } },
+  { name: "Medtronic", rating: 4.8, reviews: 165, tier: "intl", categories: ["spine-implants"], technicianSupport: { available: true, type: "Clinical Specialist", details: "Clinical Specialists for Spine & Biologics provide intraoperative support. Confirmed specialist based in Chennai (600041) covering entire Tamil Nadu. Office at Doshi Towers, Kilpauk." } },
+  { name: "B. Braun", rating: 4.6, reviews: 142, tier: "intl", categories: ["hip-replacement","knee-replacement","spine-implants"], technicianSupport: { available: true, type: "Aesculap Technical Service", details: "Aesculap division provides repair, maintenance, and OR support for surgical instruments and motor systems. Technicians trained at HQ in Germany. OrthoPilot navigation system support." } },
   { name: "Arthrex", rating: 4.7, reviews: 138, tier: "intl", categories: ["bone-plates","bone-screws","shoulder-upper-limb","spine-implants","specialized-implants"] },
   { name: "Orthofix", rating: 4.3, reviews: 71, tier: "intl", categories: ["spine-implants","external-fixation","specialized-implants"] },
   { name: "NuVasive", rating: 4.5, reviews: 96, tier: "intl", categories: ["spine-implants","specialized-implants"] },
@@ -368,10 +383,10 @@ const brandPool: BrandInfo[] = [
   { name: "CONMED", rating: 4.3, reviews: 68, tier: "intl", categories: ["shoulder-upper-limb","specialized-implants"] },
   { name: "Integra LifeSciences", rating: 4.4, reviews: 74, tier: "intl", categories: ["shoulder-upper-limb","specialized-implants"] },
   // ── Indian brands - Tier 1 (5-8 dealers per city, wide distribution) ──
-  { name: "GPC Medical", rating: 4.5, reviews: 187, tier: "tier1", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","spine-implants","external-fixation","specialized-implants"] },
-  { name: "Siora Surgicals", rating: 4.4, reviews: 156, tier: "tier1", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","spine-implants","external-fixation"] },
-  { name: "Narang Medical", rating: 4.3, reviews: 134, tier: "tier1", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","external-fixation"] },
-  { name: "Meril Life Sciences", rating: 4.4, reviews: 94, tier: "tier1", categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","knee-replacement","spine-implants"] },
+  { name: "GPC Medical", rating: 4.5, reviews: 187, tier: "tier1", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","spine-implants","external-fixation","specialized-implants"], technicianSupport: { available: true, type: "Customer Support & Training", details: "Dedicated customer support team. Interactive surgical skills learning platform for healthcare professionals. Educational seminars, workshops, and after-sales service with trained staff." } },
+  { name: "Siora Surgicals", rating: 4.4, reviews: 156, tier: "tier1", priority: true, categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","spine-implants","external-fixation"], technicianSupport: { available: true, type: "Distributor Technical Support", details: "Product training, promotional materials, and technical support provided to distributor network. Team of experts for product queries and technical issues. 130+ distributors globally." } },
+  { name: "Narang Medical", rating: 4.3, reviews: 134, tier: "tier1", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","shoulder-upper-limb","spine-implants","external-fixation"], technicianSupport: { available: true, type: "Technical Assistance & Training", details: "Technical assistance, training, and educational resources for surgeons and medical staff. In-house sales consultants with technical expertise. Workshops to demonstrate surgical techniques." } },
+  { name: "Meril Life Sciences", rating: 4.4, reviews: 94, tier: "tier1", categories: ["bone-plates","bone-screws","intramedullary-nails","hip-replacement","knee-replacement","spine-implants"], technicianSupport: { available: true, type: "Technical Application Specialist", details: "On-site technical assistance during orthopaedic surgeries — correct application of implants, instruments, and systems. Troubleshoots intraoperative issues. Meril Academy provides workshops for OT nursing and surgeons." } },
   { name: "Auxein Medical", rating: 4.4, reviews: 112, tier: "tier1", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","spine-implants","external-fixation","specialized-implants"] },
   { name: "S.H. Pitkar Orthotools", rating: 4.5, reviews: 128, tier: "tier1", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","spine-implants","external-fixation","specialized-implants"] },
   { name: "Sharma Ortho", rating: 4.2, reviews: 98, tier: "tier1", categories: ["bone-plates","bone-screws","intramedullary-nails","wires-pins-staples","hip-replacement","knee-replacement","spine-implants","external-fixation","specialized-implants"] },
@@ -506,6 +521,7 @@ function assignBrands(categoryId: string, productIndex: number, city: CityId): B
       rating: brand.rating,
       reviews: brand.reviews,
       vendors,
+      ...(brand.technicianSupport ? { technicianSupport: brand.technicianSupport } : {}),
     };
   });
 }

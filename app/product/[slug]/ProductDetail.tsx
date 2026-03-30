@@ -133,6 +133,14 @@ export default function ProductDetail({ slug }: { slug: string }) {
                           Top Rated
                         </span>
                       )}
+                      {brand.technicianSupport?.available && (
+                        <span className="text-[10px] font-bold uppercase bg-blue-500/10 text-blue-500 px-2 py-0.5 rounded-full border border-blue-500/10 flex items-center gap-1">
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                          </svg>
+                          {brand.technicianSupport.type}
+                        </span>
+                      )}
                       <span className="text-[10px] font-bold uppercase bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full">
                         Call for availability
                       </span>
@@ -144,6 +152,19 @@ export default function ProductDetail({ slug }: { slug: string }) {
                   </div>
                 </div>
               </div>
+
+              {/* Technician support detail */}
+              {brand.technicianSupport?.available && (
+                <div className="px-5 py-2.5 bg-blue-50 dark:bg-blue-500/[0.04] border-b border-blue-100 dark:border-blue-500/10 flex items-start gap-2.5">
+                  <svg className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.049.58.025 1.193-.14 1.743" />
+                  </svg>
+                  <div>
+                    <p className="text-xs font-semibold text-blue-700 dark:text-blue-400">Technician Support Available</p>
+                    <p className="text-[11px] text-blue-600/70 dark:text-blue-400/60 mt-0.5 leading-relaxed">{brand.technicianSupport.details}</p>
+                  </div>
+                </div>
+              )}
 
               {/* Vendors under this brand */}
               <div className="bg-gray-50/50 dark:bg-white/[0.01] divide-y divide-gray-100 dark:divide-white/[0.03]">
@@ -162,12 +183,22 @@ export default function ProductDetail({ slug }: { slug: string }) {
                           </svg>
                         </div>
                         <div className="min-w-0">
-                          <Link
-                            href={`/vendor/${toSlug(vendor.name)}`}
-                            className="text-sm font-semibold text-blue-700 dark:text-blue-400 hover:underline"
-                          >
-                            {vendor.name}
-                          </Link>
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <Link
+                              href={`/vendor/${toSlug(vendor.name)}`}
+                              className="text-sm font-semibold text-blue-700 dark:text-blue-400 hover:underline"
+                            >
+                              {vendor.name}
+                            </Link>
+                            {vendor.technicianSupport?.available && (
+                              <span className="text-[9px] font-bold uppercase bg-blue-500/10 text-blue-500 px-1.5 py-0.5 rounded border border-blue-500/10 flex items-center gap-0.5">
+                                <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                </svg>
+                                {vendor.technicianSupport.type}
+                              </span>
+                            )}
+                          </div>
                           <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5">{cityName}</p>
                           <div className="flex items-center gap-3 mt-1">
                             {vendor.phone && (

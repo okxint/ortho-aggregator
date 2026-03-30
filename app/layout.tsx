@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} font-sans bg-[#fafafa] dark:bg-[#030712] text-gray-900 dark:text-gray-100 antialiased transition-colors selection:bg-blue-500/30 noise-overlay`}>
+      <body className={`${poppins.variable} font-sans bg-white dark:bg-[#030712] text-gray-900 dark:text-gray-100 antialiased transition-colors selection:bg-blue-500/30 noise-overlay`}>
         <ThemeProvider>
           <CityProvider>
             <Header />

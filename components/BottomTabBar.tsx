@@ -60,7 +60,7 @@ export default function BottomTabBar({ onSearchOpen }: Props) {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden gradient-border-top safe-area-bottom">
       {/* Glass background */}
-      <div className="absolute inset-0 bg-white/80 dark:bg-[#030712]/85 backdrop-blur-2xl" />
+      <div className="absolute inset-0 bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-2xl" />
 
       <div className="relative flex items-center justify-around h-[72px]">
         {tabs.map((tab) => {

@@ -49,7 +49,22 @@ export default function VendorPage() {
           </div>
           <div className="flex-1">
             <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">{vendor.name}</h1>
-            <p className="text-gray-500 dark:text-gray-400 mb-5 text-sm md:text-base">Orthopaedic implant vendor in {cityName}</p>
+            <p className="text-gray-500 dark:text-gray-400 mb-3 text-sm md:text-base">Orthopaedic implant vendor in {cityName}</p>
+
+            {vendor.technicianSupport?.available && (
+              <div className="flex items-start gap-2.5 p-3 bg-blue-50 dark:bg-blue-500/[0.06] border border-blue-200 dark:border-blue-500/15 rounded-xl mb-5">
+                <svg className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.049.58.025 1.193-.14 1.743" />
+                </svg>
+                <div>
+                  <p className="text-sm font-semibold text-blue-700 dark:text-blue-400 flex items-center gap-2">
+                    Technician Support Available
+                    <span className="text-[10px] font-bold uppercase bg-blue-500/10 text-blue-500 px-2 py-0.5 rounded-full">{vendor.technicianSupport.type}</span>
+                  </p>
+                  <p className="text-xs text-blue-600/70 dark:text-blue-400/60 mt-1 leading-relaxed">{vendor.technicianSupport.details}</p>
+                </div>
+              </div>
+            )}
 
             {/* Stat cards with gradient numbers */}
             <div className="grid grid-cols-3 gap-3 mb-5">
